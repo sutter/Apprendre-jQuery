@@ -8,23 +8,27 @@ Voici le modèle de boite suivant lequel se base les méthodes.
 
 | Méthode | Description |
 | -- | -- |
-| `.width()` | Définis ou retourne la largeur d'un élément.<br/> Les padding, border et les marges ne sont pas compris dans le calcul. |
-| `.innerWidth()` | Définis ou retourne la largeur d'un élément.<br/> Les padding sont compris dans le calcul, mais pas les border et les marges. |
-| `.outerdWidth()` | Définis ou retourne la largeur d'un élément.<br/> Les padding et les borders sont compris dans le calcul, mais pas les marges. |
-| `.outerdWidth(true)` | Définis ou retourne la largeur d'un élément.<br/> Les padding, border et les marges sont compris dans le calcul. |
-| `.height()` | Définis ou retourne la hauteur d'un élément.<br/> Les padding, border et les marges ne sont pas compris dans le calcul. |
-| `.innerHeight()` | Définis ou retourne la hauteur d'un élément.<br/> Les padding sont compris dans le calcul, mais pas les border et les marges. |
-| `.outerdHeight()` | Définis ou retourne la hauteur d'un élément.<br/> Les padding et les borders sont compris dans le calcul, mais pas les marges. |
-| `.outerdHeight(true)` | Définis ou retourne la hauteur d'un élément.<br/> Les padding, border et les marges sont compris dans le calcul. |
+| `.width()` | Définit ou retourne la largeur d'un élément.<br/> Les padding, border et les marges ne sont pas compris dans le calcul. |
+| `.innerWidth()` | Définit ou retourne la largeur d'un élément.<br/> Les padding sont compris dans le calcul, mais pas les border et les marges. |
+| `.outerdWidth()` | Définit ou retourne la largeur d'un élément.<br/> Les padding et les borders sont compris dans le calcul, mais pas les marges. |
+| `.outerdWidth(true)` | Définit ou retourne la largeur d'un élément.<br/> Les padding, border et les marges sont compris dans le calcul. |
+| `.height()` | Définit ou retourne la hauteur d'un élément.<br/> Les padding, border et les marges ne sont pas compris dans le calcul. |
+| `.innerHeight()` | Définit ou retourne la hauteur d'un élément.<br/> Les padding sont compris dans le calcul, mais pas les border et les marges. |
+| `.outerdHeight()` | Définit ou retourne la hauteur d'un élément.<br/> Les padding et les borders sont compris dans le calcul, mais pas les marges. |
+| `.outerdHeight(true)` | Définit ou retourne la hauteur d'un élément.<br/> Les padding, border et les marges sont compris dans le calcul. |
 
 Voyons maintenant à quoi peuvent maintenant nous servir ces méthodes.
 
-Par exemple, nous pouvons donner la hauteur de la fenêtre aux éléments `<section>`, redimensionnable au resize du navigateur (astuce pour le responsive).
+## Exemple 1
+
+Nous pouvons donner la hauteur de la fenêtre aux éléments `<section>`, redimensionnable au resize du navigateur (astuce pour le responsive).
 
 ```js
 // Création de la fonction
 function fullHeight() {
+    // Attribuons à 'hWindow' la hauteur du navigateur
     var hWindow = $(window).height();
+    // Ajoutons la hauteur de 'hWindow' aux éléments section
     $('section').css('height', hWindow);
 }
 
@@ -40,6 +44,8 @@ $(window).resize(function() {
 ```
 
 <p data-height="300" data-theme-id="7816" data-slug-hash="bgops" data-default-tab="result" class='codepen'>See the Pen <a href='http://codepen.io/sutterlity/pen/bgops/'>.height()</a> by Sutterlity (<a href='http://codepen.io/sutterlity'>@sutterlity</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+
+## Exemple 2
 
 Nous pouvons aussi calculer la hauteur d'un élément pour l'assigner à un autre.
 

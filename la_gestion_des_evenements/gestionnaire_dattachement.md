@@ -22,6 +22,11 @@ La méthode `.on()` attache un ou plusieurs gestionnaires d'événements sur les
 
 Vous pouvez retrouver la liste des événements à cette adresse : http://api.jquery.com/category/events/
 
+La méthode `.on()` prend comme événement : <br/>
+*blur, focus, focusin, focusout, load, resize, scroll, unload, click, dblclick, mousedown, mouseup, mousemove, mouseover, mouseout, mouseenter, mouseleave, change, select, submit, keydown, keypress, keyup, error*
+
+### Exemples
+
 Dans l'exemple ci-dessous, nous écoutons l'événement au clic sur l'élément **.btn**, puis nous retournons la chaine de caractères dans une fenêtre d'alerte.
 
 ```js
@@ -32,6 +37,8 @@ $('.btn').on('click', function() {
 
 <p data-height="90" data-theme-id="7816" data-slug-hash="nsftm" data-default-tab="result" class='codepen'>See the Pen <a href='http://codepen.io/sutterlity/pen/nsftm/'>.on()</a> by Sutterlity (<a href='http://codepen.io/sutterlity'>@sutterlity</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
 
+---
+
 Faisons de même, mais en sélectionnant le parent au départ.
 
 ```js
@@ -41,6 +48,8 @@ $('.box').on('click', '.btn', function() {
 ```
 
 <p data-height="90" data-theme-id="7816" data-slug-hash="mnBlt" data-default-tab="result" class='codepen'>See the Pen <a href='http://codepen.io/sutterlity/pen/mnBlt/'>.on() -2 </a> by Sutterlity (<a href='http://codepen.io/sutterlity'>@sutterlity</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+
+---
 
 Prenons un autre exemple (plutôt tordu). Au clic ajoutons / supprimons-lui la classe **.border** , au survole de **.pod** ajoutons la classe **.hover** et pour finir, lorsque l'on sort retirons la classe **.hover**.
 
@@ -60,9 +69,5 @@ $('.pod').on({
 
 
 <p data-height="220" data-theme-id="7816" data-slug-hash="KlFhm" data-default-tab="result" class='codepen'>See the Pen <a href='http://codepen.io/sutterlity/pen/KlFhm/'>.on() - Multiple event</a> by Sutterlity (<a href='http://codepen.io/sutterlity'>@sutterlity</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
-
-La méthode `.on()` prend comme événement :
-
-*blur, focus, focusin, focusout, load, resize, scroll, unload, click, dblclick, mousedown, mouseup, mousemove, mouseover, mouseout, mouseenter, mouseleave, change, select, submit, keydown, keypress, keyup, error*
 
 <script async src="//codepen.io/assets/embed/ei.js"></script>

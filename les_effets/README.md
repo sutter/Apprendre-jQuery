@@ -23,7 +23,7 @@ Il est aussi à l'heure actuelle impossible d'ajouter un *callback* en fin d'ani
 
 L'avantage majeur des animations jQuery est l'intercompatibilité des navigateurs, même IE7 est en mesure de lire une animation jQuery. Bien sûr, nous pouvons aussi ajouter des *callback*.
 
-Lorsqu'il y a beaucoup d'animations jQuery reste fluide contrairement à CSS3, évitant ainsi les bugs et les artefacts visuels.
+Lorsqu'il y a beaucoup d'animations, jQuery reste fluide contrairement à CSS3, évitant ainsi les bugs et les artefacts visuels.
 
 Je profite aussi de ce point pour vous parler de la librairie  [Velocity.js](http://julian.com/research/velocity/). Elle propose de remplacer les animations jQuery par une version plus optimisée. Elles sont même plus rapides due les animations CSS3.
 
@@ -32,7 +32,7 @@ Je profite aussi de ce point pour vous parler de la librairie  [Velocity.js](htt
 
 Les animations CSS3 sont plus simples à mettre en place, mais souffrent encore de quelques lacunes. Si vous avez besoin de *fallback* il faudra passer par jQuery.
 
-Les animations jQuery sont plus complexes à mettre en place et nécessite l'import de la librairie. En prenant en compte [Velocity.js](http://julian.com/research/velocity/) elles sont aussi plus performantes.
+Les animations jQuery sont plus complexes à mettre en place et nécessitent l'import de la librairie. En prenant en compte [Velocity.js](http://julian.com/research/velocity/) elles sont aussi plus performantes.
 
 
 

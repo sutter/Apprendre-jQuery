@@ -1,6 +1,6 @@
 # La gestion des événements
 
-En JavaScript, nous travaillons en permanence avec des événements comme le click, un touche une clavier pressée, le chargement d'un élément…
+En JavaScript, nous travaillons en permanence avec des événements comme le clic, une touche une clavier pressée, le chargement d'un élément…
 
 jQuery nous propose une gestion des événements au travers de différentes méthodes.
 Elles sont utilisées pour enregistrer les comportements lorsque l'utilisateur interagit avec le navigateur, et servent à manipuler les comportements enregistrés.

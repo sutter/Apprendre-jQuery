@@ -49,9 +49,9 @@ $('#play').click(function(){
 
 ## Chaîner deux animations
 
-Nous avons la possibilité avec la méthode `.animate()` de chaîner les animations, c'est à dire de lancer un animation puis une autre.
+Nous avons la possibilité avec la méthode `.animate()` de chaîner les animations, c'est-à-dire de lancer une animation, puis une autre.
 
-Continuons de compléxifier l'exemple du dessus.
+Continuons de complexifier l'exemple du dessus.
 À la fin de l'animation **class="pod"** prends une opacité de 25%.
 
 ```js

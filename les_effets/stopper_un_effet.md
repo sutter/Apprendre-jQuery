@@ -19,7 +19,7 @@ Cette méthode prend 2 paramètres :
 
 ### Stop sans paramètre
 
-Prenons l'exemple d'un carré que l'on anime avec la méthode `.animate()` au click sur le bouton *Play*. Si nous cliquons sur le bouton *stop* l'animation en cours se stoppe grâce à la méthode `.stop()` sans paramètres. Au click sur *play* l'animation reprend là ou elle en était.
+Prenons l'exemple d'un carré que l'on anime avec la méthode `.animate()` au clic sur le bouton *Play*. Si nous cliquons sur le bouton *stop* l'animation en cours se stoppe grâce à la méthode `.stop()` sans paramètres. Au click sur *play* l'animation reprend là ou elle en était.
 
 ```js
 // Déclaration de l'animation

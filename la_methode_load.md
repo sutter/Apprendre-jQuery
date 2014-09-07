@@ -3,7 +3,9 @@
 **API :** http://api.jquery.com/load/
 
 La méthode `.load()` va nous permettre de récupérer du contenu à insérer dans notre page.
-Nous pouvons charger des fichiers du type : *html*, *php*, *txt*, *xml* et *json*.
+Nous pouvons charger des fichiers du type : HTML, PHP, TXT, XML et JSON.
+
+Elle est un raccourci de la fonction `.ajax()`.
 
 ## La méthode en détail
 
@@ -29,7 +31,7 @@ $('#result').load('result.txt');
 
 Nous avons chargé le contenu du ficher *result.txt* dans la balise **#result**.
 
-Faisons de même avec un fichier **php**, mais cette fois si au click.
+Faisons de même avec un fichier PHP, mais cette fois si au clic.
 
 ```js
 $('#a').click(function(){
@@ -75,9 +77,7 @@ $('#a').click(function(){
 
 ### Passer des paramètres à un fichier PHP
 
-Il est fréquent de rencontrer des url telles que celle-ci : *http://adresse-du-site.fr/page.php?id=11*
-
-Il nous est possible de demander en PHP à la base de données de nous retournée les informations dépendantes des paramètres d'url.
+Il nous est possible de demander en PHP à la base de données de nous retournée des informations necessitant un paramètre.
 
 Dans l'exemple ci-dessous, nous récupérons la valeur d'un champ **#search**, puis nous la passons en paramètre.
 

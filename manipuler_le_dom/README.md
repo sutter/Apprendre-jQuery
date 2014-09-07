@@ -1,5 +1,8 @@
 # Manipuler le DOM
 
+jQuery nous propose plusieurs méthodes afin de manipuler le DOM.
+Avec ces méthodes, nous pouvons supprimer, créer, cloner, ajouter… Bref nous pouvons remodeler le DOM à notre convenance.
+
 | Méthode | Description |
 | -- | -- |
 | [`.addClass()`](http://api.jquery.com/addClass/) | Ajoute un ou plusieurs noms de classe à des éléments sélectionnés |

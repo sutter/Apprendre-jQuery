@@ -11,7 +11,7 @@ La méthode consiste à envoyer des données vers un fichier *Php* qui lui se ch
 $.post('send.php',
     {
         name: 'Jean-Michel',
-        email: 'jeanmich@gmail.com'
+        email: 'jeanmich@caramail.com'
     }, function(data) {
         alert(data);
 });
@@ -32,38 +32,39 @@ $.get( url, data, function(data,status,xhr), dataType );
 
 ## Exemple d'envoi de données
 
-Cet exemple ne contient pas le fichier *Php* de traitement, ce n'est pas le sujet de ce cours.
+Dans l'exemple suivant nous envoyons un requête afin de faire une recherche, puis nous affichons le résultat de la recherche.
 
-**Attention !**<br/>
-Cet exemple n'est pas sécurisé, il n'y a pas de contrôle sur les données envoyées.
+<small>Cet exemple ne contient pas le fichier PHP de traitement, ce n'est pas le sujet de ce cours.</small>
 
 ### La structure **html**
 ```html
-<form role="form" action="send.php" method="post">
-	<div class="form-group">
-		<label for="#name">Nom :</label>
-		<input type="text" name="name" id="name" required>
-	</div>
-	<div class="form-group">
-		<label for="email">Email :</label>
-		<input type="email" name="email" id="email" required>
-	</div>
-    <input id="submit" type="submit" value="OK">
+<form action="/" id="searchForm">
+    <input type="text" name="s" placeholder="Rechercher…">
+    <input type="submit" value="Ok">
 </form>
 <div id="result"></div>
 ```
 
 ### Le script **jQuery** de traitement
 ```js
-$('#submit').click(function() {
-    $.post('send.php',
-        {
-            name: 'Jean-Michel',
-            email: 'jeanmich@gmail.com'
-        }, function(data) {
-            alert(data);
-    });
-    // Annule comportement par défault
-    return false;
+$('#searchForm').submit(function(event) {
+
+  // Stop la propagation par défaut
+  event.preventDefault();
+
+  // Récupération des valeurs
+  var $form = $(this),
+       term = $form.find( "input[name='s']" ).val(),
+       url = $form.attr( "action" );
+
+  // Envoie des données
+  var posting = $.post( url, { s: term } );
+
+  // Reception des données et affichage
+  posting.done(function(data) {
+    var content = $(data).find('#content');
+    $('#result').empty().append(content);
+  });
+
 });
 ```

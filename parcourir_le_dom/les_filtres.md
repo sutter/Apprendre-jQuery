@@ -8,10 +8,24 @@ Dans cette partie, nous verrons les méthodes `.first()`, `.last()`, `.eq()`, `.
 
 La méthode `.first()` retourne le premier élément de l'élément sélectionné.
 
-L'exemple suivant ajoute `class="pod"` au premier élément de `class="item"`.
+L'exemple suivant ajoute `class="selected"` au premier élément de `class="item"`.
 
 ```js
-$('.item').first().addClass('pod');
+$('.item').first().addClass('selected');
+```
+
+**Résultat**
+
+```html
+<ul class="list">
+    <li class="item selected">…</li>
+	<li class="item">…</li>
+	<li class="item">…</li>
+	<li class="item">…</li>
+	<li class="item">…</li>
+	<li class="item">…</li>
+	<li class="item">…</li>
+</ul>
 ```
 
 ## Méthode .last()
@@ -20,12 +34,25 @@ $('.item').first().addClass('pod');
 
 La méthode `.last()` retourne le dernier élément de l'élément sélectionné.
 
-L'exemple suivant ajoute `class="pod"` au dernier élément de `class="item"`.
+L'exemple suivant ajoute `class="selected"` au dernier élément de `class="item"`.
 
 ```js
-$('.item').last().addClass('pod');
+$('.item').last().addClass('selected');
 ```
 
+**Résultat**
+
+```html
+<ul class="list">
+	<li class="item">…</li>
+	<li class="item">…</li>
+	<li class="item">…</li>
+	<li class="item">…</li>
+	<li class="item">…</li>
+	<li class="item">…</li>
+	<li class="item selected">…</li>
+</ul>
+```
 
 ## Méthode .eq()
 
@@ -34,10 +61,24 @@ $('.item').last().addClass('pod');
 La méthode `.eq()` retourne un élément avec un numéro d'index spécifique.
 Les numéros d'index commencent à 0, de sorte que le premier élément aura le numéro d'index 0 et non 1.
 
-L'exemple suivant ajoute `class="pod"` au 2ème élément de `class="item"`.
+L'exemple suivant ajoute `class="selected"` au 2ème élément de `class="item"`.
 
 ```js
-$('.item').eq(1).addClass('pod');
+$('.item').eq(1).addClass('selected');
+```
+
+**Résultat**
+
+```html
+<ul class="list">
+	<li class="item">…</li>
+	<li class="item selected">…</li>
+	<li class="item">…</li>
+	<li class="item">…</li>
+	<li class="item">…</li>
+	<li class="item">…</li>
+	<li class="item">…</li>
+</ul>
 ```
 
 ## Méthode .filter()
@@ -46,10 +87,24 @@ $('.item').eq(1).addClass('pod');
 
 La méthode `.filter()` permet de spécifier un critère. Les éléments qui ne correspondent pas aux critères sont retirés de la sélection, et ceux qui correspondent seront retournés.
 
-L'exemple suivant ajoute `class="pod"` aux éléments `p` ayant `class="item"`.
+L'exemple suivant ajoute `class="selected"` aux éléments `class="item"` ayant une autre `class="other-class"`.
 
 ```js
-$('.item').filter('p').addClass('pod');
+$('.item').filter('.other-class').addClass('selected');
+```
+
+**Résultat**
+
+```html
+<ul class="list">
+	<li class="item">…</li>
+	<li class="item">…</li>
+	<li class="item other-class selected">…</li>
+	<li class="item">…</li>
+	<li class="item other-class selected">…</li>
+	<li class="item">…</li>
+	<li class="item">…</li>
+</ul>
 ```
 
 ## Méthode .not()
@@ -59,8 +114,22 @@ $('.item').filter('p').addClass('pod');
 La méthode `.not()` retourne tous les éléments qui ne correspondent pas aux critères.
 C'est contraire de la méthode `.filter()`
 
-L'exemple suivant ajoute `class="pod"` qui ne sont pas `p` ayant `class="item"`.
+L'exemple suivant ajoute `class="selected"` qui ne sont pas `li` ayant aucune classe.
 
 ```js
-$('.item').not('p').addClass('pod');
+$('li').not('.item').addClass('selected');
+```
+
+**Résultat**
+
+```html
+<ul class="list">
+	<li class="item">…</li>
+	<li class="item">…</li>
+	<li class="selected">…</li>
+	<li class="item">…</li>
+	<li class="item">…</li>
+	<li class="selected">…</li>
+	<li class="item">…</li>
+</ul>
 ```

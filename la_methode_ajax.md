@@ -30,7 +30,7 @@ Voici les options les plus utilisées.
 
 Bien sûr, il existe bien d'autres options que vous pouvez retrouver dans l'[API jQuery](http://api.jquery.com/jQuery.ajax/).
 
-Voici un exemple de requête avec un message encas d'erreur.
+Voici un exemple de requête avec un message en cas d'erreur.
 
 ## Chargement de fichier
 

@@ -20,7 +20,7 @@ $('#slideDown').click(function(){
     $('#b').slideDown(1000);
     $('#c').slideDown('slow');
     $('#d').slideDown('slow', function(){
-        console.log('Élément #d est déplier);
+        console.log('Élément #d est déplié');
     });
 });
 ```
@@ -44,7 +44,7 @@ $('#slideUp').click(function(){
     $('#b').slideUp(1000);
     $('#c').slideUp('slow');
     $('#d').slideUp('slow', function(){
-        console.log('Élément #d est plié);
+        console.log('Élément #d est plié');
     });
 });
 ```
@@ -68,7 +68,7 @@ $('#slideToggle').click(function(){
     $('#b').slideToggle(1000);
     $('#c').slideToggle('slow');
     $('#d').slideToggle('slow', function(){
-        console.log('Élément #d est plié / déplié);
+        console.log('Élément #d est plié / déplié');
     });
 });
 ```

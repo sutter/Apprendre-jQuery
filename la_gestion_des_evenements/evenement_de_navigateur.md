@@ -35,3 +35,17 @@ $(window).scroll(function() {
     console.log('Je scroll dans ma page');
 });
 ```
+
+Cette méthode peut être utilisé pour lancer des animations CSS3 en ajoutant une classe en fonction de la distance du scroll par rapport au point haut de la page, comme dans l'exemple de [CSS3 Animation Cheat Sheet](http://www.justinaguilar.com/animations/scrolling.html).
+
+```js
+$(window).scroll(function() {
+	$('#animatedElement').each(function(){
+	var imagePos = $(this).offset().top;
+	var topOfWindow = $(window).scrollTop();
+		if (imagePos < topOfWindow+400) {
+			$(this).addClass("slideUp");
+		}
+	});
+});
+```

@@ -14,10 +14,17 @@ L'exemple suivant remplace le contenu texte de la balise `class="box"`.
 $('.box').text('Hello world');
 ```
 
-L'exemple suivant récupère le texte de `class="box"` et l'affiche dans la console du navigateur.
+**Résultat**
 
-```js
-console.log( $('.box').text() );
+Avant le script :
+
+```html
+<div class="box">Je suis magicien</div>
+```
+Après le script :
+
+```html
+<div class="box">Hello world</div>
 ```
 
 ## Méthode .html()
@@ -32,10 +39,20 @@ L'exemple suivant remplace le contenu HTML de la balise `class="box"`.
 $('.box').html('<h1>Hello world</h1>');
 ```
 
-L'exemple suivant récupère le contenu HTML de `class="box"` et l'affiche dans la console du navigateur.
 
-```js
-console.log( $('.box').html() );
+**Résultat**
+
+Avant le script :
+
+```html
+<div class="box">Je suis magicien</div>
+```
+Après le script :
+
+```html
+<div class="box">
+    <h1>Hello world</h1>
+</div>
 ```
 
 ## Méthode .val()
@@ -45,6 +62,16 @@ console.log( $('.box').html() );
 La méthode `.val()` récupère ou remplace la value d'un élément de formulaire *input text*, *textarea* etc. Dans les champs de type *radio* et *checked* elle renvoie **:checked** ou pas.
 
 Dans l'exemple suivant nous affichons la valeur du champ `#name`dans une boite d'alerte lors du click sur `#submit`.
+
+```html
+<form role="form" action="#">
+	<div class="form-group">
+		<label for="#name">Nom :</label>
+		<input type="text" name="name" id="name">
+	</div>
+	<input id="submit" type="submit" value="Envoyer">
+</form>
+```
 
 ```js
 $('#submit').click(function(){

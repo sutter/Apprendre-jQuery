@@ -20,10 +20,11 @@ $('#fadeIn').click(function(){
     $('#b').fadeIn(1000);
     $('#c').fadeIn('slow');
     $('#d').fadeIn('slow', function(){
-        console.log('Élément #d est apparu);
+        console.log('Élément #d est apparu');
     });
 });
 ```
+
 <p data-height="180" data-theme-id="7816" data-slug-hash="KLxjB" data-default-tab="result" class='codepen'>See the Pen <a href='http://codepen.io/sutterlity/pen/KLxjB/'>.fadeIn()</a> by Sutterlity (<a href='http://codepen.io/sutterlity'>@sutterlity</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
 
 ## Méthode .fadeOut()
@@ -44,7 +45,7 @@ $('#fadeOut').click(function(){
     $('#b').fadeOut(1000);
     $('#c').fadeOut('slow');
     $('#d').fadeOut('slow', function(){
-        console.log('Élément #d à disparu);
+        console.log('Élément #d à disparu');
     });
 });
 ```
@@ -92,7 +93,7 @@ $('#fadeTo').click(function(){
     $('#b').fadeTo(1000, 0.25);
     $('#c').fadeTo('slow', 0.25);
     $('#d').fadeTo('slow', 0.25, function(){
-        console.log('Élément #d à une opacité de 25%);
+        console.log('Élément #d à une opacité de 25%');
     });
 });
 ```

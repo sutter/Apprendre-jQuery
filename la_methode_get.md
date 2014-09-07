@@ -17,7 +17,7 @@ $.get( url, data, function(data,status,xhr), dataType );
 | **url** | **Requis**<br/>Une chaîne contenant l'URL vers laquelle la demande est envoyée |
 | **data** | **Optionnel**<br/> Spécifie les données à envoyer vers le serveur en même temps que la demande |
 | **function(data,status,xhr)** | **Optionnel**<br/> Indique une fonction à exécuter la méthode est terminée<br/>Paramètres supplémentaires : <br/>**- data** - contient les données résultant de la demande <br/> **- status** - contient l'état de la demande ("success", "notmodified", "error", "timeout", ou "parsererror")<br/> **- xhr** - contient l'objet XMLHttpRequest |
-| **dataType** | **Optionnel**<br/>Spécifie le type de données attendu de la réponse du serveur. Par défaut jQuery effectue une estimation automatique (*xml*, *json*, *script*, ou *html*) |
+| **dataType** | **Optionnel**<br/>Spécifie le type de données attendu de la réponse du serveur. Par défaut jQuery effectue une estimation automatique (HTML, PHP, TXT, XML et JSON) |
 
 ## Exemples
 
@@ -51,12 +51,43 @@ $.get('inc/test.html', function( data, status ) {
 });
 ```
 
-### Charger des données de type json
+### Charger des données de type JSON
 
-Voici un exemple de chargement de données issues du fichier *json*.
+Voici un exemple de chargement de données issues du fichier *JSON* à l'aide de `.get()`.
+
+Prenons l'exemple de fichier JSON.
+
+```json
+{
+    "name": "Jean-Michel",
+    "email": "jeanmich@caramail.com"
+}
+```
+
+Voici le script necessaire à l'affichage des informations.
 
 ```js
 $.get('inc/user.json', function( data ) {
 	$('#result').html( data.name + ' : ' +  data.email );
 }, 'json');
+```
+
+JQuery à aussi une méthode raccoucie pour le JSON [`.getJSON()`](http://api.jquery.com/jquery.getjson/)
+
+```js
+$.getJSON('inc/user.json', function( data ) {
+	$('#result').html( data.name + ' : ' +  data.email );
+});
+```
+
+Ce dernier script est le raccouci de la méthode ajax suivante.
+
+```js
+$.ajax({
+    dataType: "json",
+    url: 'inc/test.html',
+    success: function (data) {
+    	$('#result').html( data.name + ' : ' +  data.email );
+    }
+});
 ```

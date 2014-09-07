@@ -69,10 +69,16 @@ $('#a').click(function(){
 La méthode `.css()` affecte les style CSS à l'élément selectionné.
 Elle agit aussi comme un *getter*, et permet donc d'obtenir la chaîne de caractère de la valeur CSS demandée.
 
-L'exemple suivant ajout un fond rouge à `class="box"`.
+L'exemple suivant ajoute un fond rouge à `class="box"`.
 
 ```js
 $('.box').css('background-color','red');
+```
+
+Voici le résultat :
+
+```html
+<div class="box" style="background-color: red;">…</div>
 ```
 
 Nous pouvons bien sûr ajouté plusieurs style CSS en même temps, sous forme de tableau.
