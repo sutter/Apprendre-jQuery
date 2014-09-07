@@ -1,0 +1,1008 @@
+<!DOCTYPE HTML>
+<html lang="en-US" manifest="./manifest.appcache">
+    
+    <head>
+        
+        <meta charset="UTF-8">
+        <title>La méthode .get() | Apprendre jQuery</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 0.7.0">
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+        
+    
+    
+    
+    <link rel="next" href="./la_methode_post.html" />
+    
+    
+    <link rel="prev" href="./la_methode_load.html" />
+    
+
+        
+    </head>
+    <body>
+        
+        
+<link rel="stylesheet" href="gitbook/style.css">
+
+
+        
+    <div class="book"  data-level="12.2" data-basepath="." data-revision="1410070225048">
+    <div class="book-header">
+    <!-- Actions Left -->
+    <a href="#" class="btn pull-left toggle-summary" aria-label="Toggle summary"><i class="fa fa-align-justify"></i></a>
+    
+    <a href="https://github.com/null" target="_blank" class="btn pull-left home-bookmark" aria-label="GitHub home"><i class="fa fa-bookmark-o"></i></a>
+    
+    <a href="#" class="btn pull-left toggle-search" aria-label="Toggle search"><i class="fa fa-search"></i></a>
+    <span id="font-settings-wrapper">
+        <a href="#" class="btn pull-left toggle-font-settings" aria-label="Toggle font settings"><i class="fa fa-font"></i>
+        </a>
+        <div class="dropdown-menu font-settings">
+    <div class="dropdown-caret">
+        <span class="caret-outer"></span>
+        <span class="caret-inner"></span>
+    </div>
+
+    <div class="btn-group btn-block">
+        <button id="reduce-font-size" class="btn btn-default">A</button>
+        <button id="enlarge-font-size" class="btn btn-default">A</button>
+    </div>
+
+    <ul class="list-group font-family-list">
+        <li class="list-group-item" data-font="0">Serif</li>
+        <li class="list-group-item" data-font="1">Sans</li>
+    </ul>
+
+    <div class="btn-group btn-group-xs btn-block color-theme-list">
+        <button type="button" class="btn btn-default" id="color-theme-preview-0" data-theme="0">White</button>
+        <button type="button" class="btn btn-default" id="color-theme-preview-1" data-theme="1">Sepia</button>
+        <button type="button" class="btn btn-default" id="color-theme-preview-2" data-theme="2">Night</button>
+    </div>
+</div>
+
+    </span>
+
+    <!-- Actions Right -->
+    
+    <a href="#" target="_blank" class="btn pull-right google-plus-sharing-link sharing-link" data-sharing="google-plus" aria-label="Share on Google Plus"><i class="fa fa-google-plus"></i></a>
+    
+    
+    <a href="#" target="_blank" class="btn pull-right facebook-sharing-link sharing-link" data-sharing="facebook" aria-label="Share on Facebook"><i class="fa fa-facebook"></i></a>
+    
+    
+    <a href="#" target="_blank" class="btn pull-right twitter-sharing-link sharing-link" data-sharing="twitter" aria-label="Share on Twitter"><i class="fa fa-twitter"></i></a>
+    
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-spinner fa-spin"></i>
+        <a href="./" >Apprendre jQuery</a>
+    </h1>
+</div>
+
+    
+
+<div class="book-summary">
+    <div class="book-search">
+        <input type="text" placeholder="Search" class="form-control" />
+    </div>
+    <ul class="summary">
+        
+        
+
+        
+
+        
+
+	
+
+        
+
+        
+    
+        
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="./index.html">
+                        <i class="fa fa-check"></i>
+                        
+                         Introduction
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1" data-path="presentation_de_jquery.html">
+            
+                
+                    <a href="./presentation_de_jquery.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.</b>
+                        
+                         Présentation de jQuery
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="2" data-path="rappel_javascript.html">
+            
+                
+                    <a href="./rappel_javascript.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.</b>
+                        
+                         Rappel Javascript
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        
+        <li class="chapter " data-level="2.1" data-path="les_variables.html">
+            
+                
+                    <a href="./les_variables.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.1.</b>
+                        
+                         Les variables
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="2.2" data-path="les_types.html">
+            
+                
+                    <a href="./les_types.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.2.</b>
+                        
+                         Les types
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="2.3" data-path="les_operateurs_arithmetiques.html">
+            
+                
+                    <a href="./les_operateurs_arithmetiques.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.3.</b>
+                        
+                         Les opérateurs arithmétiques
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="2.4" data-path="la_concatenation.html">
+            
+                
+                    <a href="./la_concatenation.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.4.</b>
+                        
+                         La concaténation
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="2.5" data-path="les_conditions.html">
+            
+                
+                    <a href="./les_conditions.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.5.</b>
+                        
+                         Les conditions
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="2.6" data-path="les_boucles.html">
+            
+                
+                    <a href="./les_boucles.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.6.</b>
+                        
+                         Les boucles
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="2.7" data-path="les_fonctions.html">
+            
+                
+                    <a href="./les_fonctions.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.7.</b>
+                        
+                         Les fonctions
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="3" data-path="installation/README.html">
+            
+                
+                    <a href="./installation/README.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.</b>
+                        
+                         Installation
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="4" data-path="premiers_pas/README.html">
+            
+                
+                    <a href="./premiers_pas/README.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.</b>
+                        
+                         Premiers pas
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="5" data-path="le_dom/README.html">
+            
+                
+                    <a href="./le_dom/README.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.</b>
+                        
+                         Le DOM
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="6" data-path="les_selecteurs/README.html">
+            
+                
+                    <a href="./les_selecteurs/README.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.</b>
+                        
+                         Sélectionner des éléments
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="7" data-path="chainage_de_methode/README.html">
+            
+                
+                    <a href="./chainage_de_methode/README.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.</b>
+                        
+                         Notions indispensables
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="8" data-path="parcourir_le_dom/README.html">
+            
+                
+                    <a href="./parcourir_le_dom/README.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.</b>
+                        
+                         Parcourir le DOM
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        
+        <li class="chapter " data-level="8.1" data-path="parcourir_le_dom/les_parents.html">
+            
+                
+                    <a href="./parcourir_le_dom/les_parents.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.1.</b>
+                        
+                         Les ancêtres
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="8.2" data-path="parcourir_le_dom/les_enfants.html">
+            
+                
+                    <a href="./parcourir_le_dom/les_enfants.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.2.</b>
+                        
+                         Les descendants
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="8.3" data-path="parcourir_le_dom/les_freres.html">
+            
+                
+                    <a href="./parcourir_le_dom/les_freres.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.3.</b>
+                        
+                         Les frères
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="8.4" data-path="parcourir_le_dom/les_filtres.html">
+            
+                
+                    <a href="./parcourir_le_dom/les_filtres.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.4.</b>
+                        
+                         Les filtres
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="9" data-path="la_gestion_des_evenements/README.html">
+            
+                
+                    <a href="./la_gestion_des_evenements/README.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>9.</b>
+                        
+                         Gestion des événements
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        
+        <li class="chapter " data-level="9.1" data-path="la_gestion_des_evenements/evenement_de_navigateur.html">
+            
+                
+                    <a href="./la_gestion_des_evenements/evenement_de_navigateur.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>9.1.</b>
+                        
+                         Événement de navigateur
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="9.2" data-path="la_gestion_des_evenements/gestionnaire_dattachement.html">
+            
+                
+                    <a href="./la_gestion_des_evenements/gestionnaire_dattachement.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>9.2.</b>
+                        
+                         Gestionnaire d&#39;attachement d&#39;événement
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="9.3" data-path="la_gestion_des_evenements/les_alias.html">
+            
+                
+                    <a href="./la_gestion_des_evenements/les_alias.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>9.3.</b>
+                        
+                         Les méthodes d&#39;événements
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="10" data-path="manipuler_le_dom/README.html">
+            
+                
+                    <a href="./manipuler_le_dom/README.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>10.</b>
+                        
+                         Manipuler le DOM
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        
+        <li class="chapter " data-level="10.1" data-path="manipuler_le_dom/manipuler_le_texte.html">
+            
+                
+                    <a href="./manipuler_le_dom/manipuler_le_texte.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>10.1.</b>
+                        
+                         Manipuler le texte
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="10.2" data-path="manipuler_le_dom/supprimer.html">
+            
+                
+                    <a href="./manipuler_le_dom/supprimer.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>10.2.</b>
+                        
+                         Supprimer
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="10.3" data-path="manipuler_le_dom/manipuler_le_css.html">
+            
+                
+                    <a href="./manipuler_le_dom/manipuler_le_css.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>10.3.</b>
+                        
+                         Manipuler le CSS
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="10.4" data-path="manipuler_le_dom/les_dimensions.html">
+            
+                
+                    <a href="./manipuler_le_dom/les_dimensions.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>10.4.</b>
+                        
+                         Les dimensions
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="11" data-path="les_effets/README.html">
+            
+                
+                    <a href="./les_effets/README.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>11.</b>
+                        
+                         Les effets
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        
+        <li class="chapter " data-level="11.1" data-path="les_effets/cacher__afficher.html">
+            
+                
+                    <a href="./les_effets/cacher__afficher.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>11.1.</b>
+                        
+                         Cacher / Afficher
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="11.2" data-path="les_effets/les_fondus.html">
+            
+                
+                    <a href="./les_effets/les_fondus.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>11.2.</b>
+                        
+                         Les fondus
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="11.3" data-path="les_effets/plier__deplier.html">
+            
+                
+                    <a href="./les_effets/plier__deplier.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>11.3.</b>
+                        
+                         Plier / Déplier
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="11.4" data-path="les_effets/animation.html">
+            
+                
+                    <a href="./les_effets/animation.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>11.4.</b>
+                        
+                         Animation
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="11.5" data-path="les_effets/stopper_un_effet.html">
+            
+                
+                    <a href="./les_effets/stopper_un_effet.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>11.5.</b>
+                        
+                         Stopper une animation / un effet
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="11.6" data-path="les_effets/ajouter_un_delais.html">
+            
+                
+                    <a href="./les_effets/ajouter_un_delais.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>11.6.</b>
+                        
+                         Ajouter un délais
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="12" data-path="ajax.html">
+            
+                
+                    <a href="./ajax.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>12.</b>
+                        
+                         Ajax
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        
+        <li class="chapter " data-level="12.1" data-path="la_methode_load.html">
+            
+                
+                    <a href="./la_methode_load.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>12.1.</b>
+                        
+                         La méthode .load()
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter active" data-level="12.2" data-path="la_methode_get.html">
+            
+                
+                    <a href="./la_methode_get.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>12.2.</b>
+                        
+                         La méthode .get()
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="12.3" data-path="la_methode_post.html">
+            
+                
+                    <a href="./la_methode_post.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>12.3.</b>
+                        
+                         La méthode .post()
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="12.4" data-path="la_methode_ajax.html">
+            
+                
+                    <a href="./la_methode_ajax.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>12.4.</b>
+                        
+                         La méthode .ajax()
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+
+        
+        <li class="divider"></li>
+        <li>
+            <a href="http://www.gitbook.io/" target="blank" class="gitbook-link">Generated using GitBook</a>
+        </li>
+        
+    </ul>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="page-wrapper" tabindex="-1">
+                <div class="book-progress">
+    <div class="bar">
+        <div class="inner" style="width: 95%;min-width: 92.5%;"></div>
+    </div>
+    <div class="chapters">
+    
+        <a href="./index.html" title="Introduction" class="chapter done new-chapter" data-progress="0" style="left: 0%;"></a>
+    
+        <a href="./presentation_de_jquery.html" title="Présentation de jQuery" class="chapter done new-chapter" data-progress="1" style="left: 2.5%;"></a>
+    
+        <a href="./rappel_javascript.html" title="Rappel Javascript" class="chapter done new-chapter" data-progress="2" style="left: 5%;"></a>
+    
+        <a href="./les_variables.html" title="Les variables" class="chapter done " data-progress="2.1" style="left: 7.5%;"></a>
+    
+        <a href="./les_types.html" title="Les types" class="chapter done " data-progress="2.2" style="left: 10%;"></a>
+    
+        <a href="./les_operateurs_arithmetiques.html" title="Les opérateurs arithmétiques" class="chapter done " data-progress="2.3" style="left: 12.5%;"></a>
+    
+        <a href="./la_concatenation.html" title="La concaténation" class="chapter done " data-progress="2.4" style="left: 15%;"></a>
+    
+        <a href="./les_conditions.html" title="Les conditions" class="chapter done " data-progress="2.5" style="left: 17.5%;"></a>
+    
+        <a href="./les_boucles.html" title="Les boucles" class="chapter done " data-progress="2.6" style="left: 20%;"></a>
+    
+        <a href="./les_fonctions.html" title="Les fonctions" class="chapter done " data-progress="2.7" style="left: 22.5%;"></a>
+    
+        <a href="./installation/README.html" title="Installation" class="chapter done new-chapter" data-progress="3" style="left: 25%;"></a>
+    
+        <a href="./premiers_pas/README.html" title="Premiers pas" class="chapter done new-chapter" data-progress="4" style="left: 27.5%;"></a>
+    
+        <a href="./le_dom/README.html" title="Le DOM" class="chapter done new-chapter" data-progress="5" style="left: 30%;"></a>
+    
+        <a href="./les_selecteurs/README.html" title="Sélectionner des éléments" class="chapter done new-chapter" data-progress="6" style="left: 32.5%;"></a>
+    
+        <a href="./chainage_de_methode/README.html" title="Notions indispensables" class="chapter done new-chapter" data-progress="7" style="left: 35%;"></a>
+    
+        <a href="./parcourir_le_dom/README.html" title="Parcourir le DOM" class="chapter done new-chapter" data-progress="8" style="left: 37.5%;"></a>
+    
+        <a href="./parcourir_le_dom/les_parents.html" title="Les ancêtres" class="chapter done " data-progress="8.1" style="left: 40%;"></a>
+    
+        <a href="./parcourir_le_dom/les_enfants.html" title="Les descendants" class="chapter done " data-progress="8.2" style="left: 42.5%;"></a>
+    
+        <a href="./parcourir_le_dom/les_freres.html" title="Les frères" class="chapter done " data-progress="8.3" style="left: 45%;"></a>
+    
+        <a href="./parcourir_le_dom/les_filtres.html" title="Les filtres" class="chapter done " data-progress="8.4" style="left: 47.5%;"></a>
+    
+        <a href="./la_gestion_des_evenements/README.html" title="Gestion des événements" class="chapter done new-chapter" data-progress="9" style="left: 50%;"></a>
+    
+        <a href="./la_gestion_des_evenements/evenement_de_navigateur.html" title="Événement de navigateur" class="chapter done " data-progress="9.1" style="left: 52.5%;"></a>
+    
+        <a href="./la_gestion_des_evenements/gestionnaire_dattachement.html" title="Gestionnaire d&#39;attachement d&#39;événement" class="chapter done " data-progress="9.2" style="left: 55%;"></a>
+    
+        <a href="./la_gestion_des_evenements/les_alias.html" title="Les méthodes d&#39;événements" class="chapter done " data-progress="9.3" style="left: 57.5%;"></a>
+    
+        <a href="./manipuler_le_dom/README.html" title="Manipuler le DOM" class="chapter done " data-progress="10" style="left: 60%;"></a>
+    
+        <a href="./manipuler_le_dom/manipuler_le_texte.html" title="Manipuler le texte" class="chapter done " data-progress="10.1" style="left: 62.5%;"></a>
+    
+        <a href="./manipuler_le_dom/supprimer.html" title="Supprimer" class="chapter done " data-progress="10.2" style="left: 65%;"></a>
+    
+        <a href="./manipuler_le_dom/manipuler_le_css.html" title="Manipuler le CSS" class="chapter done " data-progress="10.3" style="left: 67.5%;"></a>
+    
+        <a href="./manipuler_le_dom/les_dimensions.html" title="Les dimensions" class="chapter done " data-progress="10.4" style="left: 70%;"></a>
+    
+        <a href="./les_effets/README.html" title="Les effets" class="chapter done " data-progress="11" style="left: 72.5%;"></a>
+    
+        <a href="./les_effets/cacher__afficher.html" title="Cacher / Afficher" class="chapter done " data-progress="11.1" style="left: 75%;"></a>
+    
+        <a href="./les_effets/les_fondus.html" title="Les fondus" class="chapter done " data-progress="11.2" style="left: 77.5%;"></a>
+    
+        <a href="./les_effets/plier__deplier.html" title="Plier / Déplier" class="chapter done " data-progress="11.3" style="left: 80%;"></a>
+    
+        <a href="./les_effets/animation.html" title="Animation" class="chapter done " data-progress="11.4" style="left: 82.5%;"></a>
+    
+        <a href="./les_effets/stopper_un_effet.html" title="Stopper une animation / un effet" class="chapter done " data-progress="11.5" style="left: 85%;"></a>
+    
+        <a href="./les_effets/ajouter_un_delais.html" title="Ajouter un délais" class="chapter done " data-progress="11.6" style="left: 87.5%;"></a>
+    
+        <a href="./ajax.html" title="Ajax" class="chapter done " data-progress="12" style="left: 90%;"></a>
+    
+        <a href="./la_methode_load.html" title="La méthode .load()" class="chapter done " data-progress="12.1" style="left: 92.5%;"></a>
+    
+        <a href="./la_methode_get.html" title="La méthode .get()" class="chapter done " data-progress="12.2" style="left: 95%;"></a>
+    
+        <a href="./la_methode_post.html" title="La méthode .post()" class="chapter  " data-progress="12.3" style="left: 97.5%;"></a>
+    
+        <a href="./la_methode_ajax.html" title="La méthode .ajax()" class="chapter  " data-progress="12.4" style="left: 100%;"></a>
+    
+    </div>
+</div>
+
+                <div class="page-inner">
+                
+                    <section class="normal" id="section-gitbook_528">
+                    
+                        <h1 id="la-mthode-get">La méthode .get()</h1>
+<p><strong>API :</strong> <a href="http://api.jquery.com/jQuery.get/" target="_blank">http://api.jquery.com/jQuery.get/</a></p>
+<p>La méthode <code>.get()</code> permet de recevoir des données.
+Contairemement à la méthode <code>.load()</code>, elle nous permet non pas de recevoir du contenu directement dans l&#39;élément ciblé, mais de nous laisser le choix sur les actions à faire.</p>
+<h2 id="la-mthode-en-dtail">La méthode en détail</h2>
+<pre><code class="lang-js">$.get( url, data, <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(data,status,xhr)</span>, <span class="hljs-title">dataType</span> );</span>
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>Paramètre</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>url</strong></td>
+<td><strong>Requis</strong><br/>Une chaîne contenant l&#39;URL vers laquelle la demande est envoyée</td>
+</tr>
+<tr>
+<td><strong>data</strong></td>
+<td><strong>Optionnel</strong><br/> Spécifie les données à envoyer vers le serveur en même temps que la demande</td>
+</tr>
+<tr>
+<td><strong>function(data,status,xhr)</strong></td>
+<td><strong>Optionnel</strong><br/> Indique une fonction à exécuter la méthode est terminée<br/>Paramètres supplémentaires : <br/><strong>- data</strong> - contient les données résultant de la demande <br/> <strong>- status</strong> - contient l&#39;état de la demande (&quot;success&quot;, &quot;notmodified&quot;, &quot;error&quot;, &quot;timeout&quot;, ou &quot;parsererror&quot;)<br/> <strong>- xhr</strong> - contient l&#39;objet XMLHttpRequest</td>
+</tr>
+<tr>
+<td><strong>dataType</strong></td>
+<td><strong>Optionnel</strong><br/>Spécifie le type de données attendu de la réponse du serveur. Par défaut jQuery effectue une estimation automatique (<em>xml</em>, <em>json</em>, <em>script</em>, ou <em>html</em>)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="exemples">Exemples</h2>
+<h3 id="charger-un-document">Charger un document</h3>
+<p>Prenons l&#39;exemple suivant, le fichier <strong>&#39;inc/test.html&#39;</strong> se charge dans <strong>#result</strong>.</p>
+<pre><code class="lang-js">$.get(<span class="hljs-string">'inc/test.html'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">( data )</span> {</span>
+    $(<span class="hljs-string">'#result'</span>).html( data );
+});
+</code></pre>
+<p>Elle est un raccourci de la fonction <code>.ajax()</code> suivante, que nous verrons dans la prochaine partie.</p>
+<pre><code class="lang-js">$.ajax({
+    url: <span class="hljs-string">'inc/test.html'</span>,
+    success: <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(data)</span> {</span>
+        $(<span class="hljs-string">'#result'</span>).html( data );
+    }
+});
+</code></pre>
+<p>Maintenant, affichons le statut dans la console.</p>
+<pre><code class="lang-js">$.get(<span class="hljs-string">'inc/test.html'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">( data, status )</span> {</span>
+    $(<span class="hljs-string">'#result'</span>).html( data );
+    console.log(status);
+});
+</code></pre>
+<h3 id="charger-des-donnes-de-type-json">Charger des données de type json</h3>
+<p>Voici un exemple de chargement de données issues du fichier <em>json</em>.</p>
+<pre><code class="lang-js">$.get(<span class="hljs-string">'inc/user.json'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">( data )</span> {</span>
+    $(<span class="hljs-string">'#result'</span>).html( data.name + <span class="hljs-string">' : '</span> +  data.email );
+}, <span class="hljs-string">'json'</span>);
+</code></pre>
+
+                    
+                    </section>
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="./la_methode_load.html" class="navigation navigation-prev " aria-label="Previous page: La méthode .load()"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="./la_methode_post.html" class="navigation navigation-next " aria-label="Next page: La méthode .post()"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="gitbook/jsrepl/jsrepl.js" id="jsrepl-script"></script>
+<script src="gitbook/app.js"></script>
+
+    
+    <script src="https://cdn.mathjax.org/mathjax/2.0-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+
+    
+    <script src="gitbook/plugins/gitbook-plugin-mathjax/plugin.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {};
+    gitbook.start(config);
+});
+</script>
+
+        
+    </body>
+    
+</html>
