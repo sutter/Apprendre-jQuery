@@ -41,7 +41,7 @@
 
 
         
-    <div class="book"  data-level="8.1" data-basepath=".." data-revision="1410104234486">
+    <div class="book"  data-level="8.1" data-basepath=".." data-revision="1410189906422">
     
 
 <div class="book-summary">
@@ -447,6 +447,22 @@
                             <b>9.3.</b>
                         
                          Les méthodes d&#39;événements
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="9.4" data-path="la_gestion_des_evenements/stopper_un_evenement.html">
+            
+                
+                    <a href="../la_gestion_des_evenements/stopper_un_evenement.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>9.4.</b>
+                        
+                         La propagation d&#39;événements
                     </a>
                 
             
@@ -877,7 +893,7 @@
                 <div class="page-inner">
                 
                 
-                    <section class="normal" id="section-gitbook_4227">
+                    <section class="normal" id="section-gitbook_23845">
                     
                         <h1 id="parcourir-les-anctres">Parcourir les ancêtres</h1>
 <p>Dans cette partie nous verrons les méthodes <code>parent()</code>,<code>.parents()</code> et <code>.parentUntill()</code>.</p>
@@ -899,8 +915,8 @@ Cette méthode ne traverse qu&#39;un seul niveau dans l&#39;arborescence DOM.</p
 </code></pre>
 <h2 id="mthode-parents">Méthode .parents()</h2>
 <p><strong>API :</strong> <a href="http://api.jquery.com/parents/" target="_blank">http://api.jquery.com/parents/</a></p>
-<p>La méthode <code>.parents()</code> retourne tous les éléments de l&#39;élément sélectionner.</p>
-<p>L&#39;exemple suivant retourne les éléments parents jusqu&#39;à <code>main</code> et leurs ajoute <code>class=&quot;clearfix&quot;</code>.</p>
+<p>La méthode <code>.parents()</code> retourne tous les éléments de l&#39;élément sélectionné.</p>
+<p>L&#39;exemple suivant retourne les éléments parents jusqu&#39;à <code>main</code> et leur ajoute <code>class=&quot;clearfix&quot;</code>.</p>
 <pre><code class="lang-js">$(<span class="hljs-string">'.box-inner'</span>).parents(<span class="hljs-string">'main'</span>).addClass(<span class="hljs-string">'clearfix'</span>);
 </code></pre>
 <p><strong>Résultat</strong></p>
@@ -915,7 +931,7 @@ Cette méthode ne traverse qu&#39;un seul niveau dans l&#39;arborescence DOM.</p
 <h2 id="mthode-parentsuntil">Méthode .parentsUntil()</h2>
 <p><strong>API :</strong> <a href="http://api.jquery.com/parentsUntil/" target="_blank">http://api.jquery.com/parentsUntil/</a></p>
 <p>La méthode <code>.parentsUntil()</code> retourne tous les éléments ancêtres entre deux arguments donnés.</p>
-<p>L&#39;exemple suivant retourne les éléments parents au niveau en dessous de <code>main</code> et leurs ajoute <code>class=&quot;clearfix&quot;</code>.</p>
+<p>L&#39;exemple suivant retourne les éléments parents au niveau en dessous de <code>main</code> et leur ajoute <code>class=&quot;clearfix&quot;</code>.</p>
 <pre><code class="lang-js">$(<span class="hljs-string">'.box-inner'</span>).parentsUntil(<span class="hljs-string">'main'</span>).addClass(<span class="hljs-string">'clearfix'</span>);
 </code></pre>
 <p><strong>Résultat</strong></p>

@@ -112,7 +112,7 @@ $('.item').filter('.other-class').addClass('selected');
 **API :** http://api.jquery.com/not/
 
 La méthode `.not()` retourne tous les éléments qui ne correspondent pas aux critères.
-C'est contraire de la méthode `.filter()`
+C'est le contraire de la méthode `.filter()`
 
 L'exemple suivant ajoute `class="selected"` qui ne sont pas `li` ayant aucune classe.
 

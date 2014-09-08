@@ -41,7 +41,7 @@
 
 
         
-    <div class="book"  data-level="2.2" data-basepath="." data-revision="1410104234486">
+    <div class="book"  data-level="2.2" data-basepath="." data-revision="1410189906422">
     
 
 <div class="book-summary">
@@ -447,6 +447,22 @@
                             <b>9.3.</b>
                         
                          Les méthodes d&#39;événements
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="9.4" data-path="la_gestion_des_evenements/stopper_un_evenement.html">
+            
+                
+                    <a href="./la_gestion_des_evenements/stopper_un_evenement.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>9.4.</b>
+                        
+                         La propagation d&#39;événements
                     </a>
                 
             
@@ -877,7 +893,7 @@
                 <div class="page-inner">
                 
                 
-                    <section class="normal" id="section-gitbook_4214">
+                    <section class="normal" id="section-gitbook_23832">
                     
                         <h1 id="les-types">Les types</h1>
 <h2 id="les-chanes-de-caractres">Les chaînes de caractères</h2>
@@ -889,21 +905,28 @@ On peut l&#39;assigner de deux façons différentes.</p>
 <p><strong>Avec des apostrophes</strong></p>
 <pre><code class="lang-js">maVariable = <span class="hljs-string">'J\'aime JavaScript'</span>;
 </code></pre>
-<p><strong>Attention</strong>, si vous voulez des apostrophes pour déclarer votre variable et que vous utilisez des apostrophes dans le texte vous devez échapper des derniers avec le caractère <code>\</code> (antislash).
-Sinon JavaScript croira que le code s’arrêtera à la première apostrophe, et produira une erreur.</p>
+<p><strong>Attention</strong>, si vous voulez des apostrophes pour déclarer votre variable et que vous utilisez des apostrophes dans le texte vous devez échapper les derniers avec le caractère <code>\</code> (antislash).
+Dans le cas contraire, JavaScript pensera que le code s’arrête à la première apostrophe et produira une erreur.</p>
 <h2 id="le-type-numrique">Le type numérique</h2>
-<p>Ce type de variable représente tout nombre, que ce soit un entier, un négatif, un nombre scientifique, etc.</p>
+<p>Ce type de variable représente tout nombre  que ce soit un entier, un négatif, un nombre scientifique, etc.</p>
 <pre><code class="lang-js">maVariable = <span class="hljs-number">3</span>;
 </code></pre>
 <p>Un chiffre décimal se déclare avec un point comme séparateur et non une virgule.</p>
 <pre><code class="lang-js">maVariable = <span class="hljs-number">3.5</span>;
 </code></pre>
-<p><strong>Attention</strong>, si vous écrivez le nombre entre des guillemets ou des apostrophes il sera reconnu comme une chaîne de caractères.</p>
+<p><strong>Attention</strong>, si vous écrivez le nombre entre guillemets ou avec apostrophes, il sera reconnu comme une chaîne de caractères.</p>
 <pre><code class="lang-js">maVariable = <span class="hljs-string">'3'</span>; <span class="hljs-comment">// Chaîne de caractères</span>
 </code></pre>
 <h2 id="les-boolens">Les booléens</h2>
 <p>Désigne un paramètre qui peut avoir comme valeur <strong>true</strong> ou <strong>false</strong>.</p>
-<p>Lorsqu&#39;aucune valeur n&#39;est passée, ou la valeur 0, ou une chaîne de caractères vide, ou null, ou undefined ou bien NaN, la valeur de l&#39;objet est initialisée à <code>False</code>.<br/>Dans tous les autres cas, l&#39;objet Boolean possédera la valeur <code>True</code>.</p>
+<p>Lorsque :</p>
+<ul>
+<li>aucune valeur n&#39;est passée ;</li>
+<li>la valeur est égale à <em>0</em> ;</li>
+<li>une chaîne de caractères est vide, <em>null</em>, <em>undefined</em> ou <em>NaN</em></li>
+</ul>
+<p>la valeur de l&#39;objet est initialisée à <code>False</code>.</p>
+<p>Dans tous les autres cas, l&#39;objet Boolean possédera la valeur <code>True</code>.</p>
 <p>Ces deux états s&#39;écrivent de la façon suivante :</p>
 <pre><code class="lang-js"><span class="hljs-keyword">var</span> isTrue = <span class="hljs-literal">true</span>;
 <span class="hljs-keyword">var</span> isFalse = <span class="hljs-literal">false</span>;

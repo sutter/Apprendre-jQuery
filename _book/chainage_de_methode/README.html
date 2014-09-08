@@ -41,7 +41,7 @@
 
 
         
-    <div class="book"  data-level="7" data-basepath=".." data-revision="1410104234486">
+    <div class="book"  data-level="7" data-basepath=".." data-revision="1410189906422">
     
 
 <div class="book-summary">
@@ -447,6 +447,22 @@
                             <b>9.3.</b>
                         
                          Les méthodes d&#39;événements
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="9.4" data-path="la_gestion_des_evenements/stopper_un_evenement.html">
+            
+                
+                    <a href="../la_gestion_des_evenements/stopper_un_evenement.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>9.4.</b>
+                        
+                         La propagation d&#39;événements
                     </a>
                 
             
@@ -877,12 +893,12 @@
                 <div class="page-inner">
                 
                 
-                    <section class="normal" id="section-gitbook_4187">
+                    <section class="normal" id="section-gitbook_23804">
                     
                         <h1 id="notions-indispensables">Notions indispensables</h1>
 <h2 id="les-fonctions-de-rappel">Les fonctions de rappel</h2>
 <p>Les fonctions de rappel ou <strong>callback</strong> sont des fonctions qui s&#39;exécutent lorsque l&#39;autre fonction se termine.</p>
-<p>Prenons l&#39;exemple ci-dessous, au clic sur un bouton nous faisons disparaître un texte, puis nous affichons un texte dans un boite d&#39;alerte.</p>
+<p>Prenons l&#39;exemple ci-dessous, au clic sur un bouton nous faisons disparaître un texte, puis nous affichons un texte dans une boite d&#39;alerte.</p>
 <pre><code class="lang-js">$(<span class="hljs-string">'button'</span>).click(<span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span></span>{
     $(<span class="hljs-string">'.bg-muted'</span>).hide(<span class="hljs-string">'slow'</span>,<span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span></span>{
       alert(<span class="hljs-string">'Le paragraphe est maintenant caché'</span>);
@@ -892,17 +908,17 @@
 <p><p data-height="200" data-theme-id="7816" data-slug-hash="JFxlm" data-default-tab="result" class='codepen'>See the Pen <a href='http://codepen.io/sutterlity/pen/JFxlm/'>JFxlm</a> by Sutterlity (<a href='http://codepen.io/sutterlity'>@sutterlity</a>) on <a href='http://codepen.io'>CodePen</a>.</p></p>
 <script async src="//codepen.io/assets/embed/ei.js"></script>
 
-<h2 id="chainage-de-mthode">Chainage de méthode</h2>
+<h2 id="chainage-de-mthodes">Chainage de méthodes</h2>
 <p>Il est possible d&#39;appliquer plusieurs méthodes les unes à la suite des autres.</p>
 <p>Plutôt que d&#39;écrire les instructions comme ceci :</p>
 <pre><code class="lang-js">$(<span class="hljs-string">'.box'</span>).addClass(<span class="hljs-string">'is-collapsed'</span>);
 $(<span class="hljs-string">'.box'</span>).slideUp();
 </code></pre>
-<p>Optimiser votre code comme cela :</p>
+<p>Optimisez votre code comme cela :</p>
 <pre><code class="lang-js">$(<span class="hljs-string">'.box'</span>).addClass(<span class="hljs-string">'is-collapsed'</span>).slideUp();
 </code></pre>
 <p>Vous pouvez même faire des choses plus complexes.<br/>
-Par exemple ajouter une classe <code>.active</code> sur un élément au clic, puis faire une recherche dans ce <em>pattern</em> pour rechercher un élément qui a la classe <code>.inner</code> pour lui supprimer sa classe.</p>
+Par exemple, ajouter une classe <code>.active</code> sur un élément au clic, puis faire une recherche dans ce <em>pattern</em> pour rechercher un élément qui a la classe <code>.inner</code> pour lui supprimer sa classe.</p>
 <pre><code class="lang-js">$(<span class="hljs-string">'.btn'</span>).click(<span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span></span>{
     $(<span class="hljs-keyword">this</span>).addClass(<span class="hljs-string">'active'</span>).find(<span class="hljs-string">'.inner'</span>).removeClass();
     <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;

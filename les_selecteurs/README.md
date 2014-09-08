@@ -3,7 +3,7 @@
 Un des grands avantages de jQuery est d'utiliser la syntaxe des [sélecteurs CSS](http://www.w3.org/TR/css3-selectors/).<br/>
 Pour sélectionner les *noeuds du DOM* (éléments) nous utiliserons la syntaxe `$(sélecteur)`.
 
-Bien entendu, la liste ci-dessous est incomplète et ne reprend que les sélecteurs les plus utilisés.<br/>Vous pouvez en trouver davantage dans [l'API jQuery](http://api.jquery.com/category/selectors/).
+Bien entendu, la liste ci-dessous n'est pas exhaustive et ne reprend que les sélecteurs les plus utilisés.<br/>Vous pouvez en trouver davantage dans [l'API jQuery](http://api.jquery.com/category/selectors/).
 
 ## Combiner des sélecteurs
 | Sélecteurs | Exemple | Éléments selectionnés |
@@ -19,8 +19,8 @@ Bien entendu, la liste ci-dessous est incomplète et ne reprend que les sélecte
 
 | Sélecteurs | Exemple | Éléments selectionnés |
 | -- | -- | -- |
-| [*****](http://api.jquery.com/all-selector/) | `$('*')` | Tout les éléments |
-| [**Balise html**](http://api.jquery.com/element-selector/) | `$('p')` | Tout les paragraphes |
+| [*****](http://api.jquery.com/all-selector/) | `$('*')` | Tous les éléments |
+| [**Balise html**](http://api.jquery.com/element-selector/) | `$('p')` | Tous les paragraphes |
 | [**#id**](http://api.jquery.com/id-selector/) | `$('#header')` | Les éléments avec **id="header"** |
 | [**.class**](http://api.jquery.com/class-selector/) | `$('.box')` | Les éléments avec **class="box"** |
 | [**A > B**](http://api.jquery.com/child-selector/) | `$('.box > p'`) | Les élément **B** enfants directs de **A**|
@@ -50,7 +50,7 @@ Bien entendu, la liste ci-dessous est incomplète et ne reprend que les sélecte
 | [**:parent**](http://api.jquery.com/parent-selector/) | `$('.box:parent')` | Les éléments **class="box"** non vides |
 | [**:empty**](http://api.jquery.com/empty-selector/) | `$('.box:empty')` | Les éléments **class="box"** vides |
 
-## Les sélecteur d'attribut
+## Les sélecteurs d'attribut
 
 **API :** [http://api.jquery.com/category/selectors/attribute-selectors/](http://api.jquery.com/category/selectors/attribute-selectors/)
 
@@ -88,7 +88,7 @@ Bien entendu, la liste ci-dessous est incomplète et ne reprend que les sélecte
 | Sélecteurs | Exemple | Éléments selectionnés |
 | -- | -- | -- |
 | [**:hidden**](http://api.jquery.com/hidden-selector/) | `$('.box:hidden')` | Les éléments **class="box"** cachés |
-| [**:visible**](http://api.jquery.com/visible-selector/) | `$('.box:visible')` | Les éléments **class=".box"** qui ont une largeur ou une hauteur plus grande que **0**. |
+| [**:visible**](http://api.jquery.com/visible-selector/) | `$('.box:visible')` | Les éléments **class=".box"** ayant une largeur ou une hauteur plus grande que **0**. |
 
 ## Les sélecteurs de formulaires
 

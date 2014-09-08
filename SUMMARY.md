@@ -24,6 +24,7 @@
    * [Événement de navigateur](la_gestion_des_evenements/evenement_de_navigateur.md)
    * [Gestionnaire d'attachement d'événement](la_gestion_des_evenements/gestionnaire_dattachement.md)
    * [Les méthodes d'événements](la_gestion_des_evenements/les_alias.md)
+   * [La propagation d'événements](la_gestion_des_evenements/stopper_un_evenement.md)
 * [Manipuler le DOM](manipuler_le_dom/README.md)
    * [Manipuler le texte](manipuler_le_dom/manipuler_le_texte.md)
    * [Supprimer](manipuler_le_dom/supprimer.md)

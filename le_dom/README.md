@@ -4,9 +4,9 @@ Le DOM ou **Document Object Model** est un standard du W3C qui définit l'arbore
 
 jQuery est utilisé pour manipuler le DOM en écriture et en lecture.
 
-Prenons le cas ou le DOM n'est pas encore totalement construit lors du chargement de la page et que le script jQuery est exécuté. Nous nous retrouverons avec des erreurs.
+Prenons le cas où le DOM n'est pas encore totalement construit lors du chargement de la page et que le script jQuery est exécuté ; les sripts produiront des erreurs.
 
-Afin d'éviter ces erreurs et attendre que le DOM soit entièrement chargé, nous utiliserons la méthode `.ready()`.
+Pour attendre que le DOM soit entièrement chargé et ainsi éviter des erreurs, nous utiliserons la méthode `.ready()`.
 
 ```js
 $(document).ready(function() {

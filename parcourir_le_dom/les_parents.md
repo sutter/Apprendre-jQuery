@@ -31,9 +31,9 @@ $('.box-inner').parent().addClass('box');
 
 **API :** http://api.jquery.com/parents/
 
-La méthode `.parents()` retourne tous les éléments de l'élément sélectionner.
+La méthode `.parents()` retourne tous les éléments de l'élément sélectionné.
 
-L'exemple suivant retourne les éléments parents jusqu'à `main` et leurs ajoute `class="clearfix"`.
+L'exemple suivant retourne les éléments parents jusqu'à `main` et leur ajoute `class="clearfix"`.
 
 ```js
 $('.box-inner').parents('main').addClass('clearfix');
@@ -57,7 +57,7 @@ $('.box-inner').parents('main').addClass('clearfix');
 
 La méthode `.parentsUntil()` retourne tous les éléments ancêtres entre deux arguments donnés.
 
-L'exemple suivant retourne les éléments parents au niveau en dessous de `main` et leurs ajoute `class="clearfix"`.
+L'exemple suivant retourne les éléments parents au niveau en dessous de `main` et leur ajoute `class="clearfix"`.
 
 ```js
 $('.box-inner').parentsUntil('main').addClass('clearfix');

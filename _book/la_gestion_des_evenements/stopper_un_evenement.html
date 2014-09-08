@@ -4,7 +4,7 @@
     <head>
         
         <meta charset="UTF-8">
-        <title>Ajouter un délais | Apprendre jQuery</title>
+        <title>La propagation d&#39;événements | Apprendre jQuery</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 1.0.3">
@@ -18,10 +18,10 @@
     
     
     
-    <link rel="next" href="../ajax.html" />
+    <link rel="next" href="../manipuler_le_dom/README.html" />
     
     
-    <link rel="prev" href="../les_effets/stopper_un_effet.html" />
+    <link rel="prev" href="../la_gestion_des_evenements/les_alias.html" />
     
 
         
@@ -41,7 +41,7 @@
 
 
         
-    <div class="book"  data-level="11.6" data-basepath=".." data-revision="1410189906422">
+    <div class="book"  data-level="9.4" data-basepath=".." data-revision="1410189906422">
     
 
 <div class="book-summary">
@@ -454,7 +454,7 @@
         </li>
     
         
-        <li class="chapter " data-level="9.4" data-path="la_gestion_des_evenements/stopper_un_evenement.html">
+        <li class="chapter active" data-level="9.4" data-path="la_gestion_des_evenements/stopper_un_evenement.html">
             
                 
                     <a href="../la_gestion_des_evenements/stopper_un_evenement.html">
@@ -658,7 +658,7 @@
         </li>
     
         
-        <li class="chapter active" data-level="11.6" data-path="les_effets/ajouter_un_delais.html">
+        <li class="chapter " data-level="11.6" data-path="les_effets/ajouter_un_delais.html">
             
                 
                     <a href="../les_effets/ajouter_un_delais.html">
@@ -893,30 +893,62 @@
                 <div class="page-inner">
                 
                 
-                    <section class="normal" id="section-gitbook_23823">
+                    <section class="normal" id="section-gitbook_23815">
                     
-                        <h1 id="ajouter-un-dlais">Ajouter un délais</h1>
-<p>Dans cette partie, nous verrons la méthode <code>.delay()</code> servant à ajouter un délais avant l&#39;execution d&#39;un effet.</p>
-<h2 id="mthode-delay">Méthode .delay()</h2>
-<p><strong>API :</strong> <a href="http://api.jquery.com/delay/" target="_blank">http://api.jquery.com/delay/</a></p>
-<pre><code class="lang-js">$(selecteur).delay(Durée)
+                        <h1 id="la-propagation-dvnements">La propagation d&#39;événements</h1>
+<p>Lorsque que vous déclarez un événement il se propage à travers le DOM jusqu&#39;à rencontrer l&#39;élément ciblé.</p>
+<p>Prenons le cas d&#39;un élément unique :</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"totop"</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span>&gt;</span>Haut de page<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
 </code></pre>
-<p>Prenons le cas de deux éléments <strong>#a</strong> et <strong>#b</strong>, qui reçoivent successivement une méthode <code>.slideUp()</code>puis <code>.slideDown()</code>. Nous ajoutons à l&#39;élément <strong>#b</strong> une méthode <code>.delay(1000)</code> entre les deux méthodes de <em>slide</em>. Nous pouvons nous rendre compte qu&#39;au click sur le bouton les effets de <strong>#a</strong> sont successifs, tandis que <strong>#b</strong> il y a une temporisation de 1s entre les deux.</p>
-<pre><code class="lang-js">$(<span class="hljs-string">'#play'</span>).click(<span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span></span>{
-
-    <span class="hljs-comment">// Pas de .delay()</span>
-    $(<span class="hljs-string">'#a'</span>).slideUp().slideDown();
-
-    <span class="hljs-comment">// Avec .delay()</span>
-    $(<span class="hljs-string">'#b'</span>).slideUp().delay(<span class="hljs-number">1000</span>).slideDown();
-
+<pre><code class="lang-js">$(<span class="hljs-string">"#totop"</span>).click(<span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span></span>{
+    alert($(<span class="hljs-keyword">this</span>).html());
 });
-`
 </code></pre>
-<p><p data-height="266" data-theme-id="7816" data-slug-hash="aFthI" data-default-tab="result" class='codepen'>See the Pen <a href='http://codepen.io/sutterlity/pen/aFthI/'>.delay</a> by Sutterlity (<a href='http://codepen.io/sutterlity'>@sutterlity</a>) on <a href='http://codepen.io'>CodePen</a>.</p></p>
-<script async src="//codepen.io/assets/embed/ei.js"></script>
-
-<p>Pour information la méthode <code>.delay()</code> ne s&#39;applique qu&#39;aux effets. Pour temporiser autre chose, il faut employer la fonction JavaScript <a href="https://developer.mozilla.org/fr/docs/DOM/window.setTimeout" target="_blank">setTimeout</a>.</p>
+<p>L&#39;événement pointe sur un élément unique <code>id=&quot;yolo&quot;</code> et le script est exécuté une seule fois.</p>
+<p>Tandis que dans le cas suivant, le message d&#39;alerte apparaîtra deux fois.</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-title">ul</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>Niveau 1<span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>Niveau 1<span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">ul</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>Niveau 2<span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>Niveau 2<span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>Niveau 1<span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>Niveau 1<span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span>
+</code></pre>
+<pre><code class="lang-js">$(<span class="hljs-string">"li"</span>).click(<span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span></span>{
+    alert($(<span class="hljs-keyword">this</span>).html());
+});
+</code></pre>
+<p>L&#39;événement se propagera à travers tout les <strong>li</strong> du document suivant le <strong>principe de bouillonnement</strong>.
+Le script sera exécuté à chaque élément <strong>li</strong> rencontré, peu importe son niveau dans le DOM.
+C&#39;est-ce que l&#39;ont appelle la propagation d&#39;événements.</p>
+<h2 id="viter-la-propagation">Éviter la propagation</h2>
+<p>Dans certains cas la propagation est problématique, heureusement jQuery propose deux moyens de les éviter.</p>
+<h3 id="eventstoppropagation">event.stopPropagation()</h3>
+<p><strong>API :</strong> <a href="http://api.jquery.com/event.stoppropagation/" target="_blank">http://api.jquery.com/event.stoppropagation/</a></p>
+<p><code>event.stopPropagation()</code> empêche l&#39;évènement de se propager dans l&#39;arbre DOM en évitant le bouillonnement.
+Dans l&#39;exemple ci-dessous, le message d&#39;alerte n&#39;apparaît qu&#39;une fois.</p>
+<pre><code class="lang-js">$(<span class="hljs-string">"li"</span>).click(<span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(e)</span></span>{
+    event.stopPropagation();
+    alert($(<span class="hljs-keyword">this</span>).html());
+});
+</code></pre>
+<h3 id="return-false">return false</h3>
+<p><code>return false</code> empêche-lui aussi l&#39;évènement de se propager dans l&#39;arbre DOM en évitant le bouillonnement comme <code>event.stopPropagation()</code>, mais il annule aussi l&#39;action en cours.</p>
+<p>Dans l&#39;exemple suivant nous affichons un message d&#39;alerte et nous empêchons de mofidier l&#39;URL au clic sur une l&#39;ancre.</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"totop"</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span>&gt;</span>Haut de page<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+</code></pre>
+<pre><code class="lang-js">$(<span class="hljs-string">"#totop"</span>).click(<span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span></span>{
+    alert($(<span class="hljs-keyword">this</span>).html());
+    <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>
+});
+</code></pre>
+<p><strong>Attention</strong><br/>
+Les déclarations en dessous de <code>return false</code> ne sont pas traitées.</p>
 
                     
                     </section>
@@ -927,10 +959,10 @@
         </div>
 
         
-        <a href="../les_effets/stopper_un_effet.html" class="navigation navigation-prev " aria-label="Previous page: Stopper une animation / un effet"><i class="fa fa-angle-left"></i></a>
+        <a href="../la_gestion_des_evenements/les_alias.html" class="navigation navigation-prev " aria-label="Previous page: Les méthodes d&#39;événements"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../ajax.html" class="navigation navigation-next " aria-label="Next page: Ajax"><i class="fa fa-angle-right"></i></a>
+        <a href="../manipuler_le_dom/README.html" class="navigation navigation-next " aria-label="Next page: Manipuler le DOM"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>

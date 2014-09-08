@@ -14,7 +14,7 @@ Ils sont à la base de tout calcul et sont au nombre de 5 :
 
 ## Calculs simples
 
-Il est relativement simple de faire des calculs avec JavaScript.
+Faire des calculs avec JavaScript s'avère très simple.
 
 ```js
 var result = 7 + 2;
@@ -38,14 +38,14 @@ console.log(result); // Affiche : 9
 
 ## Simplification des calculs
 
-Il arrive relativement souvent d’écrire ce genre de calcul.
+Il est fréquent d’écrire ce type de calcul.
 ```js
 var maVariable = 7;
     maVariable = maVariable + 2
 console.log(maVariable); // Affiche : 9
 ```
 
-Il existe une façon plus concise pour éviter la redondance de code.
+Il existe une façon plus concise permettant d'éviter la redondance de variables.
 
 ```js
 var maVariable = 7;
@@ -53,7 +53,7 @@ var maVariable = 7;
 console.log(maVariable); // Affiche : 9
 ```
 
-Il est également possible de procéder de la même manière pour chaque opérateur.
+On procèdera de la même manière pour chaque opérateur.
 
 ```js
 maVariable += 2;

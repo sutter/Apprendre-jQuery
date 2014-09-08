@@ -41,7 +41,7 @@
 
 
         
-    <div class="book"  data-level="3" data-basepath=".." data-revision="1410104234486">
+    <div class="book"  data-level="3" data-basepath=".." data-revision="1410189906422">
     
 
 <div class="book-summary">
@@ -447,6 +447,22 @@
                             <b>9.3.</b>
                         
                          Les méthodes d&#39;événements
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="9.4" data-path="la_gestion_des_evenements/stopper_un_evenement.html">
+            
+                
+                    <a href="../la_gestion_des_evenements/stopper_un_evenement.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>9.4.</b>
+                        
+                         La propagation d&#39;événements
                     </a>
                 
             
@@ -877,28 +893,28 @@
                 <div class="page-inner">
                 
                 
-                    <section class="normal" id="section-gitbook_4188">
+                    <section class="normal" id="section-gitbook_23806">
                     
                         <h1 id="installation">Installation</h1>
 <p>jQuery est une bibliothèque JavaScript qui n&#39;est pas installée de base dans votre navigateur. Il faut l&#39;ajouter par le biais d&#39;un fichier ayant pour extension <code>.js</code>.</p>
-<p>Pour l&#39;utiliser dans une page HTML, il faut liais le fichier jQuery par le biais le la balise <code>script</code>.</p>
+<p>Pour l&#39;utiliser dans une page HTML, il faut lier le fichier jQuery par le biais de la balise <code>script</code>.</p>
 <pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-title">head</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">script</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"jquery-2.1.1.min.js"</span>&gt;</span><span class="javascript"></span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-title">head</span>&gt;</span>
 </code></pre>
 <h2 id="installation-locale">Installation locale</h2>
-<p>L&#39;installation en local est idéale si vous n&#39;avez pas toujours accès à internet ou que votre connexion n&#39;est pas très rapide.</p>
-<p>Nous verrons que par la suite ce n&#39;est pas la solution la plus optimisée pour une utilisation en production.</p>
+<p>L&#39;installation en local est idéale si vous n&#39;avez pas toujours accès à internet ou si votre connexion n&#39;est pas très rapide.</p>
+<p>Nous verrons par la suite que ce n&#39;est pas la solution optimale pour une utilisation en production.</p>
 <p>Vous avez besoin de télécharger le fichier sur le site officiel de jQuery : <a href="http://jquery.com/download/" target="_blank">Télécharger jQuery</a></p>
 <p><img src="../img/jquery-download.jpg" alt=""></p>
-<p>Vous pouvez vous rendre compte qu&#39;il existe plusieurs versions de jQuery. Mi 2013 jQuery est passé en version 2.XX laissant de côté la compatibilité avec les versions antérieures d&#39;Internet Explorer 8, allégeant aussi son poids par la même occasion.</p>
-<p>Ne prenez pas peur, vous n&#39;aurez pas à modifier ces fichiers, vous y ferez juste référence dans votre HTML pour l&#39;installation.</p>
+<p>Vous pouvez vous rendre compte qu&#39;il existe plusieurs versions de jQuery. Mi 2013 jQuery est passé en version 2.XX laissant de côté la compatibilité avec les versions antérieures d&#39;Internet Explorer 8, allégeant aussi son poids.</p>
+<p>Ne prenez pas peur, vous n&#39;aurez pas à modifier ces fichiers, vous devez juste y référence dans votre HTML pour l&#39;installation.</p>
 <p>Vous trouverez deux versions du même fichier :</p>
 <ol>
 <li>un nommé &quot;jquery-2.1.1.js&quot;</li>
 <li>un autre nommé &quot;jquery-2.1.1.min.js&quot;</li>
 </ol>
-<p>La version <strong>&#39;2&#39;</strong> avec le suffixe <strong>min</strong> est une version minifiée du fichier de base. C&#39;est-à-dire une version ou les commentaires, les espaces et les tabulations ont étaient supprimées pour réduire le poids du fichier (chargement plus rapide).</p>
+<p>La version <strong>&#39;2&#39;</strong> avec le suffixe <strong>min</strong> est une version minifiée du fichier de base. C&#39;est-à-dire une version où les commentaires, les espaces et les tabulations ont été supprimées pour réduire le poids du fichier (chargement plus rapide).</p>
 <p>Voici l&#39;installation avec le script dans le header :</p>
 <pre><code class="lang-html"><span class="hljs-doctype">&lt;!DOCTYPE html&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-title">html</span> <span class="hljs-attribute">lang</span>=<span class="hljs-value">"fr"</span>&gt;</span>
@@ -929,11 +945,11 @@
 <span class="hljs-tag">&lt;/<span class="hljs-title">html</span>&gt;</span>
 `
 </code></pre>
-<p>Bien évidement il faudra placer nos fichier utilisant la librairie jQuery en dessous de son appel.</p>
+<p>Bien évidement, il faudra placer nos fichiers utilisant la librairie jQuery en dessous de son appel.</p>
 <h2 id="installation-de-jquery-distante">Installation de jQuery distante</h2>
 <p>La manière la plus courante et aussi la plus utilisée est de passer par un CDN.</p>
 <p>Le fichier est mis à disposition sur de multiples serveurs à travers le monde. Ces serveurs sont souvent plus rapides et économisent aussi votre bande passante. L&#39;autre avantage est que de très nombreux sites utilisent cette méthode, donc le fichier jQuery est surement déjà en cache chez votre utilisateur.</p>
-<p>Il existe plus CDN pouvant vous fournir le fichier :</p>
+<p>Il existe plusieurs CDN pouvant vous fournir le fichier :</p>
 <ol>
 <li>CDN jQuery : <a href="http://code.jquery.com/jquery-2.1.1.js" target="_blank">http://code.jquery.com/jquery-2.1.1.js</a></li>
 <li>CDN Google : <a href="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js" target="_blank">http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js</a></li>
@@ -943,7 +959,7 @@
 </code></pre>
 <h2 id="conclusion">Conclusion</h2>
 <ol>
-<li>Pour le développement de votre site utilisez jQuery en local pour la rapidité d&#39;exécution.</li>
+<li>Pour le développement de votre site, utilisez jQuery en local pour la rapidité d&#39;exécution.</li>
 <li>Pour la production, passez par un CDN afin d&#39;utiliser le cache de vos utilisateurs.</li>
 <li>Placez vos scripts en fin de page, pour optimiser le chargement de la page.</li>
 </ol>

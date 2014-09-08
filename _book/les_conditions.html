@@ -41,7 +41,7 @@
 
 
         
-    <div class="book"  data-level="2.5" data-basepath="." data-revision="1410104234486">
+    <div class="book"  data-level="2.5" data-basepath="." data-revision="1410189906422">
     
 
 <div class="book-summary">
@@ -447,6 +447,22 @@
                             <b>9.3.</b>
                         
                          Les méthodes d&#39;événements
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="9.4" data-path="la_gestion_des_evenements/stopper_un_evenement.html">
+            
+                
+                    <a href="./la_gestion_des_evenements/stopper_un_evenement.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>9.4.</b>
+                        
+                         La propagation d&#39;événements
                     </a>
                 
             
@@ -877,13 +893,13 @@
                 <div class="page-inner">
                 
                 
-                    <section class="normal" id="section-gitbook_4203">
+                    <section class="normal" id="section-gitbook_23821">
                     
                         <h1 id="les-conditions">Les conditions</h1>
 <p>On appelle structure conditionnelle les instructions qui permettent de tester si une condition est vraie (true) ou non (false).</p>
 <p>En JavaScript les conditions sont constituées de :</p>
 <ul>
-<li>de valeurs à tester ;</li>
+<li>valeurs à tester ;</li>
 <li>un opérateur logique ;</li>
 <li>un opérateur de comparaison (optionnel).</li>
 </ul>
@@ -989,14 +1005,14 @@
 </tbody>
 </table>
 <h2 id="instruction-if">Instruction if</h2>
-<p>Elle permet d&#39;exécuter une série d&#39;instructions si jamais une condition est réalisée.</p>
+<p>Elle permet d&#39;exécuter une série d&#39;instructions lorsqu&#39;une condition est réalisée.</p>
 <p>La syntaxe de cette expression est la suivante.</p>
 <pre><code class="lang-js">if ( si condition réalisée ) {
     liste d&#39;instructions
 }
 </code></pre>
 <p>Il est possible de définir plusieurs conditions à remplir avec les opérateurs <code>&amp;&amp;</code> et <code>||</code>.</p>
-<p>L&#39;instruction suivante par exemple teste si les deux conditions sont réalisées.</p>
+<p>Par exemple, l&#39;instruction ci-dessous teste si les deux conditions sont réalisées.</p>
 <pre><code class="lang-js"><span class="hljs-keyword">if</span> ( (condition1) &amp;&amp; (condition2) ) { … }
 </code></pre>
 <p>L&#39;instruction suivante exécutera les instructions si l&#39;une ou l&#39;autre des deux conditions est réalisée.</p>
@@ -1014,9 +1030,9 @@
 }
 </code></pre>
 <h2 id="instruction-if--else">Instruction if … else</h2>
-<p>L&#39;instruction if dans sa forme basique ne permet de tester qu&#39;une condition, or la plupart du temps on aimerait pouvoir choisir les instructions à exécuter en cas de non réalisation de la condition.</p>
-<p>L&#39;expression <strong>if … else</strong> permet d&#39;exécuter une autre série d&#39;instructions en cas de non-réalisation de la condition.</p>
-<p>La syntaxe de cette expression est la suivante.</p>
+<p>L&#39;instruction <strong>if</strong> dans sa forme basique permet de tester qu&#39;une condition. Or, la plupart du temps, on aimerait pouvoir choisir les instructions à exécuter lorsque la condition n&#39;est pas remplie.</p>
+<p>L&#39;expression <strong>if … else</strong> permet dès lors d&#39;exécuter une autre série d&#39;instructions en cas de non-réalisation de la condition.</p>
+<p>La syntaxe de cette expression est la suivante :</p>
 <pre><code class="lang-js"><span class="hljs-keyword">if</span> ( si condition réalisée ) {
     <span class="hljs-comment">// liste d'instructions</span>
 }
@@ -1025,7 +1041,7 @@
 }
 </code></pre>
 <p><strong>Remarque :</strong><br/>
-Les structures conditionnelles pouvant être imbriquées, il peut être utile d&#39;indenter le code pour plus de lisibilité, c&#39;est-à-dire de décaler à l&#39;aide d&#39;une tabulation chaque bloc d&#39;instruction pour pouvoir rapidement visualiser l&#39;imbrication des structures !</p>
+Les structures conditionnelles pouvant être imbriquées, il peut être utile d&#39;indenter le code pour plus de lisibilité. En d&#39;autres termes, il s&#39;agit de décaler à l&#39;aide d&#39;une tabulation chaque bloc d&#39;instructions pour pouvoir rapidement visualiser l&#39;imbrication des structures.</p>
 <p><strong>Exemple</strong></p>
 <pre><code class="lang-js"><span class="hljs-comment">// Déclaration de variable et assignation de valeur</span>
 <span class="hljs-keyword">var</span> monArgent = <span class="hljs-number">1</span>;
@@ -1042,8 +1058,8 @@ Les structures conditionnelles pouvant être imbriquées, il peut être utile d&
 }
 </code></pre>
 <h2 id="instruction-else-if">Instruction else if</h2>
-<p>Elle permet d&#39;exécuter une série d&#39;instructions si jamais plusieurs conditions sont réalisées.</p>
-<p>La syntaxe de cette expression est la suivante.</p>
+<p>Cette instruction permet d&#39;exécuter une série d&#39;instructions lorsque plusieurs conditions sont réalisées.</p>
+<p>La syntaxe de cette expression est la suivante :</p>
 <pre><code class="lang-js"><span class="hljs-comment">// Une première condition est testée</span>
 <span class="hljs-keyword">if</span> ( si condition réalisée ) {
     <span class="hljs-comment">// liste d'instructions</span>
@@ -1080,8 +1096,8 @@ Les structures conditionnelles pouvant être imbriquées, il peut être utile d&
 }
 </code></pre>
 <h2 id="instruction-switchcase">Instruction switch...case</h2>
-<p>L&#39;instruction switch permet de faire plusieurs tests de valeurs sur le contenu d&#39;une même variable. Ce branchement conditionnel simplifie beaucoup le test de plusieurs valeurs d&#39;une variable, car cette opération aurait été compliquée (mais possible) avec des if imbriqués.</p>
-<p>La syntaxe de cette expression est la suivante.</p>
+<p>L&#39;instruction switch permet de faire plusieurs tests de valeurs sur le contenu d&#39;une même variable. Ce branchement conditionnel simplifie beaucoup le test de plusieurs valeurs d&#39;une variable. Cette opération aurait ainsi été plus compliquée (mais possible) avec des if imbriqués.</p>
+<p>La syntaxe de cette expression est la suivante :</p>
 <pre><code class="lang-js">switch (Variable) {
     case Valeur1:
         Liste d&#39;instructions;
@@ -1094,10 +1110,10 @@ Les structures conditionnelles pouvant être imbriquées, il peut être utile d&
         break;
 }
 </code></pre>
-<p>Les parenthèses qui suivent le mot clé switch indiquent une expression dont la valeur est testée successivement par chacun des case. Lorsque l&#39;expression testée est égale à une des valeurs suivant un case, la liste d&#39;instruction qui suit celui-ci est exécutée.</p>
-<p>Le mot clé break indique la sortie de la structure conditionnelle. Le mot clé default précède la liste d&#39;instructions qui sera exécutée si l&#39;expression n&#39;est jamais égale à une des valeurs.</p>
-<p><strong>Attention</strong>, il est essentiel de terminer chaque bloc d&#39;instruction par l&#39;instruction break !<br/>
-N&#39;oubliez pas d&#39;insérer des instructions break entre chaque test, ce genre d&#39;oubli est difficile à détecter, car aucune erreur n&#39;est signalée.</p>
+<p>Les parenthèses qui suivent le mot clé <strong>switch</strong> indiquent une expression dont la valeur est testée successivement par chacun des <strong>case</strong>. Lorsque l&#39;expression testée est égale à une des valeurs suivant un <strong>case</strong>, la liste d&#39;instructions qui suit celui-ci est exécutée.</p>
+<p>Le mot clé <strong>break</strong> indique la sortie de la structure conditionnelle. Le mot clé <strong>default</strong> précède la liste d&#39;instructions qui sera exécutée si l&#39;expression n&#39;est jamais égale à une des valeurs.</p>
+<p><strong>Attention</strong>, il est essentiel de terminer chaque bloc d&#39;instructions par l&#39;instruction <strong>break</strong>.<br/>
+N&#39;oubliez pas d&#39;insérer des instructions <strong>break</strong> entre chaque test. Ce genre d&#39;oubli est difficile à détecter, aucune erreur n&#39;étant signalée.</p>
 
                     
                     </section>

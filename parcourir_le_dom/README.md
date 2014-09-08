@@ -2,7 +2,7 @@
 
 **API :** http://api.jquery.com/category/traversing/
 
-Même si les sélecteurs jQuery nous permettent de sélectionner des éléments, nos possibilités sont relativement limitées. jQuery nous propose plusieures méthodes afin de parcourir le DOM et de faire des tris.
+Même si les sélecteurs jQuery nous permettent de sélectionner des éléments, nos possibilités sont relativement limitées. jQuery nous propose plusieurs méthodes afin de parcourir le DOM et de faire des tris.
 
 Bien sûr nous ne verrons pas toutes les méthodes en détail, mais voici un tableau récapitulatif.
 
@@ -11,7 +11,6 @@ Bien sûr nous ne verrons pas toutes les méthodes en détail, mais voici un tab
 | [`.add()`](http://api.jquery.com/add/) | Ajoute des éléments au sélecteur actuel |
 | [`.addBack()`](http://api.jquery.com/addBack/) | Ajoute les précédents éléments sélectionnés au sélecteur actuel|
 | [`.children()`](http://api.jquery.com/?s=.children) |  Retourne tous les enfants directs de l'élément sélectionné |
-| [`.closest()`](http://api.jquery.com/closest/) | Retourne tous les enfants directs de l'élément sélectionné (y compris les nœuds de texte et commentaire) |
 | [`.contents()`](http://api.jquery.com/contents/) | Les noeuds enfants (y compris les noeuds de texte) |
 | [`.each()`](http://api.jquery.com/each/) | Exécute une fonction à chaque élément identifié |
 | [`.end()`](http://api.jquery.com/end/) | Termine le filtrage en cours et retourne aux éléments sélectionnés précédemment |
@@ -19,7 +18,7 @@ Bien sûr nous ne verrons pas toutes les méthodes en détail, mais voici un tab
 | [`.filter()`](http://api.jquery.com/filter/) | Filtre les éléments qui correspondent au sélecteur indiqué |
 | [`.find()`](http://api.jquery.com/find/) | Recherche les éléments enfants qui correspondent au sélecteur |
 | [`.first()`](http://api.jquery.com/first/) | Retourne le premier élément des éléments sélectionnés |
-| [`.has()`](http://api.jquery.com/has/) | Retourne les éléments qui ont un ou plusieurs éléments à l'intérieur d'eux correspondants au sélecteur indiqué. |
+| [`.has()`](http://api.jquery.com/has/) | Retourne les éléments ayant à l'intérieur le sélecteur indiqué. |
 | [`.is()`](http://api.jquery.com/is/) | Vérifie l'ensemble des éléments sélectionnés contre un sélecteur / élément / objet jQuery, et retourne vrai si au moins un de ces éléments correspond arguments donnés |
 | [`.last()`](http://api.jquery.com/last/) | Retourne le dernier élément des éléments sélectionnés |
 | [`.map()`](http://api.jquery.com/map/) | Retourne un tableau de valeurs, de l'élément sélectionné |

@@ -7,7 +7,7 @@ Dans cette partie, nous verrons les méthodes `children()` et `.find()`.
 **API :** http://api.jquery.com/children/
 
 La méthode `.children()` retourne tous les enfants directs de l'élément sélectionné.
-Cette méthode traverse qu'un seul niveau dans l'arbre DOM.
+Cette méthode ne traverse qu'un seul niveau dans l'arbre DOM.
 
 L'exemple suivant ajoute `class="box-inner"` aux enfants directs de `class="box"`.
 

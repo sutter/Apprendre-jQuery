@@ -41,7 +41,7 @@
 
 
         
-    <div class="book"  data-level="2.6" data-basepath="." data-revision="1410104234486">
+    <div class="book"  data-level="2.6" data-basepath="." data-revision="1410189906422">
     
 
 <div class="book-summary">
@@ -447,6 +447,22 @@
                             <b>9.3.</b>
                         
                          Les méthodes d&#39;événements
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="9.4" data-path="la_gestion_des_evenements/stopper_un_evenement.html">
+            
+                
+                    <a href="./la_gestion_des_evenements/stopper_un_evenement.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>9.4.</b>
+                        
+                         La propagation d&#39;événements
                     </a>
                 
             
@@ -877,14 +893,14 @@
                 <div class="page-inner">
                 
                 
-                    <section class="normal" id="section-gitbook_4202">
+                    <section class="normal" id="section-gitbook_23820">
                     
                         <h1 id="les-boucles">Les boucles</h1>
 <p>Les boucles sont des structures qui permettent d&#39;exécuter plusieurs fois la même série d&#39;instructions jusqu&#39;à ce qu&#39;une condition ne soit plus réalisée.</p>
 <p>La façon la plus commune de faire une boucle est de créer un compteur (une variable qui s&#39;incrémente, c&#39;est-à-dire qui augmente de 1 à chaque tour de boucle) et de faire arrêter la boucle lorsque le compteur dépasse une certaine valeur.</p>
 <h2 id="linstruction-for">L&#39;instruction for</h2>
-<p>L&#39;instruction <code>for</code> permet d&#39;exécuter plusieurs fois la même série d&#39;instructions: c&#39;est une boucle !</p>
-<p>Dans sa syntaxe, il suffit de préciser le nom de la variable qui sert de compteur et éventuellement sa valeur de départ, la condition sur la variable pour laquelle la boucle s&#39;arrête (basiquement une condition qui teste si la valeur du compteur dépasse une limite) et enfin une instruction qui <em>incrémente</em> ou <em>décrémente</em> le compteur.</p>
+<p>L&#39;instruction <strong>for</strong> permet d&#39;exécuter plusieurs fois la même série d&#39;instructions : c&#39;est une boucle !</p>
+<p>Dans cette syntaxe, il suffit de préciser le nom de la variable qui sert de compteur et éventuellement sa valeur de départ, la condition sur la variable pour laquelle la boucle s&#39;arrête (basiquement une condition qui teste si la valeur du compteur dépasse une limite) et enfin une instruction qui <em>incrémente</em> ou <em>décrémente</em> le compteur.</p>
 <p>La syntaxe de cette expression est la suivante :</p>
 <pre><code class="lang-js"><span class="hljs-keyword">for</span> (compteur; condition; modification du compteur) {
     <span class="hljs-comment">// liste d'instructions</span>
@@ -896,28 +912,22 @@
     <span class="hljs-built_in">console</span>.log(i);
 }
 </code></pre>
-<p>Cette boucle affiche 5 fois la valeur de i, c&#39;est-à-dire 1,2,3,4,5</p>
-<p>Elle commence à <code>i=1</code>, vérifie que i est bien inférieur à 6, etc... jusqu&#39;à atteindre la valeur <code>i=6</code>, pour laquelle la condition ne sera plus réalisée, la boucle s&#39;interrompra et le programme continuera son cours.</p>
+<p>Cette boucle affiche 5 fois la valeur de i, c&#39;est-à-dire 1,2,3,4,5.</p>
+<p>Elle commence à <code>i=1</code>, vérifie que i est bien inférieur à 6, etc... jusqu&#39;à atteindre la valeur <code>i=6</code>, pour laquelle la condition ne sera plus réalisée. La boucle s&#39;interrompra et le programme continuera son cours.</p>
+<p><strong>Attention</strong></p>
 <ol>
-<li>Il faudra toujours vérifier que la boucle a bien une condition de sortie</li>
-<li>Une instruction <code>Alert(i)</code>; dans votre boucle est un bon moyen pour vérifier la valeur du compteur pas à pas!</li>
-<li>Il faut bien compter le nombre de fois que l&#39;on veut faire exécuter la boucle:<ul>
-<li><code>for(i=0;i&lt;10;i++)</code> exécute 10 fois la boucle (i de 0 à 9)</li>
-<li><code>for(i=0;i&lt;=10;i++)</code> exécute 11 fois la boucle (i de 0 à 10)</li>
-<li><code>for(i=1;i&lt;10;i++)</code> exécute 9 fois la boucle (i de 1 à 9)</li>
-<li><code>for(i=1;i&lt;=10;i++)</code> exécute 10 fois la boucle (i de 1 à 10)</li>
-</ul>
-</li>
+<li>Il faudra toujours vérifier que la boucle a bien une condition de sortie.</li>
+<li>Une instruction <code>Alert(i)</code>; dans votre boucle est un bon moyen pour vérifier la valeur du compteur pas à pas.</li>
 </ol>
 <h2 id="linstruction-while">L&#39;instruction while</h2>
 <p>L&#39;instruction <code>while</code> représente un autre moyen d&#39;exécuter plusieurs fois la même série d&#39;instructions.</p>
-<p>La syntaxe de cette expression est la suivante.</p>
+<p>La syntaxe de cette expression est la suivante :</p>
 <pre><code class="lang-js"><span class="hljs-keyword">while</span> (condition réalisée) {
     <span class="hljs-comment">// liste d'instructions</span>
 }
 </code></pre>
 <p>Cette instruction exécute la liste d&#39;instructions <strong>tant que</strong> la condition est réalisée.</p>
-<p><strong>Attention</strong> aux boucles infinies (boucle dont la condition est toujours vraie) provoque un plantage du navigateur!</p>
+<p><strong>Attention</strong> aux boucles infinies (boucle dont la condition est toujours vraie) elle provoque un plantage du navigateur.</p>
 <p><strong>Exemple</strong></p>
 <pre><code class="lang-js"><span class="hljs-keyword">var</span> x = <span class="hljs-number">0</span>;
 <span class="hljs-keyword">while</span>(x &lt; <span class="hljs-number">10</span>) {

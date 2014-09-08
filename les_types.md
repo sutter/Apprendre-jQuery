@@ -16,12 +16,12 @@ maVariable = "J'aime JavaScript";
 maVariable = 'J\'aime JavaScript';
 ```
 
-**Attention**, si vous voulez des apostrophes pour déclarer votre variable et que vous utilisez des apostrophes dans le texte vous devez échapper des derniers avec le caractère `\` (antislash).
-Sinon JavaScript croira que le code s’arrêtera à la première apostrophe, et produira une erreur.
+**Attention**, si vous voulez des apostrophes pour déclarer votre variable et que vous utilisez des apostrophes dans le texte vous devez échapper les derniers avec le caractère `\` (antislash).
+Dans le cas contraire, JavaScript pensera que le code s’arrête à la première apostrophe et produira une erreur.
 
 ## Le type numérique
 
-Ce type de variable représente tout nombre, que ce soit un entier, un négatif, un nombre scientifique, etc.
+Ce type de variable représente tout nombre  que ce soit un entier, un négatif, un nombre scientifique, etc.
 
 ```js
 maVariable = 3;
@@ -32,7 +32,7 @@ Un chiffre décimal se déclare avec un point comme séparateur et non une virgu
 maVariable = 3.5;
 ```
 
-**Attention**, si vous écrivez le nombre entre des guillemets ou des apostrophes il sera reconnu comme une chaîne de caractères.
+**Attention**, si vous écrivez le nombre entre guillemets ou avec apostrophes, il sera reconnu comme une chaîne de caractères.
 ```js
 maVariable = '3'; // Chaîne de caractères
 ```
@@ -41,7 +41,15 @@ maVariable = '3'; // Chaîne de caractères
 
 Désigne un paramètre qui peut avoir comme valeur **true** ou **false**.
 
-Lorsqu'aucune valeur n'est passée, ou la valeur 0, ou une chaîne de caractères vide, ou null, ou undefined ou bien NaN, la valeur de l'objet est initialisée à `False`.<br/>Dans tous les autres cas, l'objet Boolean possédera la valeur `True`.
+Lorsque :
+
+* aucune valeur n'est passée ;
+* la valeur est égale à *0* ;
+* une chaîne de caractères est vide, *null*, *undefined* ou *NaN*
+
+la valeur de l'objet est initialisée à `False`.
+
+Dans tous les autres cas, l'objet Boolean possédera la valeur `True`.
 
 Ces deux états s'écrivent de la façon suivante :
 

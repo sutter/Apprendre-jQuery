@@ -4,7 +4,7 @@
 
 Les fonctions de rappel ou **callback** sont des fonctions qui s'exécutent lorsque l'autre fonction se termine.
 
-Prenons l'exemple ci-dessous, au clic sur un bouton nous faisons disparaître un texte, puis nous affichons un texte dans un boite d'alerte.
+Prenons l'exemple ci-dessous, au clic sur un bouton nous faisons disparaître un texte, puis nous affichons un texte dans une boite d'alerte.
 
 ```js
 $('button').click(function(){
@@ -16,7 +16,7 @@ $('button').click(function(){
 <p data-height="200" data-theme-id="7816" data-slug-hash="JFxlm" data-default-tab="result" class='codepen'>See the Pen <a href='http://codepen.io/sutterlity/pen/JFxlm/'>JFxlm</a> by Sutterlity (<a href='http://codepen.io/sutterlity'>@sutterlity</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
 <script async src="//codepen.io/assets/embed/ei.js"></script>
 
-## Chainage de méthode
+## Chainage de méthodes
 
 
 Il est possible d'appliquer plusieurs méthodes les unes à la suite des autres.
@@ -28,14 +28,14 @@ $('.box').addClass('is-collapsed');
 $('.box').slideUp();
 ```
 
-Optimiser votre code comme cela :
+Optimisez votre code comme cela :
 
 ```js
 $('.box').addClass('is-collapsed').slideUp();
 ```
 
 Vous pouvez même faire des choses plus complexes.<br/>
-Par exemple ajouter une classe `.active` sur un élément au clic, puis faire une recherche dans ce *pattern* pour rechercher un élément qui a la classe `.inner` pour lui supprimer sa classe.
+Par exemple, ajouter une classe `.active` sur un élément au clic, puis faire une recherche dans ce *pattern* pour rechercher un élément qui a la classe `.inner` pour lui supprimer sa classe.
 
 ```js
 $('.btn').click(function(){

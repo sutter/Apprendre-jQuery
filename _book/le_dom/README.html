@@ -41,7 +41,7 @@
 
 
         
-    <div class="book"  data-level="5" data-basepath=".." data-revision="1410104234486">
+    <div class="book"  data-level="5" data-basepath=".." data-revision="1410189906422">
     
 
 <div class="book-summary">
@@ -447,6 +447,22 @@
                             <b>9.3.</b>
                         
                          Les méthodes d&#39;événements
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="9.4" data-path="la_gestion_des_evenements/stopper_un_evenement.html">
+            
+                
+                    <a href="../la_gestion_des_evenements/stopper_un_evenement.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>9.4.</b>
+                        
+                         La propagation d&#39;événements
                     </a>
                 
             
@@ -877,13 +893,13 @@
                 <div class="page-inner">
                 
                 
-                    <section class="normal" id="section-gitbook_4201">
+                    <section class="normal" id="section-gitbook_23819">
                     
                         <h1 id="le-dom">Le DOM</h1>
 <p>Le DOM ou <strong>Document Object Model</strong> est un standard du W3C qui définit l&#39;arborescence du document HTML.</p>
 <p>jQuery est utilisé pour manipuler le DOM en écriture et en lecture.</p>
-<p>Prenons le cas ou le DOM n&#39;est pas encore totalement construit lors du chargement de la page et que le script jQuery est exécuté. Nous nous retrouverons avec des erreurs.</p>
-<p>Afin d&#39;éviter ces erreurs et attendre que le DOM soit entièrement chargé, nous utiliserons la méthode <code>.ready()</code>.</p>
+<p>Prenons le cas où le DOM n&#39;est pas encore totalement construit lors du chargement de la page et que le script jQuery est exécuté ; les sripts produiront des erreurs.</p>
+<p>Pour attendre que le DOM soit entièrement chargé et ainsi éviter des erreurs, nous utiliserons la méthode <code>.ready()</code>.</p>
 <pre><code class="lang-js">$(<span class="hljs-built_in">document</span>).ready(<span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span> </span>{
     <span class="hljs-comment">// Ici le DOM est prêt</span>
 });

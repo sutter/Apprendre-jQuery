@@ -3,7 +3,7 @@
 On appelle structure conditionnelle les instructions qui permettent de tester si une condition est vraie (true) ou non (false).
 
 En JavaScript les conditions sont constituées de :
-* de valeurs à tester ;
+* valeurs à tester ;
 * un opérateur logique ;
 * un opérateur de comparaison (optionnel).
 
@@ -32,7 +32,7 @@ En JavaScript les conditions sont constituées de :
 
 ## Instruction if
 
-Elle permet d'exécuter une série d'instructions si jamais une condition est réalisée.
+Elle permet d'exécuter une série d'instructions lorsqu'une condition est réalisée.
 
 La syntaxe de cette expression est la suivante.
 
@@ -44,7 +44,7 @@ if ( si condition réalisée ) {
 
 Il est possible de définir plusieurs conditions à remplir avec les opérateurs `&&` et `||`.
 
-L'instruction suivante par exemple teste si les deux conditions sont réalisées.
+Par exemple, l'instruction ci-dessous teste si les deux conditions sont réalisées.
 
 ```js
 if ( (condition1) && (condition2) ) { … }
@@ -72,11 +72,11 @@ if ( monArgent >= prixCafe) {
 
 ## Instruction if … else
 
-L'instruction if dans sa forme basique ne permet de tester qu'une condition, or la plupart du temps on aimerait pouvoir choisir les instructions à exécuter en cas de non réalisation de la condition.
+L'instruction **if** dans sa forme basique permet de tester qu'une condition. Or, la plupart du temps, on aimerait pouvoir choisir les instructions à exécuter lorsque la condition n'est pas remplie.
 
-L'expression **if … else** permet d'exécuter une autre série d'instructions en cas de non-réalisation de la condition.
+L'expression **if … else** permet dès lors d'exécuter une autre série d'instructions en cas de non-réalisation de la condition.
 
-La syntaxe de cette expression est la suivante.
+La syntaxe de cette expression est la suivante :
 
 ```js
 if ( si condition réalisée ) {
@@ -88,7 +88,7 @@ else {
 ```
 
 **Remarque :**<br/>
-Les structures conditionnelles pouvant être imbriquées, il peut être utile d'indenter le code pour plus de lisibilité, c'est-à-dire de décaler à l'aide d'une tabulation chaque bloc d'instruction pour pouvoir rapidement visualiser l'imbrication des structures !
+Les structures conditionnelles pouvant être imbriquées, il peut être utile d'indenter le code pour plus de lisibilité. En d'autres termes, il s'agit de décaler à l'aide d'une tabulation chaque bloc d'instructions pour pouvoir rapidement visualiser l'imbrication des structures.
 
 **Exemple**
 
@@ -110,9 +110,9 @@ else {
 
 ## Instruction else if
 
-Elle permet d'exécuter une série d'instructions si jamais plusieurs conditions sont réalisées.
+Cette instruction permet d'exécuter une série d'instructions lorsque plusieurs conditions sont réalisées.
 
-La syntaxe de cette expression est la suivante.
+La syntaxe de cette expression est la suivante :
 
 ```js
 // Une première condition est testée
@@ -156,9 +156,9 @@ else {
 
 ## Instruction switch...case
 
-L'instruction switch permet de faire plusieurs tests de valeurs sur le contenu d'une même variable. Ce branchement conditionnel simplifie beaucoup le test de plusieurs valeurs d'une variable, car cette opération aurait été compliquée (mais possible) avec des if imbriqués.
+L'instruction switch permet de faire plusieurs tests de valeurs sur le contenu d'une même variable. Ce branchement conditionnel simplifie beaucoup le test de plusieurs valeurs d'une variable. Cette opération aurait ainsi été plus compliquée (mais possible) avec des if imbriqués.
 
-La syntaxe de cette expression est la suivante.
+La syntaxe de cette expression est la suivante :
 
 ```js
 switch (Variable) {
@@ -174,9 +174,9 @@ switch (Variable) {
 }
 ```
 
-Les parenthèses qui suivent le mot clé switch indiquent une expression dont la valeur est testée successivement par chacun des case. Lorsque l'expression testée est égale à une des valeurs suivant un case, la liste d'instruction qui suit celui-ci est exécutée.
+Les parenthèses qui suivent le mot clé **switch** indiquent une expression dont la valeur est testée successivement par chacun des **case**. Lorsque l'expression testée est égale à une des valeurs suivant un **case**, la liste d'instructions qui suit celui-ci est exécutée.
 
-Le mot clé break indique la sortie de la structure conditionnelle. Le mot clé default précède la liste d'instructions qui sera exécutée si l'expression n'est jamais égale à une des valeurs.
+Le mot clé **break** indique la sortie de la structure conditionnelle. Le mot clé **default** précède la liste d'instructions qui sera exécutée si l'expression n'est jamais égale à une des valeurs.
 
-**Attention**, il est essentiel de terminer chaque bloc d'instruction par l'instruction break !<br/>
-N'oubliez pas d'insérer des instructions break entre chaque test, ce genre d'oubli est difficile à détecter, car aucune erreur n'est signalée.
+**Attention**, il est essentiel de terminer chaque bloc d'instructions par l'instruction **break**.<br/>
+N'oubliez pas d'insérer des instructions **break** entre chaque test. Ce genre d'oubli est difficile à détecter, aucune erreur n'étant signalée.

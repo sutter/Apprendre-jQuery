@@ -39,7 +39,7 @@
 
 
         
-    <div class="book"  data-level="13.1" data-basepath="." data-revision="1410104234486">
+    <div class="book"  data-level="13.1" data-basepath="." data-revision="1410189906422">
     
 
 <div class="book-summary">
@@ -445,6 +445,22 @@
                             <b>9.3.</b>
                         
                          Les méthodes d&#39;événements
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="9.4" data-path="la_gestion_des_evenements/stopper_un_evenement.html">
+            
+                
+                    <a href="./la_gestion_des_evenements/stopper_un_evenement.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>9.4.</b>
+                        
+                         La propagation d&#39;événements
                     </a>
                 
             
@@ -875,10 +891,32 @@
                 <div class="page-inner">
                 
                 
-                    <section class="normal" id="section-gitbook_4189">
+                    <section class="normal" id="section-gitbook_23805">
                     
                         <h1 id="installation-jquery-ui">Installation jQuery UI</h1>
-<p><em>**</em> <a href="http://jqueryui.com/download/" target="_blank">http://jqueryui.com/download/</a></p>
+<p>Comme la bibliothèque jQuery, jQuery UI n&#39;est pas installé par défaut dans votre navigateur, il va donc falloir l&#39;installer de la même manière que jQuery.</p>
+<h2 id="tlcharger-jquery-ui">Télécharger jQuery UI</h2>
+<p>Aller sur lien : <a href="http://jqueryui.com/download/" target="_blank">http://jqueryui.com/download/</a></p>
+<p><img src="img/jquery-ui.jpg" alt=""></p>
+<p>Vous pouvez installer la bibliothèque en entier ou seulement les modules indispensables à votre projet, afin d&#39;optimiser la vitesse de chargement de votre site.</p>
+<h2 id="installation">Installation</h2>
+<p>À la manière jQuery, jQuery UI est un fichier JS à insérer dans votre document. Vous pouvez faire l&#39;installation dans le header ou en bas de page.</p>
+<p>jQuery UI a aussi besoin d&#39;un fichier CSS pour fonctionner. Bien entendu, pour la mise en production il est conseillé de concaténer les CSS</p>
+<pre><code class="lang-html"><span class="hljs-doctype">&lt;!DOCTYPE html&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">html</span> <span class="hljs-attribute">lang</span>=<span class="hljs-value">"fr"</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">head</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">meta</span> <span class="hljs-attribute">charset</span>=<span class="hljs-value">"UTF-8"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">title</span>&gt;</span>Installation de jQuery<span class="hljs-tag">&lt;/<span class="hljs-title">title</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">link</span> <span class="hljs-attribute">rel</span>=<span class="hljs-value">"stylesheet"</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"css/styles.css"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">link</span> <span class="hljs-attribute">rel</span>=<span class="hljs-value">"stylesheet"</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"css/jquery-ui.min.css"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">script</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"js/jquery-2.1.1.min.js"</span>&gt;</span><span class="javascript"></span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">script</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"js/jquery-ui.min.js"</span>&gt;</span><span class="javascript"></span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">head</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">body</span>&gt;</span>
+    <span class="hljs-comment">&lt;!-- Contenu de la page --&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">html</span>&gt;</span>
+</code></pre>
 
                     
                     </section>

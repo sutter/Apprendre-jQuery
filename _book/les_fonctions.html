@@ -41,7 +41,7 @@
 
 
         
-    <div class="book"  data-level="2.7" data-basepath="." data-revision="1410104234486">
+    <div class="book"  data-level="2.7" data-basepath="." data-revision="1410189906422">
     
 
 <div class="book-summary">
@@ -447,6 +447,22 @@
                             <b>9.3.</b>
                         
                          Les méthodes d&#39;événements
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="9.4" data-path="la_gestion_des_evenements/stopper_un_evenement.html">
+            
+                
+                    <a href="./la_gestion_des_evenements/stopper_un_evenement.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>9.4.</b>
+                        
+                         La propagation d&#39;événements
                     </a>
                 
             
@@ -877,17 +893,17 @@
                 <div class="page-inner">
                 
                 
-                    <section class="normal" id="section-gitbook_4211">
+                    <section class="normal" id="section-gitbook_23829">
                     
                         <h1 id="les-fonctions">Les fonctions</h1>
 <p>En programmation, une fonction est un sous-programme qui permet d’exécuter un ensemble d’instructions dans le corps du programme principal.</p>
-<p>Les fonctions permettent d&#39;exécuter dans plusieurs parties du programme une série d’instructions, cela permet une simplicité du code et donc une taille de programme minimale.</p>
-<p>D&#39;autre part, une fonction peut faire appel à elle-même, on parle alors de fonction récursive.</p>
+<p>Les fonctions permettent d&#39;exécuter dans plusieurs parties du programme une série d’instructions. Ce procédé permet une simplicité du code et donc une taille de programme minimale.</p>
+<p>Par ailleurs, une fonction peut faire appel à elle-même. On parle alors de fonction récursive.</p>
 <h2 id="cration-de-notre-premire-fonction">Création de notre première fonction</h2>
 <p>Avant d’être utilisée, une fonction doit être déclarée afin que le navigateur l’interprète.</p>
 <p>Une déclaration de fonction est constituée du mot-clé <code>function</code>, suivi :</p>
 <ol>
-<li>Du nom de la fonction ( suit les mêmes règles que les noms de variables ) ;</li>
+<li>Du nom de la fonction (suit les mêmes règles que les noms de variables ) ;</li>
 <li>D&#39;une liste de paramètres facultatifs séparée par des virgules et entourée de parenthèses ;</li>
 <li>Des instructions JavaScript définissant la fonction, entourés d’accolades <code>{ }</code>.<br/>Les instructions d&#39;une fonction peuvent comprendre des appels à d&#39;autres fonctions définies dans l&#39;application courante.</li>
 </ol>
@@ -919,10 +935,10 @@ hello();
 }
 sayHello();
 </code></pre>
-<p>Ici, pas de problème. On déclare une variable dans laquelle on stocke du texte puis on créer une fonction qui se charge de l&#39;afficher à l&#39;écran et enfin on exécute cette dernière.</p>
+<p>Ici, pas de problème. On déclare une variable dans laquelle on stocke du texte puis on crée une fonction qui se charge de l&#39;afficher à l&#39;écran et enfin on l&#39;exécute.</p>
 <p>Les variables déclarées en dehors des fonctions sont nommées variables globales.</p>
 <h3 id="exemple-2">Exemple 2</h3>
-<p>Modifions maintenait l’ordre des déclarations, la variable sera déclarée dans la fonction.</p>
+<p>Modifions maintenant l’ordre des déclarations. Dans cette hypothèse, la variable sera déclarée dans la fonction.</p>
 <pre><code class="lang-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">sayHello</span><span class="hljs-params">()</span> </span>{
     <span class="hljs-keyword">var</span> hello = <span class="hljs-string">'Hello world !'</span>;
 }
@@ -930,13 +946,13 @@ sayHello();
 <span class="hljs-built_in">console</span>.log(hello);
 </code></pre>
 <p>Nous pouvons nous rendre compte que cet exemple ne fonctionne pas.
-Le script est arrêté, car il produit une erreur (visible dans l’inspecteur web).</p>
+Le script est arrêté car il produit une erreur (visible dans l’inspecteur web).</p>
 <p>Voilà tout le concept de portée de variables :<br/>
 Toute variable déclarée dans une fonction n&#39;est utilisable que dans cette même fonction !
 Ces variables spécifiques à une seule fonction ont un nom : les variables locales.</p>
 <h2 id="variable-globale-vs-variable-locale">Variable globale VS variable locale</h2>
-<p>Maintenant que nous savons faire la différence entre les variables globales et les variables locales, essayons de comprendre leurs comportements.</p>
-<p>Que se passe t’il si l’ont déclare une variable globale et une locale avec le même nom, mais une autre valeur?</p>
+<p>Maintenant que nous savons faire la différence entre les variables globales et les variables locales, essayons de comprendre leur comportement.</p>
+<p>Que se passe t’il si nous déclarons une variable globale et une locale avec le même nom, mais avec une autre valeur ?</p>
 <pre><code class="lang-js"><span class="hljs-keyword">var</span> hello = <span class="hljs-string">"Hello world !"</span>;
 <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">sayHello</span><span class="hljs-params">()</span> </span>{
     <span class="hljs-keyword">var</span> hello = <span class="hljs-string">"Bonjour la terre !"</span>;
@@ -945,11 +961,14 @@ Ces variables spécifiques à une seule fonction ont un nom : les variables loca
 sayHello();
 <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"En dehors de la fonction : "</span> + hello);
 </code></pre>
-<p><strong>Bonne pratique</strong><br/>
+<p>Nous obtenons le résultat suivant :</p>
+<pre><code>&quot;Dans la fonction : Bonjour la terre !&quot;
+&quot;En dehors de la fonction : Hello world !&quot;
+</code></pre><p><strong>Bonne pratique</strong><br/>
 De manière générale, il est préférable d’utiliser les variables locales pour les fonctions, afin de ne pas interférer avec d’autres fonctions qui peuvent utiliser le même nom de variables.</p>
 <h2 id="les-paramtres-dune-fonction">Les paramètres d&#39;une fonction</h2>
 <p>Il est possible de passer des paramètres à une fonction, c&#39;est-à-dire lui fournir une valeur ou le nom d&#39;une variable afin que la fonction puisse effectuer des opérations sur ces paramètres.</p>
-<p>Lorsque vous passez plusieurs paramètres à une fonction il faut les séparer par des virgules, aussi bien dans la déclaration que dans l&#39;appel et il faudra veiller à bien passer le bon nombre de paramètres lors de l&#39;appel au risque sinon de créer une erreur dans votre script.</p>
+<p>Lorsque vous passez plusieurs paramètres à une fonction il faut les séparer par des virgules aussi bien dans la déclaration que dans l&#39;appel. Il faudra également veiller à passer le bon nombre de paramètres lors de l&#39;appel. Dans le cas contraire, une erreur se produira dans votre script.</p>
 <p><strong>Exemple avec un argument</strong></p>
 <pre><code class="lang-js"><span class="hljs-comment">// Déclaration de la fonction</span>
 <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">carre</span><span class="hljs-params">(nombre)</span> </span>{
@@ -970,15 +989,15 @@ carre(<span class="hljs-number">3</span>);
 remise(<span class="hljs-number">150</span>, <span class="hljs-number">20</span>);
 </code></pre>
 <h2 id="la-valeur-return">La valeur return</h2>
-<p>Comme son nom l’indique, c’est la valeur retournée par la fonction.
+<p>Comme son nom l’indique, la valeur <strong>return</strong> est la valeur retournée par la fonction.
 Les fonctions ne peuvent renvoyer qu’une valeur de retour.</p>
 <pre><code class="lang-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Nom_De_La_Fonction</span><span class="hljs-params">(argument1, argument2)</span> </span>{
     <span class="hljs-keyword">return</span> argument1 * argument2
 }
 </code></pre>
 <p><strong>Attention</strong><br/>
-L’instruction return met fin à la fonction, puis retourne la valeur.
-Tout se qui est renseigné en dessous sera ignoré.</p>
+L’instruction <strong>return</strong> met fin à la fonction, puis retourne la valeur.
+Tout ce qui est renseigné en dessous est ignoré.</p>
 <p><strong>Exemple</strong></p>
 <pre><code class="lang-js"><span class="hljs-comment">// Déclaration de la fonction</span>
 <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">carre</span><span class="hljs-params">(nombre)</span> </span>{

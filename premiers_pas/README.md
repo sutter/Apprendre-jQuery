@@ -1,6 +1,6 @@
 # Premiers pas
 
-Nous avons vu à l'étape précédente comme installer jQuery dans notre projet.
+Nous avons vu à l'étape précédente comment installer jQuery dans notre projet.
 Maintenant, rentrons dans le vif du sujet, l'utilisation de la librairie.
 
 Nous allons créer un nouveau fichier **app.js** contenant un script modifiant une page web.

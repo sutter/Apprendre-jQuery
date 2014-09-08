@@ -3,7 +3,7 @@
 L’opérateur arithmétique **+** permet de faire des concaténations entre plusieurs chaînes de
 caractères.
 
-Cela consiste à ajouter une chaîne de caractères à la fin d'une autre, comme dans cet exemple.
+La concaténation consiste à ajouter une chaîne de caractères à la fin d'une autre, comme dans cet exemple.
 
 ```js
 var maVariable = "J'aime JavaScript";

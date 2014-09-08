@@ -4,7 +4,7 @@ jQuery UI (User Interface) est une librairie de composants prés à l'emploi per
 
 jQuery UI est développé par la communauté, il fait partie du projet [jQuery.org](https://jquery.org/).
 
-Les widgets sont conçus pour être paramétrables au niveau du style et du comportement.
+Les widgets sont conçus pour être paramétrables au niveau du style et du comportement. Ils peuvent être installés indépendamment les uns des autres.
 
 Un des grands avantages de jQuery UI est qu'il fonctionne de la manière sur tous les navigateurs.
 
