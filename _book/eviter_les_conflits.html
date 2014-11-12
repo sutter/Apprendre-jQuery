@@ -4,9 +4,9 @@
     <head>
         
         <meta charset="UTF-8">
-        <title>Introduction | Apprendre jQuery</title>
+        <title>Éviter les conflits | Apprendre jQuery</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <meta name="description" content="Ce cours est destiné à des personnes ayant déja de bonnes connaissances HTML/CSS.Nous ne traiterons pas de toutes les méthodes de jQuery, mais des plus utilisées.">
+        <meta name="description" content="">
         <meta name="generator" content="GitBook 1.0.3">
         <meta name="HandheldFriendly" content="true"/>
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
@@ -18,8 +18,10 @@
     
     
     
-    <link rel="next" href="./presentation_de_jquery.html" />
+    <link rel="next" href="./premiers_pas/README.html" />
     
+    
+    <link rel="prev" href="./installation/README.html" />
     
 
         
@@ -39,7 +41,7 @@
 
 
         
-    <div class="book"  data-level="0" data-basepath="." data-revision="1415778350579">
+    <div class="book"  data-level="4" data-basepath="." data-revision="1415778350579">
     
 
 <div class="book-summary">
@@ -57,7 +59,7 @@
         
     
         
-        <li class="chapter active" data-level="0" data-path="index.html">
+        <li class="chapter " data-level="0" data-path="index.html">
             
                 
                     <a href="./index.html">
@@ -237,7 +239,7 @@
         </li>
     
         
-        <li class="chapter " data-level="4" data-path="eviter_les_conflits.html">
+        <li class="chapter active" data-level="4" data-path="eviter_les_conflits.html">
             
                 
                     <a href="./eviter_les_conflits.html">
@@ -907,28 +909,27 @@
                 <div class="page-inner">
                 
                 
-                    <section class="normal" id="section-gitbook_7360">
+                    <section class="normal" id="section-gitbook_7363">
                     
-                        <h1 id="apprendre-jquery">Apprendre jQuery</h1>
-<h2 id="pr-requis">Pré-requis</h2>
-<p>Ce cours est destiné à des personnes ayant déja de bonnes connaissances HTML/CSS.
-Nous ne traiterons pas de toutes les méthodes de jQuery, mais des plus utilisées.</p>
-<h2 id="autres-rfrences-en-ligne">Autres références en ligne</h2>
-<ul>
-<li><strong>w3schools</strong> : <a href="http://www.w3schools.com/jquery/default.asp" target="_blank">http://www.w3schools.com/jquery/default.asp</a></li>
-<li><strong>Openclassrooms</strong> : <a href="http://fr.openclassrooms.com/informatique/cours/jquery-ecrivez-moins-pour-faire-plus" target="_blank">http://fr.openclassrooms.com/informatique/cours/jquery-ecrivez-moins-pour-faire-plus</a></li>
-</ul>
-<h2 id="livres-sur-le-sujet">Livres sur le sujet</h2>
-<ul>
-<li>jQuery : Simplifiez et enrichissez vos développements JavaScript<br/><a href="http://www.pearson.fr/livre/?GCOI=27440100609080" target="_blank">http://www.pearson.fr/livre/?GCOI=27440100609080</a></li>
-<li>Simplifiez vos développements JavaScript avec jQuery<br/><a href="http://boutique.fr.openclassrooms.com/boutique-614-1061-simplifiez-vos-developpements-javascript-avec-jquery.html" target="_blank">http://boutique.fr.openclassrooms.com/boutique-614-1061-simplifiez-vos-developpements-javascript-avec-jquery.html</a></li>
-<li>jQuery-Ajax avec PHP<br/><a href="http://www.eyrolles.com/Informatique/Livre/jquery-ajax-avec-php-9782212137200" target="_blank">http://www.eyrolles.com/Informatique/Livre/jquery-ajax-avec-php-9782212137200</a></li>
-</ul>
-<h2 id="autres-rfrences-en-ligne">Autres références en ligne</h2>
-<ul>
-<li>Ressource en anglais référence en JS : <a href="http://eloquentjavascript.net/" target="_blank">Eloquent Javascript</a></li>
-<li>CodeSchool : <a href="https://www.codeschool.com/courses/try-jquery" target="_blank">https://www.codeschool.com/courses/try-jquery</a></li>
-</ul>
+                        <h1 id="viter-les-conflits">Éviter les conflits</h1>
+<p><strong>Dans cette partie nous allons voir comment gérer les conflits entre plusieures bibliothèques jQuery.</strong></p>
+<p>Les pluparts des bibliothèques jQuery utilisent le signe <code>$</code> comme préfix de sélecteurs d&#39;éléments. Bien entendu, cela a pour effet de produire des conflits.</p>
+<p>Jquery à prévu une alternative afin de palier à ce problème avec la méthode <code>noConflict()</code>. Il suffira de remplacer <code>$</code> par <code>jQuery</code>.</p>
+<pre><code class="lang-js">jQuery.noConflict();
+</code></pre>
+<p>Une fois ce code déclaré, vous pouvez continuer à utiliser <code>$</code> pour l&#39;autre bibliothèque.</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-title">script</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"js/jquery.js"</span>&gt;</span><span class="javascript"></span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">script</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"js/mootools.js"</span>&gt;</span><span class="javascript"></span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">script</span>&gt;</span><span class="javascript">
+    jQuery.noConflict();
+
+    <span class="hljs-comment">// Ici vos codes jQuery avec comme préfixe `jQuery`</span>
+    jQuery(<span class="hljs-string">'.box_inner'</span>).addClass(<span class="hljs-string">'rounded'</span>);
+
+    <span class="hljs-comment">// Pour l'autre bibliothèque `$`</span>
+    $(<span class="hljs-string">'.box'</span>).set(<span class="hljs-string">'opacity'</span>,<span class="hljs-number">0</span>);
+</span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
+</code></pre>
 
                     
                     </section>
@@ -939,8 +940,10 @@ Nous ne traiterons pas de toutes les méthodes de jQuery, mais des plus utilisé
         </div>
 
         
+        <a href="./installation/README.html" class="navigation navigation-prev " aria-label="Previous page: Installation"><i class="fa fa-angle-left"></i></a>
         
-        <a href="./presentation_de_jquery.html" class="navigation navigation-next navigation-unique" aria-label="Next page: Présentation de jQuery"><i class="fa fa-angle-right"></i></a>
+        
+        <a href="./premiers_pas/README.html" class="navigation navigation-next " aria-label="Next page: Premiers pas"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>

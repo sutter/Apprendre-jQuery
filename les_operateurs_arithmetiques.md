@@ -1,13 +1,13 @@
 # Les opérateurs arithmétiques
 
-Les opérateurs de calcul permettent de modifier mathématiquement la valeur d'une variable.
+Les opérateurs de calcul permettent de modifier mathématiquement la valeur d'une variable de type **number**.
 
 Ils sont à la base de tout calcul et sont au nombre de 5 :
 
 | Opérateurs | Signe | Effet | Exemple | Résultat (avec x valant 7) |
 | -- | -- | -- | -- | -- |
 | Addition | **+** | Ajoute deux valeurs | x + 3 | 10 |
-| Soustraction | **-** | Soustrait deux valeurs | x - 3 | 7 |
+| Soustraction | **-** | Soustrait deux valeurs | x - 3 | 4 |
 | Multiplication | ***** | Multiplie les valeurs | x * 3 | 21 |
 | Division | **/** | Divise deux valeurs | x / 3 | 2.3333333 |
 | Modulo | **%** | Retourne le reste de la division entière de l'opérant de gauche par celle de droite | x % 2 | 1 |
@@ -61,4 +61,18 @@ maVariable -= 2;
 maVariable *= 2;
 maVariable /= 2;
 maVariable %= 2;
+```
+
+Pour ajouter **+1** nous pouvons utiliser l'opérateur d'incrémentation **++**
+```js
+var maVariable = 7;
+    maVariable++;
+console.log(maVariable); // Affiche : 8
+```
+
+Pour supprimer **-1** nous pouvons utiliser l'opérateur de décrémentation **++**
+```js
+var maVariable = 7;
+    maVariable--;
+console.log(maVariable); // Affiche : 6
 ```

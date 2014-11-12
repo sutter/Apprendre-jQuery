@@ -10,21 +10,18 @@ La méthode `.remove()` supprime du DOM l'élément sélectionné.
 
 L'exemple suivant supprime du DOM `class="box"`.
 
-```js
-$('.box').remove();
-```
-
-**Résultat**
-
-Avant le script :
-
 ```html
 <div id="main">
     <div class="other">Je suis ingénieur informaticien</div>
     <div class="box">Je suis magicien</div>
 </di>
 ```
-Après le script :
+
+```js
+$('.box').remove();
+```
+
+**Résultat**
 
 ```html
 <div id="main">
@@ -40,21 +37,18 @@ La méthode `.empty()` vide le contenu de l'élément sélectionné.
 
 L'exemple suivant vide le contenu de l'élément `class="box"`.
 
-```js
-$('.box').empty();
-```
-
-**Résultat**
-
-Avant le script :
-
 ```html
 <div id="main">
     <div class="other">Je suis ingénieur informaticien</div>
     <div class="box">Je suis magicien</div>
 </di>
 ```
-Après le script :
+
+```js
+$('.box').empty();
+```
+
+**Résultat**
 
 ```html
 <div id="main">

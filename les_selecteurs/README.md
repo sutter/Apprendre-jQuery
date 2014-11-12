@@ -1,11 +1,62 @@
 # Sélectionner des éléments
 
-Un des grands avantages de jQuery est d'utiliser la syntaxe des [sélecteurs CSS](http://www.w3.org/TR/css3-selectors/).<br/>
+## De JavaScript vers jQuery
+
+jQuery nous permet de sélectionner des éléments de façon plus simple qu'en JavaScript.
+
+**Exemple** : Sélectionner une balise `span`
+
+```js
+// Version Javascript
+document.getElementsByTagName('span');
+
+// Version jQuery
+$('span');
+```
+
+**Exemple** : Sélectionner un identifiant `#sub-footer`
+
+```js
+// Version Javascript
+document.getElementById('sub-footer');
+
+// Version jQuery
+$('#sub-footer');
+```
+
+**Exemple** : Sélectionner une classe `box`
+
+```js
+// Version Javascript
+document.getElementsByClassName('box');
+
+// Version jQuery
+$('.box');
+```
+
+**Exemple** : Sélectionner `#nav a:nth-child(odd)`
+
+```js
+// Version Javascript
+// Ne fonctionne pas sous IE8
+document.querySelectorAll('#nav a:nth-child(odd)');
+
+// Version jQuery
+// Fonctionne sous IE8
+$('#nav a:nth-child(odd)');
+```
+
+Article d'Alsacréation sur `querySelector` et `querySelectorAll` : http://www.alsacreations.com/article/lire/1445-dom-queryselector-queryselectorall-selectors-api.html
+
+## Sélectionner avec jQuery
+
+Un des grands avantages de jQuery est d'utiliser la syntaxe des [sélecteurs CSS](http://www.w3.org/TR/css3-selectors/) et permet d'utiliser les sélecteurs CSS3 avec de vieux navigateurs.
+
 Pour sélectionner les *noeuds du DOM* (éléments) nous utiliserons la syntaxe `$(sélecteur)`.
 
 Bien entendu, la liste ci-dessous n'est pas exhaustive et ne reprend que les sélecteurs les plus utilisés.<br/>Vous pouvez en trouver davantage dans [l'API jQuery](http://api.jquery.com/category/selectors/).
 
-## Combiner des sélecteurs
+### Combiner des sélecteurs
 | Sélecteurs | Exemple | Éléments selectionnés |
 | -- | -- | -- |
 | [**.class, .class**](http://api.jquery.com/multiple-selector/) | `$('.box, .pod')` | Les éléments **class="box"** ou **class="pod"** |
@@ -13,7 +64,7 @@ Bien entendu, la liste ci-dessous n'est pas exhaustive et ne reprend que les sé
 | **#id.class** | `$('#header.box')` | Les éléments **class="box"** ayant pour identifiant **id="header"** |
 | **'.class',  '#id'** | `$('.box',  '#header')` | Les éléments **class="box"** dans le contexte **id="header"** |
 
-## Les sélecteurs de base
+### Les sélecteurs de base
 
 **API :** [http://api.jquery.com/category/selectors/basic-css-selectors/](http://api.jquery.com/category/selectors/basic-css-selectors/)
 
@@ -27,19 +78,19 @@ Bien entendu, la liste ci-dessous n'est pas exhaustive et ne reprend que les sé
 | [**A + B**](http://api.jquery.com/next-adjacent-Selector/) | `$('li + li')` | L'élément **B** frère adjacent de **A** |
 | [**A ~ B**](http://api.jquery.com/next-siblings-selector/) | `$('h2 ~ p')` | Les éléments **B** en dessous de **A** |
 
-## Les sélecteurs d'enfant
+### Les sélecteurs d'enfant
 
 **API :** [http://api.jquery.com/category/selectors/child-filter-selectors/](http://api.jquery.com/category/selectors/child-filter-selectors/)
 
 | Sélecteurs | Exemple | Éléments selectionnés |
 | -- | -- | -- |
-| [**:first-child**](http://api.jquery.com/first-child-selector/) | `$('p:first')` | Premier élément **p** |
-| [**:last-child**](http://api.jquery.com/last-child-selector/) | `$('p:last')` | Dernier élément **p** |
-| [**:nth-child(x)**](http://api.jquery.com/nth-child-selector/) | `$('li:nth-child(2)')` | Deuxième élément **li** |
-| [**:nth-child(xn + x)**](http://api.jquery.com/nth-child-selector/) | `$('li:nth-child(3n + 2)')` | 2ème élément **li** tous les 3 **li** |
+| [**:first-child**](http://api.jquery.com/first-child-selector/) | `$('p:first-child')` | 1<sup>er</sup> élément **p** |
+| [**:last-child**](http://api.jquery.com/last-child-selector/) | `$('p:last-child')` | Dernier élément **p** |
+| [**:nth-child(x)**](http://api.jquery.com/nth-child-selector/) | `$('li:nth-child(2)')` | 2<sup>ème</sup> élément **li** |
+| [**:nth-child(xn + x)**](http://api.jquery.com/nth-child-selector/) | `$('li:nth-child(3n + 2)')` | 2<sup>ème</sup> élément **li** tous les 3 **li** |
 | [**:only-child**](http://api.jquery.com/nth-child-selector/) | `$('.box p:only-child')` | Le fils unique **p** de **class="box"** |
 
-## Les sélecteurs de contenu
+### Les sélecteurs de contenu
 
 **API :** [http://api.jquery.com/category/selectors/content-filter-selector/](http://api.jquery.com/category/selectors/content-filter-selector/)
 
@@ -50,7 +101,7 @@ Bien entendu, la liste ci-dessous n'est pas exhaustive et ne reprend que les sé
 | [**:parent**](http://api.jquery.com/parent-selector/) | `$('.box:parent')` | Les éléments **class="box"** non vides |
 | [**:empty**](http://api.jquery.com/empty-selector/) | `$('.box:empty')` | Les éléments **class="box"** vides |
 
-## Les sélecteurs d'attribut
+### Les sélecteurs d'attribut
 
 **API :** [http://api.jquery.com/category/selectors/attribute-selectors/](http://api.jquery.com/category/selectors/attribute-selectors/)
 
@@ -64,7 +115,7 @@ Bien entendu, la liste ci-dessous n'est pas exhaustive et ne reprend que les sé
 | [**[attr*=valeur]**](http://api.jquery.com/attribute-contains-selector/) | `$('[class*="box"]')` | Les éléments ayant un classe contenant **box** comme **.pod-boxed** |
 | [**[attr~=valeur]**](http://api.jquery.com/attribute-contains-word-selector/) | `$('[class~="box"]')` | Les éléments ayant un classe dont la valeur est une liste séparée par des espaces dont l’un d’eux est exactement **box** comme **class="first box"** |
 
-## Les sélecteurs de filtre
+### Les sélecteurs de filtre
 
 **API :** [http://api.jquery.com/category/selectors/basic-filter-selectors/](http://api.jquery.com/category/selectors/basic-filter-selectors/)
 
@@ -72,8 +123,8 @@ Bien entendu, la liste ci-dessous n'est pas exhaustive et ne reprend que les sé
 | -- | -- | -- |
 | [**:animated**](http://api.jquery.com/animated-selector/) | `$('.box:animated')` | Les éléments **class=".box"** animés en jQuery |
 | [**:eq**](http://api.jquery.com/eq-selector/) | `$('.box:eq(2)')` | Le 3<sup>ème</sup> élément **class=".box"** |
-| [**:even**](http://api.jquery.com/even-selector/) | `$('tr:even')` | Les éléments **tr** impairs |
-| [**:odd**](http://api.jquery.com/odd-selector/) | `$('tr:even')` | Les éléments **tr** pairs |
+| [**:even**](http://api.jquery.com/even-selector/) | `$('tr:even')` | Les éléments **tr** pairs |
+| [**:odd**](http://api.jquery.com/odd-selector/) | `$('tr:odd')` | Les éléments **tr** impairs |
 | [**:first**](http://api.jquery.com/first-selector/) | `$('tr:first')` | Le premier élément **tr** trouvé |
 | [**:last**](http://api.jquery.com/last-selector/) | `$('tr:last')` | Le dernier élément **tr** trouvé |
 | [**:focus**](http://api.jquery.com/focus-selector/) | `$('.box:focus')` | Les éléments qui ont le **focus** |

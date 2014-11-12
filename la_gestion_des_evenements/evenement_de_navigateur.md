@@ -13,7 +13,7 @@ jQuery permet d'écouter les événements déclenchés par le navigateur.
 
 La méthode resize sert à écouter l'événement de redimensionnement du navigateur.
 
-Prenons un exemple plus intrusif, qui nous servira juste à voir le fonctionnement de cette méthode.
+Prenons un exemple plus intrusif qui nous servira juste à voir le fonctionnement de cette méthode.
 
 ```js
 $(window).resize(function() {
@@ -21,7 +21,7 @@ $(window).resize(function() {
 });
 ```
 
-Cette méthode sera bien utile pour adapter certains de vos scripts au responsive webdesign. Par exemple lors du calcul de hauteur de certains éléments. Nous le verrons d'ailleurs dans la partie expliquant la manipulation de dimensions.
+Cette méthode sera bien utile pour adapter certains de vos scripts au responsive webdesign. Par exemple, lors du calcul de hauteur de certains éléments. Nous le verrons d'ailleurs dans la partie expliquant la manipulation de dimensions.
 
 
 ## Méthode .scroll()
@@ -36,7 +36,7 @@ $(window).scroll(function() {
 });
 ```
 
-Cette méthode peut être utilisé pour lancer des animations CSS3 en ajoutant une classe en fonction de la distance du scroll par rapport au point haut de la page, comme dans l'exemple de [CSS3 Animation Cheat Sheet](http://www.justinaguilar.com/animations/scrolling.html).
+Cette méthode peut être utilisée pour lancer des animations CSS3 en ajoutant une classe en fonction de la distance du scroll par rapport au point haut de la page, comme dans l'exemple de [CSS3 Animation Cheat Sheet](http://www.justinaguilar.com/animations/scrolling.html).
 
 ```js
 $(window).scroll(function() {

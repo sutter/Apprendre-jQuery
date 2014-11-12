@@ -16,7 +16,7 @@ Nous déclarons notre variable.
 var maVariable;
 ```
 
-Le mot clé **var** indique que vous déclarez une variable.
+Le mot clé **var** indique que vous déclarez une variable, `;` indique que l'instruction est terminée.
 Une fois déclarée, **var** n'est plus nécessaire, vous pouvez stoker ce que vous souhaitez.
 
 ```js
@@ -41,9 +41,11 @@ var maVariable_2 = 7;
 
 Nous pouvons déclarer plusieurs variables sur une ligne, mais attribuer une valeur seulement à *maVariable_*2.
 
+Puisque l'ont délare le même type d'élément, le mot clé `var` peut éviter d'être répété en séparant les déclarations par des virgules.
+
 ```js
 var maVariable_1,
-    maVariable_2 = 7
+    maVariable_2 = 7,
     maVariable_3;
 ```
 
@@ -53,29 +55,3 @@ Vous pouvez afficher votre 1ère variable dans la console de votre navigateur.
 var maVariable = "J'aime JavaScript";
 console.log(maVariable);
 ```
----
-
-Définisez une variable `x` avec une valeur de 10.
-
-```js
-var x =
-```
-
-```js
-var x = 10;
-```
-
-```js
-assert(x == 10);
-```
-
-```js
-// This is context code available everywhere
-// The user will be able to call magicFunc in his code
-function magicFunc() {
-    return 3;
-}
-```
-
----
-

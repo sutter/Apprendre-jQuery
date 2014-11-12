@@ -2,7 +2,7 @@
 
 **API :** http://api.jquery.com/load/
 
-La méthode `.load()` va nous permettre de récupérer du contenu à insérer dans notre page.
+La méthode `.load()` nous permettra de récupérer du contenu à insérer dans notre page.
 Nous pouvons charger des fichiers du type : HTML, PHP, TXT, XML et JSON.
 
 Elle est un raccourci de la fonction `.ajax()`.
@@ -17,13 +17,13 @@ $(selecteur).load(url,data,function(reponse,status,xhr)));
 | -- | -- |
 | **url** | **Requis**<br/>Une chaîne contenant l'URL vers laquelle la demande est envoyée |
 | **data** | **Optionnel**<br/> Spécifie les données à envoyer vers le serveur en même temps que la demande |
-| **function(reponse,status,xhr)** | **Optionnel**<br/> Indique une fonction à exécuter la méthode est terminé<br/>Paramètres suepplémentaires : <br/>**- data** - contient les données résultant de la demande <br/> **- status** - contient l'état de la demande ("success", "notmodified", "error", "timeout", ou "parsererror")<br/> **- xhr** - contient l'objet XMLHttpRequest |
+| **function(reponse,status,xhr)** | **Optionnel**<br/> Indique une fonction à exécuter quand la méthode est terminée <br/>Paramètres supplémentaires : <br/>**- data** - contient les données résultant de la demande <br/> **- status** - contient l'état de la demande ("success", "notmodified", "error", "timeout", ou "parsererror")<br/> **- xhr** - contient l'objet XMLHttpRequest |
 
 ## Exemples
 
 ### Charger un document
 
-Voici un exemple simple, pour comprendre le fonctionnement.
+Voici un exemple simple pour comprendre le fonctionnement.
 
 ```js
 $('#result').load('result.txt');
@@ -31,7 +31,7 @@ $('#result').load('result.txt');
 
 Nous avons chargé le contenu du ficher *result.txt* dans la balise **#result**.
 
-Faisons de même avec un fichier PHP, mais cette fois si au clic.
+Faisons de même avec un fichier PHP mais cette fois-ci au clic.
 
 ```js
 $('#a').click(function(){
@@ -39,7 +39,7 @@ $('#a').click(function(){
 });
 ```
 
-Bien sûr nous pouvons ajouter des effets de fondu.
+Bien sûr, nous pouvons ajouter des effets de fondu.
 La méthode consiste à cacher le contenu, le charger puis faire le fondu en *callback*.
 
 ```js
@@ -77,7 +77,7 @@ $('#a').click(function(){
 
 ### Passer des paramètres à un fichier PHP
 
-Il nous est possible de demander en PHP à la base de données de nous retournée des informations necessitant un paramètre.
+Il nous est possible de demander en PHP à la base de données de nous retourner des informations necessitant un paramètre.
 
 Dans l'exemple ci-dessous, nous récupérons la valeur d'un champ **#search**, puis nous la passons en paramètre.
 

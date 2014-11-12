@@ -4,7 +4,7 @@ jQuery est une bibliothèque JavaScript libre et multi-plateforme créée pour f
 
 La bibliothèque contient notamment les fonctionnalités suivantes :
 
-* Parcours et modifications du DOM
+* Parcours et modifications du DOM ;
 * Gestion des événements ;
 * Effets visuels et animations ;
 * Manipulation des CSS ;

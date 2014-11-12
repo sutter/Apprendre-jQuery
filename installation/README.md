@@ -22,7 +22,7 @@ Vous avez besoin de télécharger le fichier sur le site officiel de jQuery : [T
 
 Vous pouvez vous rendre compte qu'il existe plusieurs versions de jQuery. Mi 2013 jQuery est passé en version 2.XX laissant de côté la compatibilité avec les versions antérieures d'Internet Explorer 8, allégeant aussi son poids.
 
-Ne prenez pas peur, vous n'aurez pas à modifier ces fichiers, vous devez juste y référence dans votre HTML pour l'installation.
+Ne prenez pas peur, vous n'aurez pas à modifier ces fichiers, vous devez juste y faire référence dans votre HTML pour l'installation.
 
 Vous trouverez deux versions du même fichier :
 
@@ -65,7 +65,7 @@ Cette technique améliore la vitesse de chargement du site internet.
     <script src="js/jquery-2.1.1.min.js"></script>
 </body>
 </html>
-````
+```
 
 Bien évidement, il faudra placer nos fichiers utilisant la librairie jQuery en dessous de son appel.
 

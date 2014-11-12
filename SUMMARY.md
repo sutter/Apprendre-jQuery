@@ -11,6 +11,7 @@
    * [Les boucles](les_boucles.md)
    * [Les fonctions](les_fonctions.md)
 * [Installation](installation/README.md)
+* [Éviter les conflits](eviter_les_conflits.md)
 * [Premiers pas](premiers_pas/README.md)
 * [Le DOM](le_dom/README.md)
 * [Sélectionner des éléments](les_selecteurs/README.md)

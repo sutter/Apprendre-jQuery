@@ -1,6 +1,6 @@
 # Installation jQuery UI
 
-Comme la bibliothèque jQuery, jQuery UI n'est pas installé par défaut dans votre navigateur, il va donc falloir l'installer de la même manière que jQuery.
+Comme la bibliothèque jQuery, jQuery UI n'est pas installé par défaut dans votre navigateur, il va donc falloir l'importer de la même manière que jQuery.
 
 ## Télécharger jQuery UI
 
@@ -8,11 +8,11 @@ Aller sur lien : http://jqueryui.com/download/
 
 ![](img/jquery-ui.jpg)
 
-Vous pouvez installer la bibliothèque en entier ou seulement les modules indispensables à votre projet, afin d'optimiser la vitesse de chargement de votre site.
+Vous pouvez importer la bibliothèque en entier ou seulement les modules indispensables à votre projet, afin d'optimiser la vitesse de chargement de votre site.
 
 ## Installation
 
-À la manière jQuery, jQuery UI est un fichier JS à insérer dans votre document. Vous pouvez faire l'installation dans le header ou en bas de page.
+De la même manière que pour jQuery, jQuery UI est un fichier JS à insérer dans votre document. Vous pouvez faire l'importation dans le header ou en bas de la page.
 
 jQuery UI a aussi besoin d'un fichier CSS pour fonctionner. Bien entendu, pour la mise en production il est conseillé de concaténer les CSS
 

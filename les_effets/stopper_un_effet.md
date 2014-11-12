@@ -1,6 +1,6 @@
 # Stopper une animation / un effet
 
-Dans cette partie nous verrons la méthode `.stop()` servant à stopper **une animation** ou **un effet**.
+Dans cette partie, nous verrons la méthode `.stop()` servant à stopper **une animation** ou **un effet**.
 
 ## Méthode .stop()
 
@@ -14,12 +14,12 @@ Cette méthode prend 2 paramètres :
 
 | Paramètre | Description
 | -- | -- | -- |
-| StopAll | **Optionnelle** : la valeur par défaut est **false**.<br/>Valeur booléenne indiquant **true** ou **false** permettant d'arrêter toutes les animations en file d'attente. |
-| goToEnd | **Optionnelle** : la valeur par défaut est **false**.<br/>Valeur booléenne indiquant **true** ou **false** permettant de finir toutes les animations immédiatement. |
+| StopAll | **Optionnelle** : la valeur par défaut est **false**.<br/>Valeur booléenne indiquant **true** ou **false**. <br/> **false** permet d'arrêter toutes les animations en file d'attente. |
+| goToEnd | **Optionnelle** : la valeur par défaut est **false**.<br/>Valeur booléenne indiquant **true** ou **false**. <br> **false** permet de finir toutes les animations immédiatement.|
 
-### Stop sans paramètre
+### Stop sans paramètres
 
-Prenons l'exemple d'un carré que l'on anime avec la méthode `.animate()` au clic sur le bouton *Play*. Si nous cliquons sur le bouton *stop* l'animation en cours se stoppe grâce à la méthode `.stop()` sans paramètres. Au click sur *play* l'animation reprend là ou elle en était.
+Prenons l'exemple d'un carré qu'on anime avec la méthode `.animate()` au clic sur le bouton *Play*. Si nous cliquons sur le bouton *stop*, l'animation en cours se stoppe grâce à la méthode `.stop()` sans paramètres. Au click sur *play*, l'animation reprend là où elle en était.
 
 ```js
 // Déclaration de l'animation
@@ -41,7 +41,7 @@ $('#stop').click(function(){
 
 <p data-height="200" data-theme-id="7816" data-slug-hash="tdECu" data-default-tab="result" class='codepen'>See the Pen <a href='http://codepen.io/sutterlity/pen/tdECu/'>.stop()</a> by Sutterlity (<a href='http://codepen.io/sutterlity'>@sutterlity</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
 
-Prenons l'exemple d'un carré de l'ont modifie au survol. Dans l'exemple si dessous nous voyons qu'au survol avec de multiples passages sur le carré rose, l'animation continue le nombre de fois survolée, se qui peut être plutôt gênant. Tandis que le carré bleu lui cesse son animation lorsque le survol est terminé.
+Prenons l'exemple d'un carré qu'on modifie au survol. Dans l'exemple si dessous nous voyons qu'au survol avec de multiples passages sur le carré rose, l'animation continue le nombre de fois survolée, ce qui peut s'avérer gênant. Tandis que le carré bleu cesse son animation lorsque le survol est terminé.
 
 ```js
 // Déclaration sans .stop()
@@ -63,7 +63,7 @@ $('#b').hover(function(){
 
 ### Stop avec les paramètres 'stopAll' et 'goToEnd'
 
-Reprenons le cas de notre premier exemple. Agrémentons le d'un bouton de stopper les animations en cours et un autre pour les terminer toutes.
+Reprenons le cas de notre premier exemple. Agrémentons le d'un bouton permettant de stopper les animations en cours et un autre bouton permettant de les terminer toutes.
 
 ```js
 // Stopper toutes les animations en cours

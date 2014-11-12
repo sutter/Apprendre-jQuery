@@ -1,6 +1,6 @@
 # Les types
 
-## Les chaînes de caractères
+## Les chaînes de caractères ou "string"
 
 Ce type représente n’importe quel texte.
 On peut l'assigner de deux façons différentes.
@@ -19,7 +19,7 @@ maVariable = 'J\'aime JavaScript';
 **Attention**, si vous voulez des apostrophes pour déclarer votre variable et que vous utilisez des apostrophes dans le texte vous devez échapper les derniers avec le caractère `\` (antislash).
 Dans le cas contraire, JavaScript pensera que le code s’arrête à la première apostrophe et produira une erreur.
 
-## Le type numérique
+## Le type numérique ou "number"
 
 Ce type de variable représente tout nombre  que ce soit un entier, un négatif, un nombre scientifique, etc.
 
@@ -80,3 +80,42 @@ Nous pouvons tester l’existence de variable avec la même instruction.
 ```js
 console.log(typeof otherVariable); // Affiche : « undefined »
 ```
+
+## La convertion de type
+
+### Convertion type "number" en "string"
+
+Dans certains cas de figure, nous pouvons avoir besoin de convertir une chaîne de caractères en nombre. La méthode `parseInt()` convertie une chaîne de caractères en nombre.
+
+```js
+var myVariable = '2',
+    n = parseInt(myVariable);
+console.log(typeof n); // Affiche : « number »
+```
+
+### Convertion type "string" en "number"
+
+Pour convertir une chaîne de charactères en nombre, nous pouvons utiliser la méthode`.toString()`.
+
+```js
+var myVariable = '2',
+    n = myVariable.toString();
+console.log(typeof n); // Affiche : « string »
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

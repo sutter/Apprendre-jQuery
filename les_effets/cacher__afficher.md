@@ -1,7 +1,8 @@
 # Cacher / Afficher
 
-Dans cette partie nous verrons les méthodes `.hide()`, `.show()` et `.toggle()`.
- Elles servent à faire apparaître ou disparaître des éléments avec une animation.
+Dans cette partie, nous verrons les méthodes `.hide()`, `.show()` et `.toggle()`.
+
+Elles permettenet de faire apparaître ou disparaître des éléments avec une animation.
 
 Ces méthodes peuvent prendre comme paramètres :
 1. une vitesse

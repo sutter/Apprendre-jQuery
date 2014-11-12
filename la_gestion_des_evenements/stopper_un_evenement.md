@@ -1,6 +1,6 @@
 # La propagation d'événements
 
-Lorsque que vous déclarez un événement il se propage à travers le DOM jusqu'à rencontrer l'élément ciblé.
+Lorsque que vous déclarez un événement, il se propage à travers le DOM jusqu'à rencontrer l'élément ciblé.
 
 Prenons le cas d'un élément unique :
 
@@ -15,7 +15,7 @@ $("#totop").click(function(){
 });
 ```
 
-L'événement pointe sur un élément unique `id="yolo"` et le script est exécuté une seule fois.
+L'événement pointe sur un élément unique `id="totop"` et le script est exécuté une seule fois.
 
 Tandis que dans le cas suivant, le message d'alerte apparaîtra deux fois.
 
@@ -41,13 +41,15 @@ $("li").click(function(){
 ```
 
 
-L'événement se propagera à travers tout les **li** du document suivant le **principe de bouillonnement**.
+L'événement se propagera à travers tous les **li** du document suivant le **principe de bouillonnement**.
 Le script sera exécuté à chaque élément **li** rencontré, peu importe son niveau dans le DOM.
-C'est-ce que l'ont appelle la propagation d'événements.
+C'est ce qu'on appelle la propagation d'événements.
+
+Exemple de propagation : http://codepen.io/mueflo00/details/sAHFu
 
 ## Éviter la propagation
 
-Dans certains cas la propagation est problématique, heureusement jQuery propose deux moyens de les éviter.
+Dans certains cas, la propagation est problématique. Heureusement jQuery propose deux moyens de les éviter.
 
 ### event.stopPropagation()
 
@@ -65,9 +67,9 @@ $("li").click(function(e){
 
 ### return false
 
-`return false` empêche-lui aussi l'évènement de se propager dans l'arbre DOM en évitant le bouillonnement comme `event.stopPropagation()`, mais il annule aussi l'action en cours.
+`return false` empêche-lui aussi l'évènement de se propager dans l'arbre DOM en évitant le bouillonnement comme `event.stopPropagation()`. Il annule également l'action en cours.
 
-Dans l'exemple suivant nous affichons un message d'alerte et nous empêchons de mofidier l'URL au clic sur une l'ancre.
+Dans l'exemple suivant, nous affichons un message d'alerte et nous empêchons la modification de l'URL au clic sur l'ancre.
 
 ```html
 <a id="totop" href="#">Haut de page</a>

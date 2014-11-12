@@ -2,11 +2,11 @@
 
 Dans la précédente partie, nous avons vu comment effectuer des tâches lors d'un événement sur le navigateur.
 
-Dans cette partie nous allons voir comment attacher un événement comme le clic d'une souris, la modification d'un champ de formulaire, un touche clavier pressée …
+Dans cette partie, nous verrons comment attacher un événement comme le clic d'une souris, la modification d'un champ de formulaire, une touche clavier pressée …
 
 ## Anatomie d'un événement
 
-L’exécution d’un événement se fait en trois phases qui sont :
+L’exécution d’un événement se fait en trois phases :
 
 1. la capture
 2. l’atteinte de la cible
@@ -19,6 +19,7 @@ L’exécution d’un événement se fait en trois phases qui sont :
 **API :** http://api.jquery.com/on/
 
 La méthode `.on()` attache un ou plusieurs gestionnaires d'événements sur les éléments sélectionnés et les éléments enfants.
+Elle permet d'écouter les éléments créés dynamiquement.
 
 Vous pouvez retrouver la liste des événements à cette adresse : http://api.jquery.com/category/events/
 
@@ -51,18 +52,18 @@ $('.box').on('click', '.btn', function() {
 
 ---
 
-Prenons un autre exemple (plutôt tordu). Au clic ajoutons / supprimons-lui la classe **.border** , au survole de **.pod** ajoutons la classe **.hover** et pour finir, lorsque l'on sort retirons la classe **.hover**.
+Prenons un autre exemple (plutôt tordu) : au clic ajoutons / supprimons-lui la classe **.border** , au survol de **.pod** ajoutons la classe **.hover** et pour finir, en sortant retirons la classe **.hover**.
 
 
 ```js
 $('.pod').on({
-    click: function() {
-        $(this).toggleClass('have-border');
-    }, mouseenter: function() {
-        $(this).addClass('hover');
-    }, mouseleave: function() {
-        $(this).removeClass('hover');
-    }
+  click: function() {
+    $(this).toggleClass('have-border');
+  }, mouseenter: function() {
+    $('body').css('background', '#212121')
+  }, mouseleave: function() {
+    $('body').css('background', '#fff')
+  }
 });
 ```
 

@@ -12,9 +12,9 @@ Avant d’être utilisée, une fonction doit être déclarée afin que le naviga
 
 Une déclaration de fonction est constituée du mot-clé `function`, suivi :
 
-1. Du nom de la fonction (suit les mêmes règles que les noms de variables ) ;
-2. D'une liste de paramètres facultatifs séparée par des virgules et entourée de parenthèses ;
-3. Des instructions JavaScript définissant la fonction, entourés d’accolades `{ }`.<br/>Les instructions d'une fonction peuvent comprendre des appels à d'autres fonctions définies dans l'application courante.
+1. du nom de la fonction (suit les mêmes règles que les noms de variables ) ;
+2. des parenthèses **obligatoires** pouvant contenir des paramètres facultatifs séparés par des virgules ;
+3. des instructions JavaScript définissant la fonction, entourés d’accolades `{ }`.<br/>Les instructions d'une fonction peuvent comprendre des appels à d'autres fonctions définies dans l'application courante.
 
 La syntaxe de cette expression est la suivante.
 

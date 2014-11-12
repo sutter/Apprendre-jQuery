@@ -1,6 +1,6 @@
 # Animation
 
-Dans cette partie nous verrons la méthode `.animate()`, qui sert à céer des animation personnalisées.
+Dans cette partie, nous verrons la méthode `.animate()` utilisée pour céer des animations personnalisées.
 
 ## Méthode .animate()
 
@@ -10,7 +10,7 @@ Dans cette partie nous verrons la méthode `.animate()`, qui sert à céer des a
 $(selecteur).animate({paramètres},vitesse,callback);
 ```
 
-Par exemple déplaçons un élément **class="pod"** de 250px ver la droite.
+Par exemple, déplaçons un élément **class="pod"** de 250px vers la droite.
 
 ```js
 $('#play').click(function(){
@@ -49,10 +49,10 @@ $('#play').click(function(){
 
 ## Chaîner deux animations
 
-Nous avons la possibilité avec la méthode `.animate()` de chaîner les animations, c'est-à-dire de lancer une animation, puis une autre.
+Nous avons la possibilité avec la méthode `.animate()` de chaîner les animations, c'est-à-dire de lancer une animation puis une autre.
 
 Continuons de complexifier l'exemple du dessus.
-À la fin de l'animation **class="pod"** prends une opacité de 25%.
+À la fin de l'animation **class="pod"** prend une opacité de 25%.
 
 ```js
 $('#play').click(function(){

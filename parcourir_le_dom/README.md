@@ -4,13 +4,20 @@
 
 Même si les sélecteurs jQuery nous permettent de sélectionner des éléments, nos possibilités sont relativement limitées. jQuery nous propose plusieurs méthodes afin de parcourir le DOM et de faire des tris.
 
+Dans l'exemple ci-dessous, nous ajouterons une classe `.first-level` à l'enfant `ul` de `#menu`.
+
+```js
+$('#menu').children('ul').addClass('first-level');
+```
+
 Bien sûr nous ne verrons pas toutes les méthodes en détail, mais voici un tableau récapitulatif.
 
 | Méthode | Description |
 | -- | -- |
 | [`.add()`](http://api.jquery.com/add/) | Ajoute des éléments au sélecteur actuel |
 | [`.addBack()`](http://api.jquery.com/addBack/) | Ajoute les précédents éléments sélectionnés au sélecteur actuel|
-| [`.children()`](http://api.jquery.com/?s=.children) |  Retourne tous les enfants directs de l'élément sélectionné |
+| [`.children()`](http://api.jquery.com/children) |  Retourne tous les enfants directs de l'élément sélectionné |
+| [`.closest()`](http://api.jquery.com/closest/) |  Retourne le plus proche élément ancêtre de l'élément sélectionné |
 | [`.contents()`](http://api.jquery.com/contents/) | Les noeuds enfants (y compris les noeuds de texte) |
 | [`.each()`](http://api.jquery.com/each/) | Exécute une fonction à chaque élément identifié |
 | [`.end()`](http://api.jquery.com/end/) | Termine le filtrage en cours et retourne aux éléments sélectionnés précédemment |
@@ -28,7 +35,7 @@ Bien sûr nous ne verrons pas toutes les méthodes en détail, mais voici un tab
 | [`.not()`](http://api.jquery.com/not/) | Supprime les éléments qui ne correspondent pas au sélecteur |
 | [`.offsetParent()`](http://api.jquery.com/offsetParent/) | Retourne le parent positionné (par exemple de manière relative ou absolue) du 1<sup>er</sup> élément sélectionné. |
 | [`.parent()`](http://api.jquery.com/parent/)| Retourne le parent direct, avec filtre (facultatif) |
-| [`.parents()`](http://api.jquery.com/parents/) | Retourne tous les éléments parents de l'élément sélectionné |
+| [`.parents()`](http://api.jquery.com/parents/) | Retourne tous les éléments ancêtres de l'élément sélectionné |
 | [`.parentsUntil()`](http://api.jquery.com/parentsUntil/) | Retourne tous les éléments parents entre deux arguments donnés |
 | [`.prev()`](http://api.jquery.com/prev/) | Retourne le frère précédent de chaque élément sélectionné, avec filtre (facultatif) |
 | [`.prevAll()`](http://api.jquery.com/prevAll/) | Retourne tous les frères précédents de chaque élément sélectionné, avec filtre (facultatif) |

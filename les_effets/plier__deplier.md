@@ -1,6 +1,6 @@
 # Plier / Déplier
 
-Dans cette partie nous verrons les méthodes `.slideDown()`, `.slideUp()` et `.slideToggle()`. Elles servent à plier et déplier des éléments avec une animation de fondu.
+Dans cette partie, nous verrons les méthodes `.slideDown()`, `.slideUp()` et `.slideToggle()`. Elles permettent de plier et déplier des éléments avec une animation de fondu.
 
 ## Méthode .slideDown()
 
@@ -24,13 +24,14 @@ $('#slideDown').click(function(){
     });
 });
 ```
-<p data-height="180" data-theme-id="7816" data-slug-hash="yBCDA" data-default-tab="result" class='codepen'>See the Pen <a href='http://codepen.io/sutterlity/pen/yBCDA/'>SlideUp</a> by Sutterlity (<a href='http://codepen.io/sutterlity'>@sutterlity</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+
+<p data-height="180" data-theme-id="7816" data-slug-hash="jCkdJ" data-default-tab="result" class='codepen'>See the Pen <a href='http://codepen.io/sutterlity/pen/jCkdJ/'>.slideDown()</a> by Sutterlity (<a href='http://codepen.io/sutterlity'>@sutterlity</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
 
 ## Méthode .slideUp()
 
 **API** : [http://api.jquery.com/slideUp/](http://api.jquery.com/slideUp/)
 
-La méthode `.slideUp()` permet de plier un élément avec une transition.
+La méthode `.slideUp()` permet de replier un élément avec une transition.
 
 ```js
 $(selecteur).slideUp(vitesse,callback);
@@ -48,7 +49,8 @@ $('#slideUp').click(function(){
     });
 });
 ```
-<p data-height="180" data-theme-id="7816" data-slug-hash="jCkdJ" data-default-tab="result" class='codepen'>See the Pen <a href='http://codepen.io/sutterlity/pen/jCkdJ/'>.slideDown()</a> by Sutterlity (<a href='http://codepen.io/sutterlity'>@sutterlity</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+<p data-height="180" data-theme-id="7816" data-slug-hash="yBCDA" data-default-tab="result" class='codepen'>See the Pen <a href='http://codepen.io/sutterlity/pen/yBCDA/'>SlideUp</a> by Sutterlity (<a href='http://codepen.io/sutterlity'>@sutterlity</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+
 
 ## Méthode .slideToggle()
 
@@ -72,5 +74,7 @@ $('#slideToggle').click(function(){
     });
 });
 ```
+
 <p data-height="180" data-theme-id="7816" data-slug-hash="pCDuH" data-default-tab="result" class='codepen'>See the Pen <a href='http://codepen.io/sutterlity/pen/pCDuH/'>.slideToggle()</a> by Sutterlity (<a href='http://codepen.io/sutterlity'>@sutterlity</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+
 <script async src="//codepen.io/assets/embed/ei.js"></script>

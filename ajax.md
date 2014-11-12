@@ -1,15 +1,15 @@
 # Ajax
 
 
-[Ajax](http://fr.wikipedia.org/wiki/Ajax_(informatique) ou **Asynchronous JavaScript and XML** est une technologie se basant sur l'objet [XMLHttpRequest](http://fr.wikipedia.org/wiki/XMLHttpRequest) permettant d'invoquer le modèle HTTP.
+[Ajax](http://fr.wikipedia.org/wiki/Ajax_(informatique) ou **Asynchronous JavaScript and XML** est une technologie se basant sur l'objet [XMLHttpRequest](http://fr.wikipedia.org/wiki/XMLHttpRequest).
 
 **XMLHttpRequest** est un objet ActiveX ou JavaScript qui permet d'obtenir des données au format XML, JSON, mais aussi HTML, ou encore texte simple à l'aide de requêtes HTTP.
 
-Ajax va pouvoir récuperer ou  de transmettre sur un serveur des données sans le rafraichir notre navigateur.
+Ajax va pouvoir récupérer ou transmettre sur un serveur des données sans rafraichir notre navigateur.
 
 
 ** Exemples d'applications utilisant AJAX :**
-Gmail, Google Maps, Youtube, et les onglets Facebook.
+Gmail, Google Maps, Youtube et les onglets Facebook.
 
 
 ## Le principe
@@ -30,4 +30,4 @@ En Ajax, comme le nom l'indique, les demandes sont effectuées de manière async
 
 **Avant de vous lancer dans l'aventure AJAX**
 
-Vous devez travailler sur un serveur pour que vos échanges Ajax fonctionnent. Vous pouvez travailler en local et installant un logiciel du type [WAMP](http://www.wampserver.com/), [MAMP](http://www.mamp.info/en/), [XAMPP](https://www.apachefriends.org/fr/index.html) …
+Vous devez travailler sur un serveur pour que vos échanges Ajax fonctionnent. Vous pouvez travailler en local et instaler un logiciel du type [WAMP](http://www.wampserver.com/), [MAMP](http://www.mamp.info/en/), [XAMPP](https://www.apachefriends.org/fr/index.html) …

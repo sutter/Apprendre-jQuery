@@ -10,6 +10,18 @@ La méthode `.siblings()` retourne tous les éléments frères de l'élément s�
 
 L'exemple suivant ajoute `class="selected"` aux frères de `class="item"`.
 
+```html
+<ul class="list">
+    <li>…</li>
+	<li>…</li>
+	<li>…</li>
+	<li class="item">…</li>
+	<li>…</li>
+	<li>…</li>
+	<li>…</li>
+</ul>
+```
+
 ```js
 $('.item').siblings().addClass('selected');
 ```
@@ -37,6 +49,18 @@ La méthode `.next()` retourne le frère suivant de l'élément sélectionné.
 
 L'exemple suivant ajoute `class="selected"` au frère suivant de `class="item"`.
 
+```html
+<ul class="list">
+	<li>…</li>
+	<li>…</li>
+	<li>…</li>
+	<li class="item">…</li>
+	<li>…</li>
+	<li>…</li>
+	<li>…</li>
+</ul>
+```
+
 ```js
 $('.item').next().addClass('selected');
 ````
@@ -63,6 +87,16 @@ $('.item').next().addClass('selected');
 La méthode `.nextAll()` retourne tous les frères suivants de l'élément sélectionné.
 
 L'exemple suivant ajoute `class="selected"` aux frères suivants de `class="item"`.
+
+```html
+<ul class="list">
+	<li>…</li>
+	<li>…</li>
+	<li class="item">…</li>
+	<li>…</li>
+	<li>…</li>
+</ul>
+```
 
 ```js
 $('.item').nextAll().addClass('selected');
@@ -114,8 +148,20 @@ La méthode `.prev()` retourne le frère prédédent l'élément sélectionné.
 
 L'exemple suivant ajoute `class="selected"` au frère prédédent de `class="item"`.
 
+```html
+<ul class="list">
+    <li>…</li>
+	<li>…</li>
+	<li>…</li>
+	<li class="item">…</li>
+	<li>…</li>
+	<li>…</li>
+	<li>…</li>
+</ul>
+```
+
 ```js
-$('.item').prev().addClass('pod');
+$('.item').prev().addClass('selected');
 ```
 
 **Résultat**
@@ -140,8 +186,20 @@ La méthode `.prevAll()` retourne tous les frères prédédents de l'élément s
 
 L'exemple suivant ajoute `class="selected"` aux frères prédédents de `class="item"`.
 
+```html
+<ul class="list">
+	<li>…</li>
+	<li>…</li>
+	<li>…</li>
+	<li class="item">…</li>
+	<li>…</li>
+	<li>…</li>
+	<li>…</li>
+</ul>
+```
+
 ```js
-$('.item').prevAll().addClass('pod');
+$('.item').prevAll().addClass('selected');
 ```
 
 **Résultat**
@@ -166,20 +224,32 @@ La méthode `.prevUntil()` retourne tous les frères prédédents entre les él�
 
 L'exemple suivant ajoute `class="selected"` aux frères prédédents entre `class="item"` et `class="other-class"`.
 
+```html
+<ul class="list">
+    <li>…</li>
+	<li class="other-class">…</li>
+	<li>…</li>
+	<li>…</li>
+	<li class="item">…</li>
+	<li>…</li>
+	<li>…</li>
+</ul>
+```
+
 ```js
-$('.item').prevUntil('.last').addClass('pod');
+$('.item').prevUntil('.other-class').addClass('selected');
 ```
 
 **Résultat**
 
 ```html
 <ul class="list">
+    <li>…</li>
     <li class="other-class">…</li>
 	<li class="selected">…</li>
 	<li class="selected">…</li>
 	<li class="item">…</li>
     <li>…</li>
-	<li>…</li>
 	<li>…</li>
 </ul>
 ```

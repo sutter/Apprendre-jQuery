@@ -21,8 +21,7 @@ for (compteur; condition; modification du compteur) {
 **Exemple**
 
 ```js
-var i;
-for (i=1; i<6; i++) {
+for (var i=1; i<6; i++) {
     console.log(i);
 }
 ```
@@ -35,6 +34,14 @@ Elle commence à `i=1`, vérifie que i est bien inférieur à 6, etc... jusqu'à
 
 1. Il faudra toujours vérifier que la boucle a bien une condition de sortie.
 2. Une instruction `Alert(i)`; dans votre boucle est un bon moyen pour vérifier la valeur du compteur pas à pas.
+
+Bien entendu, si nous pouvons incrémenter dans une boucle, nous pouvons aussi décrémenter.
+
+```js
+for (var i=10; i>0; i--) {
+    console.log(i);
+}
+```
 
 ## L'instruction while
 

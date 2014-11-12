@@ -3,7 +3,7 @@
 **API :** http://api.jquery.com/jQuery.get/
 
 La méthode `.get()` permet de recevoir des données.
-Contairemement à la méthode `.load()`, elle nous permet non pas de recevoir du contenu directement dans l'élément ciblé, mais de nous laisser le choix sur les actions à faire.
+Contairemement à la méthode `.load()`, elle nous permet non pas de recevoir du contenu directement dans l'élément ciblé mais de nous laisser le choix sur les actions à faire.
 
 
 ## La méthode en détail
@@ -16,8 +16,8 @@ $.get( url, data, function(data,status,xhr), dataType );
 | -- | -- |
 | **url** | **Requis**<br/>Une chaîne contenant l'URL vers laquelle la demande est envoyée |
 | **data** | **Optionnel**<br/> Spécifie les données à envoyer vers le serveur en même temps que la demande |
-| **function(data,status,xhr)** | **Optionnel**<br/> Indique une fonction à exécuter la méthode est terminée<br/>Paramètres supplémentaires : <br/>**- data** - contient les données résultant de la demande <br/> **- status** - contient l'état de la demande ("success", "notmodified", "error", "timeout", ou "parsererror")<br/> **- xhr** - contient l'objet XMLHttpRequest |
-| **dataType** | **Optionnel**<br/>Spécifie le type de données attendu de la réponse du serveur. Par défaut jQuery effectue une estimation automatique (HTML, PHP, TXT, XML et JSON) |
+| **function(data,status,xhr)** | **Optionnel**<br/> Indique une fonction à exécuter lorsque la méthode est terminée<br/>Paramètres supplémentaires : <br/>**- data** - contient les données résultant de la demande <br/> **- status** - contient l'état de la demande ("success", "notmodified", "error", "timeout", ou "parsererror")<br/> **- xhr** - contient l'objet XMLHttpRequest |
+| **dataType** | **Optionnel**<br/>Spécifie le type de données attendu. Par défaut jQuery effectue une estimation automatique (HTML, PHP, TXT, XML et JSON) |
 
 ## Exemples
 
@@ -31,7 +31,7 @@ $.get('inc/test.html', function( data ) {
 });
 ```
 
-Elle est un raccourci de la fonction `.ajax()` suivante, que nous verrons dans la prochaine partie.
+Elle est un raccourci de la fonction `.ajax()` suivante. Nous la verrons plus en détails dans la prochaine partie.
 
 ```js
 $.ajax({
@@ -64,7 +64,7 @@ Prenons l'exemple de fichier JSON.
 }
 ```
 
-Voici le script necessaire à l'affichage des informations.
+Voici le script nécessaire à l'affichage des informations.
 
 ```js
 $.get('inc/user.json', function( data ) {
@@ -72,7 +72,7 @@ $.get('inc/user.json', function( data ) {
 }, 'json');
 ```
 
-JQuery à aussi une méthode raccoucie pour le JSON [`.getJSON()`](http://api.jquery.com/jquery.getjson/)
+JQuery à aussi une méthode raccourcie pour le JSON [`.getJSON()`](http://api.jquery.com/jquery.getjson/)
 
 ```js
 $.getJSON('inc/user.json', function( data ) {
@@ -80,7 +80,7 @@ $.getJSON('inc/user.json', function( data ) {
 });
 ```
 
-Ce dernier script est le raccouci de la méthode ajax suivante.
+Ce dernier script est le raccourci de la méthode ajax suivante.
 
 ```js
 $.ajax({

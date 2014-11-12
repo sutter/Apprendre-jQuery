@@ -10,8 +10,18 @@ La méthode `.addClass()` permet d'ajouter une classe sur l'élément selectionn
 
 L'exemple suivant ajoute la classe `pod` à `class="box"`.
 
+```html
+<div class="box">…</div>
+```
+
 ```js
 $('.box').addClass('pod');
+```
+
+**Résultat**
+
+```html
+<div class="box pod">…</div>
 ```
 
 Nous pouvons ajouter plusieurs classes en les séparant d'un espace.
@@ -19,6 +29,13 @@ Nous pouvons ajouter plusieurs classes en les séparant d'un espace.
 ```js
 $('.box').addClass('pod product');
 ```
+
+**Résultat**
+
+```html
+<div class="box pod product">…</div>
+```
+
 Exemple d'ajout de classe au click.
 
 <p data-height="180" data-theme-id="7816" data-slug-hash="qmuCr" data-default-tab="result" class='codepen'>See the Pen <a href='http://codepen.io/sutterlity/pen/qmuCr/'>.addClass()</a> by Sutterlity (<a href='http://codepen.io/sutterlity'>@sutterlity</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
@@ -29,17 +46,33 @@ Exemple d'ajout de classe au click.
 
 La méthode `.removeClass()` permet de supprimer une classe sur l'élément selectionné.
 
-L'exemple suivant supprime `class="box"`.
+L'exemple suivant supprime `class="box pod"`.
+
+```html
+<div class="box pod">…</div>
+```
 
 ```js
 $('.box').removeClass();
 ```
 
-Nous pouvons aussi passer le nom d'une classe en paramètre.
-Par exemple ici nous supprimons la classe `.product` de l'élément `class="box"`.
+**Résultat**
+
+```html
+<div>…</div>
+```
+
+Nous pouvons aussi passer le nom d'une classe en paramètres.
+Par exemple, ici nous supprimons la classe `.pod` de l'élément `class="box pod"`.
 
 ```js
-$('.box').removeClass('product');
+$('.box').removeClass('pod');
+```
+
+**Résultat**
+
+```html
+<div class="box">…</div>
 ```
 
 Exemple de supression de class au click.
@@ -55,8 +88,8 @@ La méthode `.toggleClass()` permet d'ajouter une classe sur l'élément selecti
 L'exemple suivant ajoute la classe `.is-active` à `class="btn"` au click, ou la supprime si elle est présente.
 
 ```js
-$('#a').click(function(){
-    $('#b').toggleClass('bg-success');
+$('.btn').click(function(){
+    $(this).toggleClass('is-active');
 });
 ```
 
@@ -66,22 +99,28 @@ $('#a').click(function(){
 
 **API :** http://api.jquery.com/css/
 
-La méthode `.css()` affecte les style CSS à l'élément selectionné.
-Elle agit aussi comme un *getter*, et permet donc d'obtenir la chaîne de caractère de la valeur CSS demandée.
+La méthode `.css()` affecte les styles CSS à l'élément sélectionné.
+
+Elle agit aussi comme un *getter* et permet donc d'obtenir la chaîne de caractères de la valeur CSS demandée.
 
 L'exemple suivant ajoute un fond rouge à `class="box"`.
+
+```html
+<div class="box">…</div>
+```
 
 ```js
 $('.box').css('background-color','red');
 ```
 
-Voici le résultat :
+**Résultat**
 
 ```html
 <div class="box" style="background-color: red;">…</div>
 ```
 
-Nous pouvons bien sûr ajouté plusieurs style CSS en même temps, sous forme de tableau.
+Nous pouvons bien sûr ajouter plusieurs styles CSS en même temps sous forme d'un objet avec des paramètres.
+
 ```js
 $('.box').css({
     'background-color': 'red',
@@ -90,11 +129,36 @@ $('.box').css({
 });
 ```
 
-Comme je l'ai expliquer plus haut, nous pouvons obtenir la valeur d'une propriété CSS comme dans l'exemple ci-dessous.
+**Résultat**
+
+```html
+<div class="box" style="font-size: 20px; color: yellow; background-color: red;">…</div>
+```
+
+### Setter
+
+Comme je l'ai expliqué plus haut, nous pouvons obtenir la valeur d'une propriété CSS comme dans l'exemple ci-dessous.
+
+```html
+<div class="box">…</div>
+<div class="pod">…</div>
+```
+
+```css
+.pod { background: red }
+```
 
 ```js
 $('.box').css('background-color', $('.pod').css('background-color') );
 ```
+
+**Résultat**
+
+```html
+<div class="box">…</div>
+<div class="pod" style="background-color: red;">…</div>
+```
+
 <script async src="//codepen.io/assets/embed/ei.js"></script>
 
 

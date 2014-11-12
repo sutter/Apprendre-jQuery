@@ -1,12 +1,12 @@
 # Les fondus
 
-Dans cette partie nous verrons les méthodes `.fadeIn()`, `.fadeOut()`, .fadeToggle()` et `.fadeTo()`. Elles servent à faire apparaître ou disparaître des éléments avec une animation de fondu.
+Dans cette partie nous verrons les méthodes `.fadeIn()`, `.fadeOut()`, .fadeToggle()` et `.fadeTo()`. Elles permettent de faire apparaître ou disparaître des éléments avec une animation de fondu.
 
 ## Méthode .fadeIn()
 
 **API** : [http://api.jquery.com/fadeIn/](http://api.jquery.com/fadeIn/)
 
-La méthode `.fadeIn()` permet faire apparaître les éléments avec une animation de fondu.
+La méthode `.fadeIn()` permet de faire apparaître les éléments avec une animation de fondu.
 
 ```js
 $(selecteur).fadeIn(vitesse,callback);
@@ -31,7 +31,7 @@ $('#fadeIn').click(function(){
 
 **API** : [http://api.jquery.com/fadeOut/](http://api.jquery.com/fadeOut/)
 
-La méthode `.fadeOut()` permet faire disparaître les éléments avec une animation de fondu.
+La méthode `.fadeOut()` permet de faire disparaître les éléments avec une animation de fondu.
 
 ```js
 $(selecteur).fadeOut(vitesse,callback);
@@ -55,7 +55,7 @@ $('#fadeOut').click(function(){
 
 **API** : [http://api.jquery.com/fadeToggle/](http://api.jquery.com/fadeToggle/)
 
-La méthode `.fadeToggle()` permet faire apparaître / disparaître les éléments avec une animation de fondu.
+La méthode `.fadeToggle()` permet de faire apparaître / disparaître les éléments avec une animation de fondu.
 
 ```js
 $(selecteur).fadeToggle(vitesse,callback);
@@ -80,10 +80,10 @@ $('#fadeToggle').click(function(){
 
 **API** : [http://api.jquery.com/fadeTo/](http://api.jquery.com/fadeTo/)
 
-La méthode `.fadeTo()` permet modifier l'opacité d'un élément avec un effet de transition.
+La méthode `.fadeTo()` permet de modifier l'opacité d'un élément avec un effet de transition.
 
 ```js
-$(selecteur).fadeTo(vitesse,callback);
+$(selecteur).fadeTo(vitesse,opacité,callback);
 ```
 
 Exemple :

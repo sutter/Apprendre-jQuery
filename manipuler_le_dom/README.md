@@ -1,16 +1,16 @@
 # Manipuler le DOM
 
-jQuery nous propose plusieurs méthodes afin de manipuler le DOM.
+jQuery nous propose plusieurs méthodes pour manipuler le DOM.
 Avec ces méthodes, nous pouvons supprimer, créer, cloner, ajouter… Bref nous pouvons remodeler le DOM à notre convenance.
 
 | Méthode | Description |
 | -- | -- |
 | [`.addClass()`](http://api.jquery.com/addClass/) | Ajoute un ou plusieurs noms de classe à des éléments sélectionnés |
-| [`.after()`](http://api.jquery.com/after/) | Insérez le contenu après les éléments sélectionnés |
-| [`.append()`](http://api.jquery.com/append/) | Insérez le contenu à la fin les éléments sélectionnés |
-| [`.appendTo()`](http://api.jquery.com/appendTo/) | Insérez le contenu sélectionné à la fin les éléments sélectionnés|
+| [`.after()`](http://api.jquery.com/after/) | Insére le contenu après les éléments sélectionnés |
+| [`.append()`](http://api.jquery.com/append/) | Insére le contenu à la fin les éléments sélectionnés |
+| [`.appendTo()`](http://api.jquery.com/appendTo/) | Insére le contenu sélectionné à la fin les éléments sélectionnés|
 | [`.attr()`](http://api.jquery.com/attr/) | Définit ou retourne les attributs / valeurs des éléments sélectionnés |
-| [`.before()`](http://api.jquery.com/before/) | Insérez le contenu avant les éléments sélectionnés |
+| [`.before()`](http://api.jquery.com/before/) | Insére le contenu avant les éléments sélectionnés |
 | [`.clone()`](http://api.jquery.com/clone/) | Effectue une copie des éléments sélectionnés |
 | [`.css()`](http://api.jquery.com/css/) | Définit ou retourne une ou plusieurs propriétés de style pour les éléments sélectionnés |
 | [`.detach()`](http://api.jquery.com/detach/) | Supprime les éléments sélectionnés (conserve les données et les événements) |
@@ -28,7 +28,7 @@ Avec ces méthodes, nous pouvons supprimer, créer, cloner, ajouter… Bref nous
 | [`.outerWidth()`](http://api.jquery.com/outerWidth/) | Renvoie la largeur d'un élément (y compris le padding et les border) |
 | [`.position()`](http://api.jquery.com/position/) | Renvoie la position (par rapport à l'élément parent) d'un élément |
 | [`.prepend()`](http://api.jquery.com/prepend/) | Introduire le contenu au début des éléments sélectionnés |
-| [`.prependTo()`](http://api.jquery.com/prependTo/) | Insérer des éléments de HTML au début des éléments sélectionnés |
+| [`.prependTo()`](http://api.jquery.com/prependTo/) | Insére des éléments de HTML au début des éléments sélectionnés au format html |
 | [`.prop()`](http://api.jquery.com/prop/) | Définit ou retourne propriétés / valeurs des éléments sélectionnés |
 | [`.remove()`](http://api.jquery.com/remove/) | Supprime les éléments sélectionnés (y compris des données et des événements) |
 | [`.removeAttr()`](http://api.jquery.com/removeAttr/) | Supprime un ou plusieurs attributs à partir d'éléments sélectionnés |
@@ -38,7 +38,7 @@ Avec ces méthodes, nous pouvons supprimer, créer, cloner, ajouter… Bref nous
 | [`.replaceWith()`](http://api.jquery.com/replaceWith/) | Remplace les éléments sélectionnés par un nouveau contenu |
 | [`.scrollLeft()`](http://api.jquery.com/scrollLeft/) | Définit ou retourne la position de la barre de défilement horizontale des éléments sélectionnés |
 | [`.scrollTop()`](http://api.jquery.com/scrollTop/) | Définit ou retourne la position de la barre de défilement vertical des éléments sélectionnés |
-| [`.text()`](http://api.jquery.com/text/) | Sets or returns the text content of selected elements |
+| [`.text()`](http://api.jquery.com/text/) | Insére des éléments de HTML au début des éléments sélectionnés au format texte |
 | [`.toggleClass()`](http://api.jquery.com/toggleClass/) | Bascule entre l'ajout / suppression d'une ou plusieurs classes à partir d'éléments sélectionnés |
 | [`.unwrap()`](http://api.jquery.com/unwrap/) | Supprime l'élément parent des éléments sélectionnés |
 | [`.val()`](http://api.jquery.com/val/) | Définit ou retourne la value des éléments sélectionnés (pour les éléments de formulaire) |

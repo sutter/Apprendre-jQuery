@@ -10,6 +10,18 @@ La méthode `.first()` retourne le premier élément de l'élément sélectionn�
 
 L'exemple suivant ajoute `class="selected"` au premier élément de `class="item"`.
 
+```html
+<ul class="list">
+    <li class="item">…</li>
+	<li class="item">…</li>
+	<li class="item">…</li>
+	<li class="item">…</li>
+	<li class="item">…</li>
+	<li class="item">…</li>
+	<li class="item">…</li>
+</ul>
+```
+
 ```js
 $('.item').first().addClass('selected');
 ```
@@ -35,6 +47,19 @@ $('.item').first().addClass('selected');
 La méthode `.last()` retourne le dernier élément de l'élément sélectionné.
 
 L'exemple suivant ajoute `class="selected"` au dernier élément de `class="item"`.
+
+
+```html
+<ul class="list">
+	<li class="item">…</li>
+	<li class="item">…</li>
+	<li class="item">…</li>
+	<li class="item">…</li>
+	<li class="item">…</li>
+	<li class="item">…</li>
+	<li class="item">…</li>
+</ul>
+```
 
 ```js
 $('.item').last().addClass('selected');
@@ -63,6 +88,18 @@ Les numéros d'index commencent à 0, de sorte que le premier élément aura le 
 
 L'exemple suivant ajoute `class="selected"` au 2ème élément de `class="item"`.
 
+```html
+<ul class="list">
+	<li class="item">…</li>
+	<li class="item">…</li>
+	<li class="item">…</li>
+	<li class="item">…</li>
+	<li class="item">…</li>
+	<li class="item">…</li>
+	<li class="item">…</li>
+</ul>
+```
+
 ```js
 $('.item').eq(1).addClass('selected');
 ```
@@ -88,6 +125,18 @@ $('.item').eq(1).addClass('selected');
 La méthode `.filter()` permet de spécifier un critère. Les éléments qui ne correspondent pas aux critères sont retirés de la sélection, et ceux qui correspondent seront retournés.
 
 L'exemple suivant ajoute `class="selected"` aux éléments `class="item"` ayant une autre `class="other-class"`.
+
+```html
+<ul class="list">
+	<li class="item">…</li>
+	<li class="item">…</li>
+	<li class="item other-class">…</li>
+	<li class="item">…</li>
+	<li class="item other-class">…</li>
+	<li class="item">…</li>
+	<li class="item">…</li>
+</ul>
+```
 
 ```js
 $('.item').filter('.other-class').addClass('selected');
@@ -115,6 +164,18 @@ La méthode `.not()` retourne tous les éléments qui ne correspondent pas aux c
 C'est le contraire de la méthode `.filter()`
 
 L'exemple suivant ajoute `class="selected"` qui ne sont pas `li` ayant aucune classe.
+
+```html
+<ul class="list">
+	<li class="item">…</li>
+	<li class="item">…</li>
+	<li>…</li>
+	<li class="item">…</li>
+	<li class="item">…</li>
+	<li>…</li>
+	<li class="item">…</li>
+</ul>
+```
 
 ```js
 $('li').not('.item').addClass('selected');
