@@ -43,6 +43,7 @@
    * [La méthode .get()](la_methode_get.md)
    * [La méthode .post()](la_methode_post.md)
    * [La méthode .ajax()](la_methode_ajax.md)
+* [Créer un plugin](creer_un_plugin.md)
 * [jQuery UI](jquery_ui.md)
    * [Installation jQuery UI](installation_jquery_ui.md)
 
