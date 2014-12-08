@@ -98,7 +98,7 @@ console.log(typeof n); // Affiche : « number »
 Pour convertir une chaîne de charactères en nombre, nous pouvons utiliser la méthode`.toString()`.
 
 ```js
-var myVariable = '2',
+var myVariable = 2,
     n = myVariable.toString();
 console.log(typeof n); // Affiche : « string »
 ```
