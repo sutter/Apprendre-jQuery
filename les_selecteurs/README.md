@@ -60,9 +60,9 @@ Bien entendu, la liste ci-dessous n'est pas exhaustive et ne reprend que les sé
 | Sélecteurs | Exemple | Éléments selectionnés |
 | -- | -- | -- |
 | [**.class, .class**](http://api.jquery.com/multiple-selector/) | `$('.box, .pod')` | Les éléments **class="box"** ou **class="pod"** |
-| [**#id .class** ](http://api.jquery.com/descendant-selector/)| `$('#header .box')` | Les éléments **class="box"** à l'intérieur **id="header"** |
-| **#id.class** | `$('#header.box')` | Les éléments **class="box"** ayant pour identifiant **id="header"** |
-| **'.class',  '#id'** | `$('.box',  '#header')` | Les éléments **class="box"** dans le contexte **id="header"** |
+| [**#id .class** ](http://api.jquery.com/descendant-selector/)| `$('# .box')` | Les éléments **class="box"** à l'intérieur **id=""** |
+| **#id.class** | `$('#.box')` | Les éléments **class="box"** ayant pour identifiant **id=""** |
+| **'.class',  '#id'** | `$('.box',  '#')` | Les éléments **class="box"** dans le contexte **id=""** |
 
 ### Les sélecteurs de base
 
@@ -130,7 +130,7 @@ Bien entendu, la liste ci-dessous n'est pas exhaustive et ne reprend que les sé
 | [**:focus**](http://api.jquery.com/focus-selector/) | `$('.box:focus')` | Les éléments qui ont le **focus** |
 | [**:gt**](http://api.jquery.com/gt-selector/) | `$('.box:gt(3)')` | Les éléments **class="box** à partir du 4<sup>ème</sup> |
 | [**:lt**](http://api.jquery.com/gt-selector/) | `$('.box:lt(3)')` | Les éléments **class="box** jusqu'au 3<sup>ème</sup> |
-| [**:header**](http://api.jquery.com/header-selector/) | `$('.title:header'` | Toutes les balises de **h1** à **h6** ayant **class="title"**|
+| [**:header**](http://api.jquery.com/header-selector/) | `$('.title:header')` | Toutes les balises de **h1** à **h6** ayant **class="title"**|
 
 ## Les sélecteurs de visibilité
 
