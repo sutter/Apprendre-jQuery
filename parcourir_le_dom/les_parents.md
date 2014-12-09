@@ -130,9 +130,9 @@ $('.box-inner').closest('section').addClass('clearfix');
 **Résultat**
 
 ```html
-<main class="clearfix">
+<main>
     <section class="clearfix">
-        <div class="clearfix">
+        <div>
             <div class="box-inner">…</div>
         </div>
     </section>
