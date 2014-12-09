@@ -63,7 +63,7 @@ L'exemple suivant ajoute `class="selected"` au frère suivant de `class="item"`.
 
 ```js
 $('.item').next().addClass('selected');
-````
+```
 
 **Résultat**
 
