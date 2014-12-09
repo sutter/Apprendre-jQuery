@@ -122,6 +122,18 @@ La méthode `.nextUntil()` retourne tous les frères suivants entre les élémen
 
 L'exemple suivant ajoute `class="selected"` aux frères suivants entre `class="item"` et le `class="other-class"`.
 
+```html
+<ul class="list">
+    <li>…</li>
+	<li>…</li>
+	<li>…</li>
+	<li class="item">…</li>
+	<li>…</li>
+	<li>…</li>
+	<li class="other-class">…</li>
+</ul>
+```
+
 ```js
 $('.item').nextUntil('.other-class').addClass('selected');
 ```
