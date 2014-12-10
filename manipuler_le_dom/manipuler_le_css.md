@@ -88,8 +88,8 @@ La méthode `.toggleClass()` permet d'ajouter une classe sur l'élément selecti
 L'exemple suivant ajoute la classe `.is-active` à `class="btn"` au click, ou la supprime si elle est présente.
 
 ```js
-$('.btn').click(function(){
-    $(this).toggleClass('is-active');
+$('#a').click(function(){
+  $('#b').toggleClass('bg-success');
 });
 ```
 
