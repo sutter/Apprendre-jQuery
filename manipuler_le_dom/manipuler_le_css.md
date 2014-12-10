@@ -155,8 +155,8 @@ $('.box').css('background-color', $('.pod').css('background-color') );
 **Résultat**
 
 ```html
-<div class="box">…</div>
-<div class="pod" style="background-color: red;">…</div>
+<div class="box" style="background-color: red;">…</div>
+<div class="pod">…</div>
 ```
 
 <script async src="//codepen.io/assets/embed/ei.js"></script>
