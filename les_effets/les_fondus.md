@@ -61,7 +61,7 @@ La méthode `.fadeToggle()` permet de faire apparaître / disparaître les élé
 $(selecteur).fadeToggle(vitesse,callback);
 ```
 
-Exemple :
+**Exemple :**
 
 ```js
 $('#fadeToggle').click(function(){
@@ -73,6 +73,9 @@ $('#fadeToggle').click(function(){
     });
 });
 ```
+
+**Un autre exemple :**
+
 <p data-height="180" data-theme-id="7816" data-slug-hash="ckEap" data-default-tab="result" class='codepen'>See the Pen <a href='http://codepen.io/sutterlity/pen/ckEap/'>.fadeToggle</a> by Sutterlity (<a href='http://codepen.io/sutterlity'>@sutterlity</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
 <script async src="//codepen.io/assets/embed/ei.js"></script>
 
@@ -86,7 +89,7 @@ La méthode `.fadeTo()` permet de modifier l'opacité d'un élément avec un eff
 $(selecteur).fadeTo(vitesse,opacité,callback);
 ```
 
-Exemple :
+**Exemple :**
 
 ```js
 $('#fadeTo').click(function(){

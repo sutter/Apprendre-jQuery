@@ -19,7 +19,7 @@ La méthode `.hide()` permet de cacher les éléments.
 $(selecteur).hide(vitesse,callback);
 ```
 
-Exemple :
+**Exemple :**
 
 ```js
 $('#hide').click(function(){
@@ -31,6 +31,8 @@ $('#hide').click(function(){
     });
 });
 ```
+
+**Un autre exemple :**
 
 <p data-height="180" data-theme-id="7816" data-slug-hash="mehai" data-default-tab="result" class='codepen'>8ee the Pen <a href='http://codepen.io/sutterlity/pen/mehai/'>mehai</a> by Sutterlity (<a href='http://codepen.io/sutterlity'>@sutterlity</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
 
@@ -44,7 +46,7 @@ La méthode `.show()` permet d'afficher les éléments.
 $(selecteur).show(vitesse,callback);
 ```
 
-Exemple :
+**Exemple :**
 
 ```js
 $('#show').click(function(){
@@ -56,6 +58,8 @@ $('#show').click(function(){
     });
 });
 ```
+
+**Un autre exemple :**
 
 <p data-height="180" data-theme-id="7816" data-slug-hash="rfkcI" data-default-tab="result" class='codepen'>See the Pen <a href='http://codepen.io/sutterlity/pen/rfkcI/'>rfkcI</a> by Sutterlity (<a href='http://codepen.io/sutterlity'>@sutterlity</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
 
@@ -70,7 +74,7 @@ $(selecteur).toggle(vitesse,callback);
 ```
 
 
-Exemple :
+**Exemple :**
 
 ```js
 $('#toggle').click(function(){
@@ -82,6 +86,8 @@ $('#toggle').click(function(){
     });
 });
 ```
+
+**Un autre exemple :**
 
 <p data-height="180" data-theme-id="7816" data-slug-hash="ycxAC" data-default-tab="result" class='codepen'>See the Pen <a href='http://codepen.io/sutterlity/pen/ycxAC/'>.toggle</a> by Sutterlity (<a href='http://codepen.io/sutterlity'>@sutterlity</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
 

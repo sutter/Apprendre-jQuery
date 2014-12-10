@@ -12,7 +12,7 @@ La méthode `.slideDown()` permet de déplier un élément avec une transition.
 $(selecteur).slideDown(vitesse,callback);
 ```
 
-Exemple :
+**Exemple :**
 
 ```js
 $('#slideDown').click(function(){
@@ -24,6 +24,8 @@ $('#slideDown').click(function(){
     });
 });
 ```
+
+**Un autre exemple :**
 
 <p data-height="180" data-theme-id="7816" data-slug-hash="jCkdJ" data-default-tab="result" class='codepen'>See the Pen <a href='http://codepen.io/sutterlity/pen/jCkdJ/'>.slideDown()</a> by Sutterlity (<a href='http://codepen.io/sutterlity'>@sutterlity</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
 
@@ -37,7 +39,7 @@ La méthode `.slideUp()` permet de replier un élément avec une transition.
 $(selecteur).slideUp(vitesse,callback);
 ```
 
-Exemple :
+**Exemple :**
 
 ```js
 $('#slideUp').click(function(){
@@ -49,6 +51,8 @@ $('#slideUp').click(function(){
     });
 });
 ```
+**Un autre exemple :**
+
 <p data-height="180" data-theme-id="7816" data-slug-hash="yBCDA" data-default-tab="result" class='codepen'>See the Pen <a href='http://codepen.io/sutterlity/pen/yBCDA/'>SlideUp</a> by Sutterlity (<a href='http://codepen.io/sutterlity'>@sutterlity</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
 
 
@@ -62,7 +66,7 @@ La méthode `.slideToggle()` permet de plier / déplier un élément avec une tr
 $(selecteur).slideToggle(vitesse,callback);
 ```
 
-Exemple :
+**Exemple :**
 
 ```js
 $('#slideToggle').click(function(){
@@ -74,6 +78,8 @@ $('#slideToggle').click(function(){
     });
 });
 ```
+
+**Un autre exemple :**
 
 <p data-height="180" data-theme-id="7816" data-slug-hash="pCDuH" data-default-tab="result" class='codepen'>See the Pen <a href='http://codepen.io/sutterlity/pen/pCDuH/'>.slideToggle()</a> by Sutterlity (<a href='http://codepen.io/sutterlity'>@sutterlity</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
 
