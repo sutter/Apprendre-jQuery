@@ -135,7 +135,7 @@ $('.box').css({
 <div class="box" style="font-size: 20px; color: yellow; background-color: red;">…</div>
 ```
 
-### Setter
+### Getter
 
 Comme je l'ai expliqué plus haut, nous pouvons obtenir la valeur d'une propriété CSS comme dans l'exemple ci-dessous.
 
