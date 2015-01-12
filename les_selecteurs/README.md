@@ -56,13 +56,39 @@ Pour sélectionner les *noeuds du DOM* (éléments) nous utiliserons la syntaxe 
 
 Bien entendu, la liste ci-dessous n'est pas exhaustive et ne reprend que les sélecteurs les plus utilisés.<br/>Vous pouvez en trouver davantage dans [l'API jQuery](http://api.jquery.com/category/selectors/).
 
+Certains **sélecteurs jQuery** sont redondants avec les **sélecteurs CSS3**.
+
+En effet, les sélecteurs jQuery ont été implémentés bien avant la sortie de CSS3.
+Je vous conseille donc de préviligier les sélecteurs CSS3 dont l'utilisation est plus pérenne.
+
 ### Combiner des sélecteurs
+
+#### Les combinateurs standards
 | Sélecteurs | Exemple | Éléments selectionnés |
 | -- | -- | -- |
 | [**.class, .class**](http://api.jquery.com/multiple-selector/) | `$('.box, .pod')` | Les éléments **class="box"** ou **class="pod"** |
-| [**#id .class** ](http://api.jquery.com/descendant-selector/)| `$('# .box')` | Les éléments **class="box"** à l'intérieur **id=""** |
-| **#id.class** | `$('#.box')` | Les éléments **class="box"** ayant pour identifiant **id=""** |
-| **'.class',  '#id'** | `$('.box',  '#')` | Les éléments **class="box"** dans le contexte **id=""** |
+| [**#id .class** ](http://api.jquery.com/descendant-selector/)| `$('#content .box')` | Les éléments **class="box"** à l'intérieur **id="content"** |
+| **#id.class** | `$('#content.wrap')` | Les éléments **class="wrap"** ayant pour identifiant **id="content"** |
+
+#### Le sélecteur de contexte
+
+Le sélecteur de contexte permet d’éviter la redondance de caractères au sein du sélecteur.
+
+| Sélecteurs | Exemple | Éléments selectionnés |
+| -- | -- | -- |
+| **'.class',  '#id'** | `$('.box, h1',  '#content')` | Les éléments **class="box"** et **h1** contenu dans  **id="content"** |
+
+Dans l'exemple suivant, nous pouvons être plus concis.
+
+```js
+$('#product .box, #product .thumbs').fadeIn(1000);
+```
+Utilisons maintenant la même déclaration, mais avec un sélecteur de contexte.
+
+```js
+$('.box, .thumbs','#product').fadeIn(1000);
+```
+Nous avons ainsi optimisé notre sélecteur.
 
 ### Les sélecteurs de base
 
@@ -76,7 +102,7 @@ Bien entendu, la liste ci-dessous n'est pas exhaustive et ne reprend que les sé
 | [**.class**](http://api.jquery.com/class-selector/) | `$('.box')` | Les éléments avec **class="box"** |
 | [**A > B**](http://api.jquery.com/child-selector/) | `$('.box > p'`) | Les élément **B** enfants directs de **A**|
 | [**A + B**](http://api.jquery.com/next-adjacent-Selector/) | `$('li + li')` | L'élément **B** frère adjacent de **A** |
-| [**A ~ B**](http://api.jquery.com/next-siblings-selector/) | `$('h2 ~ p')` | Les éléments **B** en dessous de **A** |
+
 
 ### Les sélecteurs d'enfant
 
@@ -161,3 +187,5 @@ Bien entendu, la liste ci-dessous n'est pas exhaustive et ne reprend que les sé
 | [**:disabled**](http://api.jquery.com/disabled-selector/) |`$('input:disabled')` | Les éléments **input** désactivés  |
 | [**:selected**](http://api.jquery.com/selected-selector/) | `$('select option:selected')` | Les éléments **option** de **select** sélectionnés |
 | [**:checked**](http://api.jquery.com/checked-selector/) | `$('input:checked')` | Les éléments **input** qui sont vérifiés ou sélectionnés |
+
+Vous pouvez aussi sélectionner un élément de formulaire avec un sélecteur CSS :`$('input[type="text"]')`
