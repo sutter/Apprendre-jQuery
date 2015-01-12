@@ -83,7 +83,7 @@ console.log(typeof otherVariable); // Affiche : « undefined »
 
 ## La convertion de type
 
-### Convertion type "number" en "string"
+### Convertion type "string" en" number"
 
 Dans certains cas de figure, nous pouvons avoir besoin de convertir une chaîne de caractères en nombre. La méthode `parseInt()` convertie une chaîne de caractères en nombre.
 
@@ -93,7 +93,7 @@ var myVariable = '2',
 console.log(typeof n); // Affiche : « number »
 ```
 
-### Convertion type "string" en "number"
+### Convertion type "number" en "string
 
 Pour convertir une chaîne de charactères en nombre, nous pouvons utiliser la méthode`.toString()`.
 
