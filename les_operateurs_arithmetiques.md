@@ -70,7 +70,7 @@ var maVariable = 7;
 console.log(maVariable); // Affiche : 8
 ```
 
-Pour supprimer **-1** nous pouvons utiliser l'opérateur de décrémentation **++**
+Pour supprimer **-1** nous pouvons utiliser l'opérateur de décrémentation **--**
 ```js
 var maVariable = 7;
     maVariable--;
