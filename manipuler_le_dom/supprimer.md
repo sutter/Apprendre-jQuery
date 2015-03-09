@@ -14,7 +14,7 @@ L'exemple suivant supprime du DOM `class="box"`.
 <div id="main">
     <div class="other">Je suis ingénieur informaticien</div>
     <div class="box">Je suis magicien</div>
-</di>
+</div>
 ```
 
 ```js
@@ -26,7 +26,7 @@ $('.box').remove();
 ```html
 <div id="main">
     <div class="other">Je suis ingénieur informaticien</div>
-</di>
+</div>
 ```
 
 ## Méthode .empty()
@@ -41,7 +41,7 @@ L'exemple suivant vide le contenu de l'élément `class="box"`.
 <div id="main">
     <div class="other">Je suis ingénieur informaticien</div>
     <div class="box">Je suis magicien</div>
-</di>
+</div>
 ```
 
 ```js
@@ -54,5 +54,5 @@ $('.box').empty();
 <div id="main">
     <div class="other">Je suis ingénieur informaticien</div>
     <div class="box"></div>
-</di>
+</div>
 ```
